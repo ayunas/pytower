@@ -1,0 +1,26 @@
+[
+  {
+    "model": "tower_app.room",
+    "pk": 1,
+    "fields": {
+      "room_name": "Foyer",
+      "description": "A beautiful open area welcoming you to PyTower",
+      "up" : "Shade",
+      "down" : "",
+      "left": "",
+      "right": "Pearl"
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 2,
+     "fields": {
+      "room_name": "Pearl",
+      "description": "Everything in here shines like pearls",
+      "up" : "Study",
+      "down" : "",
+      "left": "Foyer",
+      "right": "Parlor"
+    }
+  }
+]
