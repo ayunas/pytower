@@ -1,0 +1,12 @@
+{% extends 'tower_app/base.html'%}
+
+{% block content %}
+<h1> Welcome! </h1>
+<p>To start playing, enter a character name below and submit</p>
+<p>Get familiar with the player actions on the right</p>
+<form method="post" action="">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit", name="Create Character">Create Character</button>
+</form>
+{% endblock %}

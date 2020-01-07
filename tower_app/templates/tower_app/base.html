@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PyTower</title>
+    </head>
+    <body>
+        <div name="content">
+            {% block content%}
+            {% endblock %}
+        </div>
+        <div class="actions-wrapper">
+            <button>N</button>
+            <button>S</button>
+            <button>E</button>
+            <button>W</button>
+            <button>Take Item</button>
+            <button>Drop Item</button>
+            <button>Attack</button>
+        </div>
+        <div class="player-info">
+            <p>{{player.name}}</p>
+            <p>{{player.location}}</p>
+        </div>
+    </body>
+</html>
