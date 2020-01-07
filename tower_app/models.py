@@ -35,7 +35,7 @@ class Room(models.Model):
         return f"{self.room_name}"
 
 
-foyer = Room.objects.get(room_name="foyer")
+# foyer = Room.objects.get(room_name="foyer")
 
 class Player(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True)

@@ -22,5 +22,113 @@
       "left": "Foyer",
       "right": "Parlor"
     }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 3,
+     "fields": {
+      "room_name": "Parlor",
+      "description": " 'I wish I had a rabbit in a hat with a bat, in a 6 floor parlor' -Skee Lo",
+      "up" : "",
+      "down" : "Powder",
+      "left": "Pearl",
+      "right": "Board"
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 4,
+     "fields": {
+      "room_name": "Board",
+      "description": "Watch Out!  You may get fired in the Board Room",
+      "up" : "",
+      "down" : "Staircase",
+      "left": "Parlor",
+      "right": ""
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 5,
+     "fields": {
+      "room_name": "Staircase",
+      "description": "We're Movin' on Up!!!",
+      "up" : "Board",
+      "down" : "",
+      "left": "Powder",
+      "right": ""
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 6,
+     "fields": {
+      "room_name": "Powder",
+      "description": "We're Movin' on Up!!!",
+      "up" : "Parlor",
+      "down" : "",
+      "left": "",
+      "right": "Staircase"
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 7,
+     "fields": {
+      "room_name": "Study",
+      "description": " 'Are those who know equal to those who don't know?' -Quran",
+      "up" : "",
+      "down" : "Pearl",
+      "left": "Shade",
+      "right": ""
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 8,
+     "fields": {
+      "room_name": "Shade",
+      "description": "It's dark in here, a little too dark...",
+      "up" : "Tranquility",
+      "down" : "Foyer",
+      "left": "",
+      "right": "Study"
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 9,
+     "fields": {
+      "room_name": "Tranquility",
+      "description": "It's time to relax and recharge. HP time!!!",
+      "up" : "Gold",
+      "down" : "Shade",
+      "left": "Patio",
+      "right": ""
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 10,
+     "fields": {
+      "room_name": "Gold",
+      "description": "Bling Bling!!!  All the Glitter is Blinding...",
+      "up" : "",
+      "down" : "Tranquility",
+      "left": "",
+      "right": ""
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 11,
+     "fields": {
+      "room_name": "Patio",
+      "description": "It's time to relax and recharge. HP time!!!",
+      "up" : "",
+      "down" : "",
+      "left": "",
+      "right": "Tranquility"
+    }
   }
 ]
