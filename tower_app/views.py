@@ -5,6 +5,5 @@ from django.http import HttpResponse
 def test(request):
     return HttpResponse('test is working properly')
 
-
 def index(request):
     return HttpResponse('this is the index page view function')

@@ -1,10 +1,10 @@
 from django.db import models
 
 class Room(models.Model):
-    room = models.CharField(max_length = 64)
+    room_name = models.CharField(max_length = 64)
 
     def __str__(self):
-        return f"{self.room}"
+        return f"{self.room_name}"
 
 class Player(models.Model):
     name = models.CharField(max_length=64)
@@ -15,7 +15,5 @@ class Player(models.Model):
     
     def __str__(self):
         return f"{self.name} in {self.location}" 
-
-
 
 
