@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
+def test(request):
+    return HttpResponse('test is working properly')
+
+
+def index(request):
+    return HttpResponse('this is the index page view function')

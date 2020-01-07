@@ -14,7 +14,6 @@ class Player(models.Model):
        pass
     
     def __str__(self):
-        # return f"{self.name}"
         return f"{self.name} in {self.location}" 
 
 
