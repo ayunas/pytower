@@ -54,9 +54,10 @@ class Player(models.Model):
         if start == 'y':
             self.room = Room.objects.get(room_name = "Foyer")
             print(f"{self.name}, you have now entered the {self.room.room_name}")
+            return f"{self.name}, you have now entered the {self.room.room_name}"
         else:
             print(f"{self.name}, when you're ready for Pytower, you may enter!")
-            return
+            return f"{self.name}, when you're ready for Pytower, you may enter!"
 
         print(self.room.description)
         print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
