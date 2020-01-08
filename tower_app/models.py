@@ -35,27 +35,69 @@ class Room(models.Model):
         return f"{self.room_name}"
 
 
-# foyer = Room.objects.get(room_name="foyer")
-
 class Player(models.Model):
     uuid = models.UUIDField(default=uuid.uuid4, unique=True)
-    name = models.CharField(max_length=64, default=f"Room {random.choice(string.ascii_letters)}")  #attempting to generate a random room name using ascii_letters from string library and random.choice()
+    name = models.CharField(max_length=64, default=f"Room {random.choice(string.ascii_letters)}")#attempting to generate a random room name using ascii_letters from string library and random.choice()
     room = models.ForeignKey(Room, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
     def initialize(self):
         start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
 
         if start == 'y':
-            self.room = Room.objects.get(room_name = "foyer")
+            self.room = Room.objects.get(room_name = "Foyer")
             print(f"{self.name}, you have now entered the {self.room.room_name}")
         else:
             print(f"{self.name}, when you're ready for Pytower, you may enter!")
             return
-            
 
-    def move(self):
-        pass
-    
+        print(self.room.description)
+            
+    def move(self,way):
+        # print(self.room[way])  #causes error, Room object not subscriptable
+        # print(way)
+        # if self.room[way]:
+        #     pass
+        if way == 'up':
+            if not self.room.up:
+                print('you cannot go that way. no rooms there...')
+                return
+            else:
+                self.room = Room.objects.get(room_name = self.room.up)
+                print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+                return self.room
+                
+
+        elif way == 'down':
+            if not self.room.down:
+                print('you cannot go that way. no rooms there...')
+                return
+            else:
+                self.room = Room.objects.get(room_name = self.room.down)
+                print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+                return self.room
+
+        elif way == 'left':
+            if not self.room.left:
+                print('you cannot go that way. no rooms there...')
+                return
+            else:
+                self.room = Room.objects.get(room_name = self.room.left)
+                print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+                return self.room
+        
+        elif way == 'right':
+            if not self.room.right:
+                print('you cannot go that way. no rooms there...')
+                return
+            else:
+                self.room = Room.objects.get(room_name = self.room.right)
+                print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+                return self.room
+            
+        else:
+            print('you have entered an invalid direction')
+            return
+
     def __str__(self):
         if not self.room:
             return  f"{self.name} is outside." 
