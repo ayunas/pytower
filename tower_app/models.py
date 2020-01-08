@@ -103,19 +103,6 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name = self.room.right)
                 print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
                 return self.room
-
-            else:
-                print('you cannot go that way. no rooms there...')
-                return
-        
-        #elif way == 'right':
-        #    if not self.room.right:
-        #        print('you cannot go that way. no rooms there...')
-        #        return
-        #    else:
-         #       self.room = Room.objects.get(room_name = self.room.right)
-         #       print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
-         #       return self.room
             
         else:
             print('you have entered an invalid direction')

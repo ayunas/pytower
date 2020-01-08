@@ -14,18 +14,24 @@ def index(request):
             n = form.cleaned_data["name"]
             character = Player(name=n)
             character.save()
-            character=Player.objects.get(uuid=character.uuid)
-            character.initialize()
+            character=Player.objects.get(id=character.id)
+            print("Index ID", character.id)
+            room=character.initialize("y")
+            print("INDEX ROOM", character.room)
+            character = Player.objects.get(id=character.id)
+            print("INDEX ROOM after GET", character.room)
 
-        return HttpResponseRedirect(f'/play/{character.uuid}')
+        return HttpResponseRedirect(f'/play/{character.id}')
     else:
         form= CreateCharacter()
 
     return render(request, "tower_app/index.html", {"form": form})
 #TODO: once model is done, change player so it's not hard coded, .ay need to change "id"
-def play(request, uuid):
-    character=Player.objects.get(uuid=uuid)
-    print("CHARACTER", character)
+def play(request, id):
+    character=Player.objects.get(id=id)
+    print("Play CHARACTER", character)
+    print("Play ID", id)
+    print("PLAY ROOM", character.room)
     context = {"player": character}
     if request.method =="POST":
         print("request.POST", request.POST)
