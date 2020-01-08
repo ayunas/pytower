@@ -89,7 +89,7 @@ class Player(models.Model):
         elif way == 'left':
             if not self.room.left:
                 print('you cannot go that way. no rooms there...')
-                return 'you cannot go that way. no rooms there...')
+                return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name = self.room.left)
                 print('in room-', self.room, 'up-',self.room.up, 'down-',self.room.down, 'left-',self.room.left, 'right-', self.room.right)
