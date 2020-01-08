@@ -7,3 +7,9 @@ def test(request):
 
 def index(request):
     return HttpResponse('this is the index page view function')
+
+def login(request):
+    return render(request, "auth/login.html")
+
+def register(request):
+    return render(request, "auth/register.html")

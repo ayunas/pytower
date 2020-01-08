@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pytower Register</title> 
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+                justify-content: center;
+                align-items: center;
+            }
+            input {
+                margin-bottom: 15px;
+                font-size: 1.5rem;;
+            }
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Pytower</h1>   
+        <form id = "form">
+            <input id = "username" type = "text" />
+            <input id = "password" type = "password" />
+            <input id = "confirm" type = "password" />
+
+            <button type = "submit">Register</button>   
+        </form> 
+        <a href = "./register">Dont have an account?</a>   
+        <p id = "error"></p> 
+    </body>  
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+
+            errorObj.textContent = "";
+
+            var username = document.getElementById("username");
+            var password = document.getElementById("password");
+            var confirm = document.getElementById("confirm");
+
+            if(password.value !== confirm.value) {
+                errorObj.textContent = "Passwords dont match";
+                return;
+            }
+
+            fetch(url + "/login", {
+                headers: {
+                    'Content-Type': "application/json",
+                    'Accept': "application/json"
+                },
+                method: "POST",
+                body: JSON.stringify({ username: username.value, password: password.value })
+            })
+                .then(handleSuccess)
+                .catch(handleFailure)
+
+        }
+
+        function handleSuccess(res) {
+            res.json()
+                .then(handleJsonParse)
+                .catch(handleFailure)
+        }
+
+        function handleJsonParse(data) {
+            console.log(data);
+        }
+
+        function handleFailure(err) {
+            console.log(err);
+        }
+
+        var url = "http://localhost:8000";
+
+        var form = document.getElementById("form");
+        var errorObj = document.getElementById("error");
+        form.addEventListener("submit", handleSubmit);
+    </script>       
+</html> 
