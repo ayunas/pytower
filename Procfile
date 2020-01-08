@@ -1,1 +1,1 @@
-web: gunicorn pytower.wsgi
+web: python manage.py collectstatic --noinput; gunicorn pytower.wsgi
