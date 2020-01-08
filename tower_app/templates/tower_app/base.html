@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>PyTower</title>
-    </head>
-    <body>
-        <div name="content">
-            {% block content%}
-            {% endblock %}
-        </div>
-        <div class="actions-wrapper">
-            <button>N</button>
-            <button>S</button>
-            <button>E</button>
-            <button>W</button>
-            <button>Take Item</button>
-            <button>Drop Item</button>
-            <button>Attack</button>
-        </div>
-        <div class="player-info">
-            <p>{{player.name}}</p>
-            <p>{{player.location}}</p>
-        </div>
-    </body>
+  <head>
+    <title>PyTower</title>
+  </head>
+  <body>
+    <div name="content">
+      {% block content%} {% endblock %}
+    </div>
+    <div class="actions-wrapper">
+      <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="left" id="left"name="btn"/>
+        <input type="submit" value="right" id="right"name="btn"/>
+        <input type="submit" value="up" id="up"name="btn"/>
+        <input type="submit" value="down" id="down"name="btn"/>
+        <input type="submit" value="take" id="take"name="btn"/>
+        <input type="submit" value="drop" id="drop"name="btn"/>
+        <input type="submit" value="attack" id="attack"name="btn"/>
+      </form>
+      <button>Take Item</button>
+      <button>Drop Item</button>
+      <button>Attack</button>
+    </div>
+    <div class="player-info">
+      <p>{{player.name}}</p>
+      <p>{{player.location}}</p>
+    </div>
+  </body>
 </html>
