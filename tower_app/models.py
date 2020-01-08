@@ -11,6 +11,10 @@ class Room(models.Model):
     left = models.CharField(max_length = 64, default="")
     right = models.CharField(max_length = 64, default="")
 
+    def get_room_items(self):
+        items = Item.objects.filter(roomID = self.id)
+        return [i.item_name for i in items]
+
     # def connectRooms(self, room, direction):
     #     room_id = room.id
     #     try:
@@ -32,7 +36,7 @@ class Room(models.Model):
     #         self.save()
 
     def __str__(self):
-        return f"{self.room_name}"
+        return self.room_name
 
 
 class Player(models.Model):
@@ -41,12 +45,31 @@ class Player(models.Model):
     name = models.CharField(max_length=64, default=f"Room {random.choice(string.ascii_letters)}")#attempting to generate a random room name using ascii_letters from string library and random.choice()
     room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
     # inventory = models.ForeignKey(Inventory)
+    
+    def get_inventory(self):
+        inventory = Item.objects.filter(playerID = self.id)
+        return [i.item_name for i in inventory]
 
     def pickup(self,item):
-        inv = Inventory(item = item)
-        print(inv)
-        inv.save()
-        # return Inventory.objects.get(item = item)
+        room_items = Item.objects.filter(roomID = self.id)
+        items = [ri.item_name for ri in room_items]
+        print(items)
+        print(item in items)
+        if item in items:
+            i = Item.objects.filter(item_name = item)
+            print('i',i)
+            i[0].roomID = 0
+            print(i[0].roomID)
+            print('self.id', self.id)
+            i[0].playerID = self.id
+            i[0].save()
+            print('room after saving ', i,i[0].roomID,i[0].playerID)
+            return f'{self.name} picked up the {item} from {self.room}'
+        else:
+            return f"{item} is not in the room. can't pick it up."
+        
+    def drop_item(self,item):
+        pass
 
     def initialize(self,start):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
@@ -128,11 +151,11 @@ class Item(models.Model):
     item_type = models.CharField(max_length=64,default="weapon")
     # playerID = models.ForeignKey(Player, on_delete=models.CASCADE, null=True)
     # roomID = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
-    playerID = models.IntegerField(null=True)
-    roomID = models.IntegerField(default=1,null=True)
+    playerID = models.IntegerField(blank=True,null=True)
+    roomID = models.IntegerField(default=1,null=True,blank=True)
 
     def __str__(self):
-        return f"{self.item_name} strength: {self.strength}"
+        return self.item_name
 
 class Floor(models.Model):
     pass
