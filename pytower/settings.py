@@ -84,7 +84,7 @@ HEROKU = os.environ.get('HEROKU', 'false')
 
 if HEROKU == 'true':
     DATABASES = {}
-    DATABASES = dj_database_url.config()
+    DATABASES['default'] = dj_database_url.config()
 else:
     DATABASES = {
         'default': {
