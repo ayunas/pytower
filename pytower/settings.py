@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -23,10 +24,13 @@ FIXTURE_DIRS = (
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '-4nnko*j22oe=*lil6*s+1h88pmf#@3kcrp*=&8y%p9hl+1&_t'
+SECRET_KEY = os.getenv('SECRET_KEY', '-4nnko*j22oe=*lil6*s+1h88pmf#@3kcrp*=&8y%p9hl+1&_t')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+if os.environ.get('DEBUG') != None:
+    DEBUG = os.environ.get('DEBUG') == 'true'
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,13 +81,20 @@ WSGI_APPLICATION = 'pytower.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+DATABASES = {}
 
+HEROKU = os.environ.get('HEROKU', 'false')
+
+if HEROKU == 'true':
+    DATABASES = {}
+    DATABASES['default'] = dj_database_url.config()
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -122,3 +133,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
