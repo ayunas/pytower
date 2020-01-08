@@ -36,7 +36,7 @@ class Room(models.Model):
 
 
 class Player(models.Model):
-    uuid = models.UUIDField(default=uuid.uuid4, unique=True)
+    # uuid = models.UUIDField(default=uuid.uuid4, unique=True)
     name = models.CharField(max_length=64, default=f"Room {random.choice(string.ascii_letters)}")#attempting to generate a random room name using ascii_letters from string library and random.choice()
     room = models.ForeignKey(Room, on_delete=models.CASCADE, default=None, blank=True, null=True)
 
@@ -51,8 +51,10 @@ class Player(models.Model):
             return
 
         print(self.room.description)
+        print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+        return self.room
             
-    def move(self,way):
+    def move(self,way=""):
         # print(self.room[way])  #causes error, Room object not subscriptable
         # print(way)
         # if self.room[way]:
@@ -65,7 +67,6 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name = self.room.up)
                 print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
                 return self.room
-                
 
         elif way == 'down':
             if not self.room.down:
@@ -82,7 +83,7 @@ class Player(models.Model):
                 return
             else:
                 self.room = Room.objects.get(room_name = self.room.left)
-                print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+                print('in room-', self.room, 'up-',self.room.up, 'down-',self.room.down, 'left-',self.room.left, 'right-', self.room.right)
                 return self.room
         
         elif way == 'right':
@@ -104,4 +105,10 @@ class Player(models.Model):
         else:
             return f"{self.name} in {self.room}"
 
+
+class Item(models.Model):
+    item_name = models.CharField(max_length=64, )
+
+class Floor(models.Model):
+    pass
 
