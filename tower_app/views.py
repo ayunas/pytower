@@ -14,7 +14,7 @@ def index(request):
             n = form.cleaned_data["name"]
             character = Player(name=n)
             character.save()
-            id=Player.objects.get(id=character.id)
+            id=Player.objects.get(id=character.)
         return HttpResponseRedirect(f'/play/{id}')
     else:
         form= CreateCharacter()
