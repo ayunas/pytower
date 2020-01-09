@@ -54,6 +54,8 @@ def registerPost(request):
                 return HttpResponseRedirect('/test')
             else:
                 form.add_error("username", "that username is already taken")
+        else:
+            form.add_error("password1", "Check to make sure your password fills requirements")
                 
     else:
         form = UserCreationForm()
