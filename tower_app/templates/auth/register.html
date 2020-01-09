@@ -1,63 +1,128 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Pytower Register</title> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>Pytower Sign up</title> 
         <style>
+            * {
+                font-family: 'Roboto', sans-serif;
+            }
+            html {
+                height: 100%;
+                background-color: white;
+            }
             body {
+                height: 100%;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
+                margin: 0;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
                 
             }
             form {
                 display: flex;
                 flex-direction: column;
-                flex-grow: 1;
                 width: 100%;
                 max-width: 400px;
-                margin: 0 auto;
-                justify-content: center;
-                align-items: center;
+                margin: 15px auto;
+                border: 1px solid black;
+                padding: 25px;
+                border-radius: 5px;
+                background-color: #eee;
             }
             input {
-                margin-bottom: 15px;
-                font-size: 1.5rem;;
+                margin-bottom: 25px;
+                font-size: 1.5rem;
+                outline: 0;
+                border: 1px solid black;
+                padding: 5px;
+            }
+            button {
+                margin-top: 15px;
+                padding: 15px 0;
+                width: 100%;
+                font-size: 1.2rem;
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: #25a0ed  ;
+                border: 1px solid black;
+                transition: background-color 0.5s linear;
+            }
+            button:hover {
+                background-color: #1183ca;
             }
             h1 {
                 text-align: center;
+                font-size: 3rem;
+                margin-top: 0;
+            }
+            h3 {
+                margin: 0;
+                margin-bottom: 25px;
+                font-size: 1.8rem;
+            }
+            h6 {
+                margin: 0;
+                margin-bottom: 3px;
+                font-size: 1.2rem;
+            }
+            a {
+                margin-top: 25px;
+            }
+            p#error {
+                color: red;
+            }
+            p {
+                display: flex;
+                flex-direction: column;
             }
         </style>
     </head>
     <body>
+        {% block content %}
         <h1>Pytower</h1>   
-        <form id = "form">
-            <input id = "username" type = "text" />
-            <input id = "password" type = "password" />
-            <input id = "confirm" type = "password" />
 
-            <button type = "submit">Register</button>   
-        </form> 
-        <a href = "./register">Dont have an account?</a>   
-        <p id = "error"></p> 
+        <div class = "container">
+            <form id = "form" method = "POST">
+                {% csrf_token %}
+
+                <h3>Sign up</h3>
+
+                {{ form.as_p }}
+
+                <button id = "signup" type = "submit">Sign up</button>   
+
+                <p id = "error"></p> 
+
+                <a href = "/">Already have an account? Login</a>   
+
+            </form> 
+            
+            
+        </div>
+        {% endblock %}
     </body>  
     <script>
         function handleSubmit(event) {
             event.preventDefault();
 
+            buttonObj.textContent = "Signing up...";
+
             errorObj.textContent = "";
 
-            var username = document.getElementById("username");
-            var password = document.getElementById("password");
-            var confirm = document.getElementById("confirm");
+            var username = document.getElementById("id_username");
+            var password = document.getElementById("id_password");
 
-            if(password.value !== confirm.value) {
-                errorObj.textContent = "Passwords dont match";
-                return;
-            }
-
-            fetch(url + "/login", {
+            fetch(url + "/register/", {
                 headers: {
                     'Content-Type': "application/json",
-                    'Accept': "application/json"
+                    'Accept': "application/json",
+                    'X-CSRFToken': token
                 },
                 method: "POST",
                 body: JSON.stringify({ username: username.value, password: password.value })
@@ -75,16 +140,21 @@
 
         function handleJsonParse(data) {
             console.log(data);
+            buttonObj.textContent = "Sign up";
         }
 
         function handleFailure(err) {
             console.log(err);
+            errorObj.textContent = "Unknown error occured";
+            buttonObj.textContent = "Sign up";
         }
 
+        var token = '{{csrf_token}}'
         var url = "http://localhost:8000";
 
         var form = document.getElementById("form");
+        var buttonObj = document.getElementById("signup");
         var errorObj = document.getElementById("error");
-        form.addEventListener("submit", handleSubmit);
+        //form.addEventListener("submit", handleSubmit);
     </script>       
 </html> 
