@@ -1,6 +1,19 @@
 [
   {
     "model": "tower_app.room",
+    "pk": 0,
+    "fields": {
+      "id":0,
+      "room_name": "Outside",
+      "description": " you are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top???",
+      "up" : "",
+      "down" : "",
+      "left": "",
+      "right": "Foyer"
+    }
+  },
+  {
+    "model": "tower_app.room",
     "pk": 1,
     "fields": {
       "room_name": "Foyer",
