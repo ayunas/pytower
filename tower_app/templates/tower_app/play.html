@@ -72,9 +72,9 @@
       <p>HP: {{player.HP}}</p>
       {% if player.inventory %}
       <p>Inventory:</p>
-      {% for item in inventory%}
+        {% for item in inventory%}
       <p>{{item.item_name}}</p>
-      {% endfor %}
+        {% endfor %}
       {% endif%}
       <p>Room: {{player.room.room_name}}</p>
       <p>Description: {{player.room.description}}</p>
