@@ -20,8 +20,8 @@ class Room(models.Model):
 
 class Player(models.Model):
     # uuid = models.UUIDField(default=uuid.uuid4, unique=True)
-    hp = models.IntegerField(default=10)
     name = models.CharField(max_length=64, default=f"Room {random.choice(string.ascii_letters)}")#attempting to generate a random room name using ascii_letters from string library and random.choice()
+    hp = models.IntegerField(default=10)
     room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
     # default=Room.objects.get(room_name='Outside')
     # inventory = models.ForeignKey(Inventory)
@@ -60,6 +60,10 @@ class Player(models.Model):
         return 
             
     def move(self,way=""):
+        if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
+            self.room = Room.objects.get(id=self.room.id + 1)
+            print(f'{self.name} has moved to the {self.room.room_name}')
+            return self.room
       
         if way == 'up':
             if not self.room.up:
@@ -74,6 +78,9 @@ class Player(models.Model):
             if not self.room.down:
                 return 'you cannot go that way. no rooms there...'
             else:
+                # if self.room.down == 'Staircase':
+                #     self.room = Room.objects.get(id = 11)
+                # else:
                 self.room = Room.objects.get(room_name = self.room.down)
                 self.save()
                 print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
@@ -109,8 +116,7 @@ class Item(models.Model):
     item_name = models.CharField(max_length=64)
     strength = models.IntegerField(default=5)
     item_type = models.CharField(max_length=64,default="weapon")
-    # playerID = models.ForeignKey(Player, on_delete=models.CASCADE, null=True)
-    # roomID = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
+    description = models.CharField(max_length=256, default="Item Description")
     playerID = models.IntegerField(blank=True,null=True)
     roomID = models.IntegerField(default=1,null=True,blank=True)
 
