@@ -1,0 +1,11 @@
+[
+    {
+        "model": "tower_app.player",
+        "pk": 1,
+        "fields": {
+            "name": "Warrior",
+            "hp": 10,
+            "room": null
+          }
+      }
+]
