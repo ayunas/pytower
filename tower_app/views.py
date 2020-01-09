@@ -13,42 +13,32 @@ def index(request):
         if form.is_valid():
             n = form.cleaned_data["name"]
             character = Player(name=n)
+            character.initialize()
             character.save()
             character=Player.objects.get(id=character.id)
-            print("Index ID", character.id)
-            room=character.initialize("y")
-            print("INDEX ROOM", character.room)
-#            character = Player.objects.get(id=character.id)
-            print("INDEX ROOM after GET", character.room)
 
         return HttpResponseRedirect(f'/play/{character.id}')
     else:
         form= CreateCharacter()
 
     return render(request, "tower_app/index.html", {"form": form})
-#TODO: once model is done, change player so it's not hard coded, .ay need to change "id"
+
 def play(request, id):
     character=Player.objects.get(id=id)
-    remainder=character.room.id % 10
-    print(remainder)
-    character.room.id=remainder
-    all_rooms = Room.objects.all()
-    rooms={}
-    for room in all_rooms:
-        rooms[room.id]=room.room_name
-    print(rooms)
-    #print("Play CHARACTER", character)
-    #print("Play ID", id)
-    #print("PLAY ROOM", character.room)
-    context = {"player": character, "rooms": rooms}
+    inventory=character.inventory()
+    rooms = Room.objects.filter(floor=character.room.floor)
+    room_items = character.room.items()
+    context = {"player": character, "rooms": rooms, "inventory": inventory, "items": room_items}
+
     if request.method =="POST":
-    #    print("request.POST", request.POST)
+
         form = MoveCharacter(request.POST)
         if form.is_valid():
             data=form.cleaned_data.get("btn")
             #TODO: complete these once models are finished
             if data=="take":
-                pass
+                    message=character.pickup(room_items.item_name)
+
             elif data=="drop":
                 pass
             elif data=="attack":

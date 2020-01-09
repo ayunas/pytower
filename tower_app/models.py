@@ -57,7 +57,7 @@ class Player(models.Model):
     def initialize(self):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
         self.room = Room.objects.get(room_name = 'Outside')
-        return self.room
+        return 
             
     def move(self,way=""):
       
@@ -95,7 +95,7 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name = self.room.right)
                 self.save()
                 print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
-                return self.room
+                return 
         else:
             return 'you have entered an invalid direction'
 

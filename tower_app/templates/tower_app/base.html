@@ -3,66 +3,73 @@
   <head>
     <title>PyTower</title>
     <style type="text/css">
-      .body {box-sizing: border-box}
-      .movement-wrapper {width:15vw;}
-      .row {display: flex;}
-      .move {width: 5vw; background-color: blue; height: 5vw; border-radius: 50%; color: white;}
-      .right {margin-right: 5vw}
-      .vertical {margin-left: 5vw}
-      .action {border:none;}
+      .body {
+        box-sizing: border-box;
+        background-color: black;
+        margin: 0px
+      }
+      .movement-wrapper {
+        width: 15vw;
+      }
+      .row {
+        display: flex;
+      }
+      .action {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        color: white;
+        background-color: green;
+      }
+      .move {
+        background-color: blue;
+      }
+      .left {
+        margin-right: 5vw;
+      }
+      .vertical {
+        margin-left: 5vw;
+      }
+      .action {
+        border: none;
+      }
+      .player-info {
+        background-color:gray;
+        height: 25vw;
+        padding:1vw
+      }
+      .wrapper {
+        display: flex
+      }
+      .right-content {
+        width: 34vw;
+      }
+      .actions-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .actions-form {
+        padding: 5vw;
+      }
+      .room {
+        border: 1px white solid;
+      }
+      .material-icons {
+        color: white
+      }
+      
 
     </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
   </head>
   <body>
     <div name="content">
       {% block content%} {% endblock %}
     </div>
-    <div class="actions-wrapper">
-      <form method="POST">
-        {% csrf_token %}
-        <div class="movement-wrapper">
-          <input
-            type="submit"
-            value="left"
-            id="left"
-            name="btn"
-            class="action move vertical"
-          />
-          <div class="row">
-            <input
-              type="submit"
-              value="right"
-              id="right"
-              name="btn"
-              class="action move right"
-            />
-            <input
-              type="submit"
-              value="up"
-              id="up"
-              name="btn"
-              class="action move"
-            />
-          </div>
-          <input
-            type="submit"
-            value="down"
-            id="down"
-            name="btn"
-            class="action move vertical"
-          />
-        </div>
-        <input type="submit" value="take" id="take" name="btn" class="action" />
-        <input type="submit" value="drop" id="drop" name="btn" class="action" />
-        <input
-          type="submit"
-          value="attack"
-          id="attack"
-          name="btn"
-          class="action"
-        />
-      </form>
+ 
     </div>
   </body>
 </html>
