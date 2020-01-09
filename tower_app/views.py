@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import CreateCharacter, MoveCharacter
-from .models import Player, Room
+from .models import Player, Room, Item
 
 # Create your views here.
 def test(request):
@@ -23,12 +23,16 @@ def index(request):
 
     return render(request, "tower_app/index.html", {"form": form})
 
+
 def play(request, id):
     character=Player.objects.get(id=id)
     inventory=character.inventory()
     rooms = Room.objects.filter(floor=character.room.floor)
-    room_items = character.room.items()
-    context = {"player": character, "rooms": rooms, "inventory": inventory, "items": room_items}
+    room_items=Item.objects.all()
+    print("ROOM_ITEMS", room_items)
+    #room_items = character.room.items()
+    message=None
+    print("ROOM", character.room.room_name)
 
     if character.room.room_name == "Staircase":
         message="Move right to go upstairs"
@@ -49,13 +53,10 @@ def play(request, id):
             
             else:
                 message=character.move(data)
-            if message is not None:
-                context["message"]=message
-    #        print("FORM DATA", data)
-    #        print("MESSAGE", message)
-    else:
-        form = MoveCharacter()
+        else:
+            form = MoveCharacter()
 
-
+    context = {"player": character, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message}
+    print(f"inventory: {inventory} \nroom_items:{room_items}\nmessage: {message}")
 #    player ={"name": "Player1", "location": "Foyer"}
     return render(request, "tower_app/play.html", context)
