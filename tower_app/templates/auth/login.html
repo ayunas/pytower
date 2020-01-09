@@ -6,10 +6,11 @@
         <style>
             * {
                 font-family: 'Roboto', sans-serif;
+                color: white;
             }
             html {
                 height: 100%;
-                background-color: white;
+                background-color: #292929;
             }
             body {
                 height: 100%;
@@ -30,17 +31,17 @@
                 width: 100%;
                 max-width: 400px;
                 margin: 15px auto;
-                border: 1px solid black;
                 padding: 25px;
                 border-radius: 5px;
-                background-color: #eee;
+                background-color: rgba(255, 255, 255, .1);
             }
             input {
                 margin-bottom: 25px;
                 font-size: 1.5rem;
                 outline: 0;
-                border: 1px solid black;
+                border: none;
                 padding: 5px;
+                color: black;
             }
             button {
                 margin-top: 15px;
@@ -50,7 +51,7 @@
                 cursor: pointer;
                 border-radius: 5px;
                 background-color: #25a0ed  ;
-                border: 1px solid black;
+                border: none;
                 transition: background-color 0.5s linear;
             }
             button:hover {
@@ -75,6 +76,13 @@
                 margin-top: 25px;
             }
             p#error {
+                color: red;
+            }
+            p {
+                display: flex;
+                flex-direction: column;
+            }
+            ul.errorlist li {
                 color: red;
             }
         </style>
