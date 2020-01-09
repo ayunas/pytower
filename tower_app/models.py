@@ -1,6 +1,12 @@
 from django.db import models
 import string,random
 # import uuid
+# from django.db import models
+# from django.contrib.auth.models import User
+# from django.db.models.signals import post_save
+# from django.dispatch import receiver
+# from rest_framework.authtoken.models import Token
+
 
 class Room(models.Model):
         ### Field Columns in Room Table ###
@@ -11,33 +17,12 @@ class Room(models.Model):
     left = models.CharField(max_length = 64, default="")
     right = models.CharField(max_length = 64, default="")
 
-    def get_room_items(self):
+    def items(self):
         items = Item.objects.filter(roomID = self.id)
         return [i.item_name for i in items]
 
-    # def connectRooms(self, room, direction):
-    #     room_id = room.id
-    #     try:
-    #         room = Room.objects.get(id=room_id)
-    #     except Room.DoesNotExist:
-    #         print('That room does not exist')
-    #     else:
-    #         if direction == 'n':
-    #             self.north = room_id
-    #         elif direction == 's':
-    #             self.south = room_id
-    #         elif direction == 'e':
-    #             self.east = room_id
-    #         elif direction = 'w':
-    #             self.west = room_id
-    #         else:
-    #             print("Invalid direction")
-    #             return
-    #         self.save()
-
     def __str__(self):
         return self.room_name
-
 
 class Player(models.Model):
     # uuid = models.UUIDField(default=uuid.uuid4, unique=True)
@@ -46,27 +31,36 @@ class Player(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
     # inventory = models.ForeignKey(Inventory)
     
-    def get_inventory(self):
-        inventory = Item.objects.filter(playerID = self.id)
+    def inventory(self):
+        inventory = Item.objects.filter(playerID = self.room.id)
         return [i.item_name for i in inventory]
 
-    def pickup(self,item):
-        room_items = Item.objects.filter(roomID = self.id)
-        items = [ri.item_name for ri in room_items]
-        print(items)
-        print(item in items)
-        if item in items:
-            i = Item.objects.filter(item_name = item)
-            print('i',i)
-            i[0].roomID = 0
-            print(i[0].roomID)
-            print('self.id', self.id)
-            i[0].playerID = self.id
-            i[0].save()
-            print('room after saving ', i,i[0].roomID,i[0].playerID)
+    # def pickup(self,item):
+    #     print(self.room.id)
+    #     room_items = Item.objects.filter(roomID = self.room.id)
+    #     items = [ri.item_name for ri in room_items]
+        
+    #     if item in items:
+    #         i = Item.objects.filter(item_name = item)
+    #         i[0].roomID = 0
+    #         i[0].playerID = self.id
+    #         i[0].save()
+    #         i[0].persist()
+    #         return f'{self.name} picked up the {item} from {self.room}'
+    #     else:
+    #         return f"{item} is not in the room. can't pick it up."
+
+    def pickup(self, item_name):
+        items = Item.objects.filter(item_name=item_name, roomID=self.room.id)
+
+        if items:
+            item = items[0]
+            item.roomID = 0
+            item.playerID = self.id
+            item.save()
             return f'{self.name} picked up the {item} from {self.room}'
-        else:
-            return f"{item} is not in the room. can't pick it up."
+
+        return f"{item} is not in the room. can't pick it up."
         
     def drop_item(self,item):
         pass
@@ -137,14 +131,6 @@ class Player(models.Model):
         else:
             return f"{self.name} in {self.room}"
 
-
-# class Inventory(models.Model):
-#     player = models.ForeignKey(Player, on_delete=models.CASCADE, null=True)
-#     item = models.CharField(max_length = 64)
-
-#     def __str__(self):
-#         return str(self.item)
-
 class Item(models.Model):
     item_name = models.CharField(max_length=64)
     strength = models.IntegerField(default=5)
@@ -153,6 +139,9 @@ class Item(models.Model):
     # roomID = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
     playerID = models.IntegerField(blank=True,null=True)
     roomID = models.IntegerField(default=1,null=True,blank=True)
+
+    def persist(self):
+        self.save()
 
     def __str__(self):
         return self.item_name
