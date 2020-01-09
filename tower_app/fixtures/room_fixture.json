@@ -9,7 +9,8 @@
       "up" : "",
       "down" : "",
       "left": "",
-      "right": "Foyer"
+      "right": "Foyer",
+      "floor": 1
     }
   },
   {
@@ -21,7 +22,8 @@
       "up" : "Shade",
       "down" : "",
       "left": "",
-      "right": "Pearl"
+      "right": "Pearl",
+      "floor": 1
     }
   },
   {
@@ -33,7 +35,8 @@
       "up" : "Study",
       "down" : "",
       "left": "Foyer",
-      "right": "Parlor"
+      "right": "Parlor",
+      "floor": 1
     }
   },
   {
@@ -45,7 +48,8 @@
       "up" : "",
       "down" : "Powder",
       "left": "Pearl",
-      "right": "Board"
+      "right": "Board",
+      "floor": 1
     }
   },
   {
@@ -57,7 +61,8 @@
       "up" : "",
       "down" : "Staircase",
       "left": "Parlor",
-      "right": ""
+      "right": "",
+      "floor": 1
     }
   },
   {
@@ -69,7 +74,8 @@
       "up" : "Board",
       "down" : "",
       "left": "Powder",
-      "right": ""
+      "right": "",
+      "floor": 1
     }
   },
   {
@@ -81,7 +87,8 @@
       "up" : "Parlor",
       "down" : "",
       "left": "",
-      "right": "Staircase"
+      "right": "Staircase",
+      "floor": 1
     }
   },
   {
@@ -93,7 +100,8 @@
       "up" : "",
       "down" : "Pearl",
       "left": "Shade",
-      "right": ""
+      "right": "",
+      "floor": 1
     }
   },
   {
@@ -105,7 +113,8 @@
       "up" : "Tranquility",
       "down" : "Foyer",
       "left": "",
-      "right": "Study"
+      "right": "Study",
+      "floor": 1
     }
   },
   {
@@ -117,7 +126,8 @@
       "up" : "Gold",
       "down" : "Shade",
       "left": "Patio",
-      "right": ""
+      "right": "",
+      "floor": 1
     }
   },
   {
@@ -129,7 +139,8 @@
       "up" : "",
       "down" : "Tranquility",
       "left": "",
-      "right": ""
+      "right": "",
+      "floor": 1
     }
   },
   {
@@ -141,7 +152,8 @@
       "up" : "",
       "down" : "",
       "left": "",
-      "right": "Tranquility"
+      "right": "Tranquility",
+      "floor": 1
     }
   }
 ]
