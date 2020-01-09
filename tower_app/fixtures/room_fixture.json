@@ -69,12 +69,12 @@
     "model": "tower_app.room",
     "pk": 5,
      "fields": {
-      "room_name": "Staircase",
-      "description": "We're Movin' on Up!!!",
-      "up" : "Board",
+      "room_name": "Patio",
+      "description": "It's time to relax and recharge. HP time!!!",
+      "up" : "",
       "down" : "",
-      "left": "Powder",
-      "right": "",
+      "left": "",
+      "right": "Tranquility",
       "floor": 1
     }
   },
@@ -147,12 +147,12 @@
     "model": "tower_app.room",
     "pk": 11,
      "fields": {
-      "room_name": "Patio",
-      "description": "It's time to relax and recharge. HP time!!!",
-      "up" : "",
+      "room_name": "Staircase",
+      "description": "We're Movin' on Up!!!",
+      "up" : "Board",
       "down" : "",
-      "left": "",
-      "right": "Tranquility",
+      "left": "Powder",
+      "right": "",
       "floor": 1
     }
   }

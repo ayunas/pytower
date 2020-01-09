@@ -30,6 +30,9 @@ def play(request, id):
     room_items = character.room.items()
     context = {"player": character, "rooms": rooms, "inventory": inventory, "items": room_items}
 
+    if character.room.room_name == "Staircase":
+        message="Move right to go upstairs"
+
     if request.method =="POST":
 
         form = MoveCharacter(request.POST)
