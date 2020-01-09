@@ -61,9 +61,9 @@ class Player(models.Model):
             
     def move(self,way=""):
         if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
-            self.room = Room.objects.get(id=self.room.id + 1)
-            print(f'{self.name} has moved to the {self.room.room_name}')
-            return self.room
+            stair = Room.objects.get(room_name='Staircase',floor=self.room.floor)
+            self.room = Room.objects.get(id=stair.id+1)
+            return f'Congratulations, {self.name} has moved to floor {self.room.floor}. Now in {self.room.room_name} Room'
       
         if way == 'up':
             if not self.room.up:
