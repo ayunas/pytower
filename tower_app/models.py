@@ -28,27 +28,13 @@ class Player(models.Model):
     # uuid = models.UUIDField(default=uuid.uuid4, unique=True)
     HP = models.IntegerField(default=10)
     name = models.CharField(max_length=64, default=f"Room {random.choice(string.ascii_letters)}")#attempting to generate a random room name using ascii_letters from string library and random.choice()
-    room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
+    room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True,default=Room.objects.get(room_name='Outside'))
+    # 
     # inventory = models.ForeignKey(Inventory)
     
     def inventory(self):
-        inventory = Item.objects.filter(playerID = self.room.id)
+        inventory = Item.objects.filter(playerID = self.id)
         return [i.item_name for i in inventory]
-
-    # def pickup(self,item):
-    #     print(self.room.id)
-    #     room_items = Item.objects.filter(roomID = self.room.id)
-    #     items = [ri.item_name for ri in room_items]
-        
-    #     if item in items:
-    #         i = Item.objects.filter(item_name = item)
-    #         i[0].roomID = 0
-    #         i[0].playerID = self.id
-    #         i[0].save()
-    #         i[0].persist()
-    #         return f'{self.name} picked up the {item} from {self.room}'
-    #     else:
-    #         return f"{item} is not in the room. can't pick it up."
 
     def pickup(self, item_name):
         items = Item.objects.filter(item_name=item_name, roomID=self.room.id)
@@ -62,22 +48,35 @@ class Player(models.Model):
 
         return f"{item} is not in the room. can't pick it up."
         
-    def drop_item(self,item):
-        pass
+    def drop_item(self,item_name):
+        items = Item.objects.filter(item_name = item_name, playerID=self.id)
+        
+        if items:
+            item = items[0]
+            item.roomID = self.room.id
+            item.playerID = 0
+            item.save()
+            return f'{self.name} dropped the {item} in {self.room}'
+        
+        return f"{item} is not in your inventory. You can't drop it."
 
-    def initialize(self,start):
+
+
+    def initialize(self):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
 
-        if start == 'y':
-            self.room = Room.objects.get(room_name = "Foyer")
-            print(f"{self.name}, you have now entered the {self.room.room_name}")
-            return f"{self.name}, you have now entered the {self.room.room_name}"
-        else:
-            print(f"{self.name}, when you're ready for Pytower, you may enter!")
-            return f"{self.name}, when you're ready for Pytower, you may enter!"
+        self.room = Room.objects.get(room_name = 'Outside')
 
-        print(self.room.description)
-        print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
+        # if start == 'y':
+        #     self.room = Room.objects.get(room_name = "Foyer")
+        #     print(f"{self.name}, you have now entered the {self.room.room_name}")
+        #     return f"{self.name}, you have now entered the {self.room.room_name}"
+        # else:
+        #     print(f"{self.name}, when you're ready for Pytower, you may enter!")
+        #     return f"{self.name}, when you're ready for Pytower, you may enter!"
+
+        # print(self.room.description)
+        # print('in room: ', self.room, 'up:',self.room.up, 'down:',self.room.down, 'left:',self.room.left, 'right:', self.room.right)
         return self.room
             
     def move(self,way=""):
