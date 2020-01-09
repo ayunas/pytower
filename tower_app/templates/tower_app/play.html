@@ -4,5 +4,9 @@
 <h1>Map placeholder</h1>
 <p>{{player.name}}</p>
 <p>{{player.room}}</p>
+<p>{{room.description}}</p>
 <p>{{player.HP}}</p>
+{% if message %}
+<p>{{message}}</p>
+{% endif%}
 {% endblock %}
