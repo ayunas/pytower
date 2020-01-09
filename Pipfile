@@ -10,6 +10,7 @@ django = "==3.0"
 gunicorn = "*"
 psycopg2 = "*"
 dj-database-url = "*"
+random-word = "*"
 
 [requires]
 python_version = "3.7"
