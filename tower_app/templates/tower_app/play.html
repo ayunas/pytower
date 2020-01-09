@@ -1,7 +1,23 @@
 {% extends 'tower_app/base.html'%}
 
 {% block content %}
-<h1>Map placeholder</h1>
+<h1>Map</h1>
+<div class="map-wrapper" style="display: grid; grid-template-columns: repeat(5, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 0px;grid-row-gap: 0px; width:70vw; height:50vw">
+<div class="1 room" style="grid-area: 1 / 2 / 2 / 3; background-color: red">{% if player.room.id == 10 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="2 room" style="grid-area: 2 / 1 / 3 / 2; background-color: orange"><p>2</p>{% if player.room.id == 1 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="3 room" style="grid-area: 2 / 2 / 3 / 3; background-color: yellow"><p>3</p>{% if player.room.id == 9 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="4 room" style="grid-area: 3 / 2 / 4 / 3; background-color: green"><p>4</p>{% if player.room.id == 8 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="5 room" style="grid-area: 3 / 3 / 4 / 4; background-color: blue"><p>5</p>{% if player.room.id == 7 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="6 room" style="grid-area: 4 / 2 / 5 / 3; background-color: purple"><p>6</p>{% if player.room.id == 1 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="7 room" style="grid-area: 4 / 3 / 5 / 4; background-color: violet"><p>7</p>{% if player.room.id == 2 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="8 room" style="grid-area: 4 / 4 / 5 / 5; background-color: brown"><p>8</p>{% if player.room.id == 3 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="9 room" style="grid-area: 4 / 5 / 5 / 6; background-color: black"><p>9</p>{% if player.room.id == 4 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="10 room" style="grid-area: 5 / 4 / 6 / 5; background-color: teal"><p>10</p>{% if player.room.id == 6 %}<p>{{player.room.room_name}}</p><i class="material-icons">directions_walk</i>{% endif %}</div>
+<div class="stair room" style="grid-area: 5 / 5 / 6 / 6; background-color: yellow"><p>stairs</p></div>
+<div class="outside room" style="grid-area: 4 / 1 / 5 / 2; background-color:green">{% if player.room is None%}
+    <i class="material-icons">directions_walk</i>
+    {%endif%}</div>
+</div>
 <p>{{player.name}}</p>
 <p>{{player.room}}</p>
 <p>{{room.description}}</p>
@@ -10,3 +26,4 @@
 <p>{{message}}</p>
 {% endif%}
 {% endblock %}
+

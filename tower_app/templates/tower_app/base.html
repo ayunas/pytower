@@ -1,7 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>PyTower</title>
+    <style type="text/css">
+      .body {box-sizing: border-box}
+      .movement-wrapper {width:15vw;}
+      .row {display: flex;}
+      .move {width: 5vw; background-color: blue; height: 5vw; border-radius: 50%; color: white;}
+      .right {margin-right: 5vw}
+      .vertical {margin-left: 5vw}
+      .action {border:none;}
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <div name="content">
@@ -10,22 +21,48 @@
     <div class="actions-wrapper">
       <form method="POST">
         {% csrf_token %}
-        <input type="submit" value="left" id="left"name="btn"/>
-        <input type="submit" value="right" id="right"name="btn"/>
-        <input type="submit" value="up" id="up"name="btn"/>
-        <input type="submit" value="down" id="down"name="btn"/>
-        <input type="submit" value="take" id="take"name="btn"/>
-        <input type="submit" value="drop" id="drop"name="btn"/>
-        <input type="submit" value="attack" id="attack"name="btn"/>
+        <div class="movement-wrapper">
+          <input
+            type="submit"
+            value="left"
+            id="left"
+            name="btn"
+            class="action move vertical"
+          />
+          <div class="row">
+            <input
+              type="submit"
+              value="right"
+              id="right"
+              name="btn"
+              class="action move right"
+            />
+            <input
+              type="submit"
+              value="up"
+              id="up"
+              name="btn"
+              class="action move"
+            />
+          </div>
+          <input
+            type="submit"
+            value="down"
+            id="down"
+            name="btn"
+            class="action move vertical"
+          />
+        </div>
+        <input type="submit" value="take" id="take" name="btn" class="action" />
+        <input type="submit" value="drop" id="drop" name="btn" class="action" />
+        <input
+          type="submit"
+          value="attack"
+          id="attack"
+          name="btn"
+          class="action"
+        />
       </form>
-      <button>Take Item</button>
-      <button>Drop Item</button>
-      <button>Attack</button>
-    </div>
-    <div class="player-info">
-      <p>{{player.name}}</p>
-      <p>{{player.room}}</p>
-      <p>{{player.HP}}</p>
     </div>
   </body>
 </html>

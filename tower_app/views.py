@@ -29,11 +29,18 @@ def index(request):
 #TODO: once model is done, change player so it's not hard coded, .ay need to change "id"
 def play(request, id):
     character=Player.objects.get(id=id)
-    room = Room.objects.get(room_name=character.room)
+    remainder=character.room.id % 10
+    print(remainder)
+    character.room.id=remainder
+    all_rooms = Room.objects.all()
+    rooms={}
+    for room in all_rooms:
+        rooms[room.id]=room.room_name
+    print(rooms)
     #print("Play CHARACTER", character)
     #print("Play ID", id)
     #print("PLAY ROOM", character.room)
-    context = {"player": character, "room": room}
+    context = {"player": character, "rooms": rooms}
     if request.method =="POST":
     #    print("request.POST", request.POST)
         form = MoveCharacter(request.POST)
