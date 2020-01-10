@@ -25,24 +25,26 @@ def index(request):
 
 
 def play(request, id):
-    print("REFRESH")
+    #print("REFRESH")
     character=Player.objects.get(id=id)
+    print(f"character.floor: {character.floor}")
+
     inventory=character.inventory()
-    poison = Item.objects.get(item_name="Rat Poison")
-    print("poison room id", poison.roomID)
     if len(inventory) == 0:
         inventory=None
-    rooms = Room.objects.filter(floor=character.room.floor)
-    #room_items=Item.objects.all()
+
     room_items = character.room.items()
-    print(f"player current room ID: {character.room.id}")
+    #print(f"player current room ID: {character.room.id}")
     if len(room_items) == 0:
         room_items = None
-    else:
-        
-        #print(f"ROOM_ITEMS")
-        for item in room_items:
-            print(f"item_name: {item.item_name}, roomID: {item.roomID}")
+
+    rooms = Room.objects.filter(floor=character.room.floor)
+    if character.room.floor>1:
+        minus = (character.room.floor-1) * 11
+        print("MINUS", minus)
+        for room in rooms:
+            room.id=room.id-minus
+
     message=None
     #print("ROOM", character.room.room_name)
 
@@ -54,15 +56,16 @@ def play(request, id):
             #print("form is valid")
             action=form.cleaned_data.get("btn")
             #print("ACTION", action)
-            #TODO: complete these once models are finished
-            if action.startswith("t"):
+            #TODO: complete drop function models
+            if action.startswith("take"):
                 #print("TAKE")
                 item_name=action[5:]
                 #print("ITEM", item_name)
                 message=character.pickup(item_name)
                 return HttpResponseRedirect(f'/play/{character.id}')
-            elif action=="drop":
-                pass
+            elif action.startseith("drop"):
+                item_name=action[5:]
+                message=character.drop(item_name)
             elif action=="attack":
                 pass
             
