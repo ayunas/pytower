@@ -7,4 +7,11 @@ urlpatterns = [
     path('test',views.test,name='test'),
     url(r'^login/$', views.loginPost, name='login'),
     url(r'^register/$', views.registerPost, name='signup'),
+    path('',views.index,name='index'),
+    path('play/<slug:id>', views.play, name='play')
 ]
+
+
+
+
+

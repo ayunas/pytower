@@ -1,0 +1,19 @@
+@import "./mixins";
+
+.tower-button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  color: tower-color("blue-charcoal");
+  background: tower-color("orange-peel");
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+
+  @include cap-variable-widths(
+    (
+      border-radius: 10vw,
+      padding: 0.5vw 3vw
+    )
+  );
+}
