@@ -67,7 +67,7 @@
     </div>
   </section>
 
-  <div class="right-content">
+  <section class="right-content">
     <div class="player-info">
       <p>Name: {{player.name}}</p>
       <p>HP: {{player.hp}}</p>
@@ -76,12 +76,11 @@
       {% for item in inventory%}
       <p>{{item.item_name}}</p>
       {% endfor %} {% endif%}
-      <p>Room: {{player.room.room_name}}</p>
-      <span>roomID: {{player.room.id}}</span>
       <p>Description: {{player.room.description}}</p>
-      {% if items %} {% for item in items%}
-      <p>Item in Room:{{item.item_name}}</p>
-      <span>Item room id: {{item.roomID}}</span>
+      {% if items %} 
+      <p>Items: </p>
+      {% for item in items%}
+      <span>{{item.item_name}}</span>
       {% endfor %} {% endif %} {% if message %}
       <p>Message: {{message}}</p>
       {% endif%}
@@ -121,9 +120,7 @@
             class="action move vertical"
           />
         </div>
-        {% if items %}
-        <p>Pick Up</p>
-        {% endif %}
+
         {% for item in items%}
         <input
           type="submit"
@@ -134,7 +131,7 @@
         />
         {% endfor %}
         {% for item in inventory %}
-        <input type="submit" value="drop" id="{{ item.item_name }}" name="btn" class="action" />
+        <input type="submit" value="drop {{ item.item_name }}" id="{{ item.id }}" name="btn" class="action" />
         {% endfor %}
         <!-- <input
           type="submit"
@@ -146,6 +143,6 @@
       </form>
       <p>{{ form.errors.as_text }}</p>
     </div>
-  </div>
+  </section>
   {% endblock %}
 </div>
