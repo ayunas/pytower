@@ -5,62 +5,63 @@
     style="display: grid; grid-template-columns: repeat(5, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 0px;grid-row-gap: 0px; width:65vw; max-width:910px; height:50vw; max-height:700px; background-color: rgb(50, 50, 50); padding:2vw"
   >
     <div class="1 room" style="grid-area: 1 / 2 / 2 / 3;">
-      {% if player.room.id == 10 %}
+      
+      {% if player.room.id in rm10ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="2 room" style="grid-area: 2 / 1 / 3 / 2; ">
-      {% if player.room.id == 11 %}
+      {% if player.room.id in rm5ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="3 room" style="grid-area: 2 / 2 / 3 / 3; ">
-      {% if player.room.id == 9 %}
+      {% if player.room.id in rm9ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="4 room" style="grid-area: 3 / 2 / 4 / 3; ">
-      {% if player.room.id == 8 %}
+      {% if player.room.id in rm8ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="5 room" style="grid-area: 3 / 3 / 4 / 4; ">
-      {% if player.room.id == 7 %}
+      {% if player.room.id in rm7ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="6 room" style="grid-area: 4 / 2 / 5 / 3;">
-      {% if player.room.id == 1 %}
+      {% if player.room.id in rm1ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="7 room" style="grid-area: 4 / 3 / 5 / 4; ">
-      {% if player.room.id == 2 %}
+      {% if player.room.id in rm2ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="8 room" style="grid-area: 4 / 4 / 5 / 5; ">
-      {% if player.room.id == 3 %}
+      {% if player.room.id in rm3ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="9 room" style="grid-area: 4 / 5 / 5 / 6; ">
-      {% if player.room.id == 4 %}
+      {% if player.room.id in rm4ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="10 room" style="grid-area: 5 / 4 / 6 / 5; ">
-      {% if player.room.id == 6 %}
+      {% if player.room.id in rm6ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="stair room" style="grid-area: 5 / 5 / 6 / 6; ">
-      {% if player.room.id == 5 %}
+      {% if player.room.id in stairids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="outside room" style="grid-area: 4 / 1 / 5 / 2; ">
-      {% if player.room.id == 0%}
+      {% if player.room.id in outsideids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i> {%endif%}
     </div>

@@ -104,6 +104,7 @@ class Player(models.Model):
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
             self.room = Room.objects.get(id=stair.id + 1)
             self.hp = self.hp + 10+self.room.floor
+            self.save()
            
             room_enemies = Enemy.objects.filter(roomID=self.room.id)
             for enemy in room_enemies:
@@ -119,6 +120,7 @@ class Player(models.Model):
                 return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name=self.room.up)
+                self.save()
                 # print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                 #       'right:', self.room.right)
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
@@ -138,6 +140,7 @@ class Player(models.Model):
                 #     self.room = Room.objects.get(id = 11)
                 # else:
                 self.room = Room.objects.get(room_name=self.room.down)
+                self.save()
                 self.room.mapping()
                 # print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                 #       'right:', self.room.right)
@@ -155,6 +158,7 @@ class Player(models.Model):
                 return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name=self.room.left)
+                self.save()
                 self.room.mapping()
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
                 for enemy in room_enemies:
@@ -170,6 +174,7 @@ class Player(models.Model):
                 return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name=self.room.right)
+                self.save()
                 self.room.mapping()
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
                 for enemy in room_enemies:
