@@ -13,7 +13,7 @@ enemies = ['Giant Scorpion Spider',
            'Goblin']
 
 
-def enemy_gen(enemies, floor_num):
+def enemy_gen(enemies, floor_num, pk):
     # i = 101
     e = []
     start = floor_num + 10 * (floor_num - 1)
@@ -22,7 +22,7 @@ def enemy_gen(enemies, floor_num):
         enemy = {}
         enemy_name = choice(enemies)
         enemy['model'] = "tower_app.enemy"
-        enemy["pk"] = i
+        enemy["pk"] = pk
         enemy["fields"] = {
             # 'id' : 1,
             'enemy_name': enemy_name,
@@ -31,7 +31,7 @@ def enemy_gen(enemies, floor_num):
             'description': f"{enemy_name} fights",
             'roomID': randint(start, start + 10)
         }
-        # print(e)
+        pk += 1
         e.append(enemy)
     return e
 
@@ -43,9 +43,11 @@ def enemy_gen(enemies, floor_num):
 def floor_spawn(enemies):
     floor_num = 1
     total_enemies = []
+    pk = 1
 
     while floor_num <= 10:
-        floor_enemies = enemy_gen(enemies, floor_num)
+        floor_enemies = enemy_gen(enemies, floor_num,pk)
+        pk = pk + len(floor_enemies)
         total_enemies = total_enemies + floor_enemies
         floor_num = floor_num + 1
     return total_enemies

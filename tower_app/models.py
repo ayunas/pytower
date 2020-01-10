@@ -17,6 +17,10 @@ class Room(models.Model):
         # return [i.item_name for i in items]
         return items
 
+    def enemies(self):
+        enemies = Enemy.objects.filter(roomID__gte=1, roomID__lte=11)
+        return enemies
+
     def __str__(self):
         return self.room_name
 
@@ -63,6 +67,7 @@ class Player(models.Model):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest
         # on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
         self.room = Room.objects.get(room_name='Outside')
+        self.hp = 10
         return self.room
 
     def move(self, way=""):
@@ -161,6 +166,9 @@ class Enemy(models.Model):
     strength = models.IntegerField(default=random.randint(1, 15))
     description = models.CharField(max_length=500, default='enemy description')
 
+    def __str__(self):
+        return self.enemy_name
+
     # def spawn_enemies(self):
     #
     #     rooms = Room.objects.all()
@@ -194,12 +202,16 @@ class Enemy(models.Model):
         # if len(enemies_in_room) > 0:
         #     # sleep(5)
         #     for enemy in enemies_in_room:
+        print('An ememy attacks!')
+        print(f'{player.hp} HP.  {self.strength} enemy strength.')
         player.hp = player.hp - self.strength
         player.save()
         if player.hp <= 0:
             player.initialize()
             player.save()
+            print(f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.')
             return f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.'
+        print(f'{player.name}, You have been hit and now your HP is {player.hp}')
         return f'{player.name}, You have been hit and now your HP is {player.hp}'
 
     def player_strikes_enemy(self, player):
