@@ -1,6 +1,6 @@
 # Mac
 .DS_Store
-.sqlite3
+*.sqlite3
 .idea/*
 
 # Byte-compiled / optimized / DLL files
