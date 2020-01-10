@@ -2,7 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b6e505b-8cd1-48c6-acf5-33850b951ef7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/itemgen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/itemgen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tower_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/roomgen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/roomgen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +122,7 @@
       <workItem from="1578608861779" duration="3207000" />
       <workItem from="1578619771727" duration="432000" />
       <workItem from="1578626203760" duration="63000" />
-      <workItem from="1578626278703" duration="7873000" />
+      <workItem from="1578626278703" duration="9664000" />
     </task>
     <servers />
   </component>
@@ -158,16 +165,6 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="578" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578598146698" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tower_app/models.py</url>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS24_BW_MUD$enemygen.coverage" NAME="enemygen Coverage Results" MODIFIED="1578631763372" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tower_app" />

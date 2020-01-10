@@ -3,7 +3,7 @@ import string, random
 
 
 class Room(models.Model):
-    ### Field Columns in Room Table ###
+    # Field Columns in Room Table ###
     room_name = models.CharField(max_length=64)
     description = models.CharField(max_length=500, default=f"No Room description'")
     up = models.CharField(max_length=64, default="")
@@ -24,7 +24,8 @@ class Room(models.Model):
 class Player(models.Model):
     # uuid = models.UUIDField(default=uuid.uuid4, unique=True)
     name = models.CharField(max_length=64,
-                            default=f"Room {random.choice(string.ascii_letters)}")  # attempting to generate a random room name using ascii_letters from string library and random.choice()
+                            default=f"Room {random.choice(string.ascii_letters)}")  # attempting to generate a random
+    # room name using ascii_letters from string library and random.choice()
     hp = models.IntegerField(default=10)
     room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
 
@@ -45,7 +46,7 @@ class Player(models.Model):
             item.save()
             return f'{self.name} picked up the {item} from {self.room}'
 
-        return f"{item} is not in the room. can't pick it up."
+        return f"{item_name} is not in the room. can't pick it up."
 
     def drop(self, item_name):
         items = Item.objects.filter(item_name=item_name, playerID=self.id)
@@ -57,7 +58,7 @@ class Player(models.Model):
             item.save()
             return f'{self.name} dropped the {item} in {self.room}'
 
-        return f"{item} is not in your inventory. You can't drop it."
+        return f"{item_name} is not in your inventory. You can't drop it."
 
     def initialize(self):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest
@@ -159,7 +160,7 @@ class Enemy(models.Model):
     roomID = models.IntegerField(default=random.randint(1, 110))
     hp = models.IntegerField(default=random.randint(1, 15))
     strength = models.IntegerField(default=random.randint(1, 15))
-    description = models.CharField(max_length=500, default='enemy description')
+    description = models.CharField(max_length=500, default='Enemy description')
 
     # def spawn_enemies(self):
     #
