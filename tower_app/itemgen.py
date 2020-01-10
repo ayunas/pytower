@@ -1,133 +1,53 @@
 import json,random,requests
 
-items = ['scimitar','chain mail',]
+weapons = ['scimitar','short sword', 'crystal sword', 'falchion', 'war sword', 'broad sword', 'dimensional blade', 'ancient sword', 'Bronze Axe','Bows','Crossbows','Gold Dagger','Wooken Javelin','Silver Mace','Executioner Sword', 'Polearm','Scepter','Piercing Spear','Stave','Mystifying Wand']
 
-def itemgen():
+armors = ['chain mail','quilted armor', 'leather armor', 'studded leather', 'ring mail', 'breast plate', 'splint mail', 'full plate mail', 'buckler', 'small shield', 'bone shield', 'kite shield', 'gothic shield', 'ancient armor']
+
+def weapongen(weapons):
+    w = []
+    for i in range(50):
+        weapon = {}
+        weapon_name = random.choice(weapons)
+        weapon['model'] = "tower_app.item"
+        weapon["pk"] = i+1
+        weapon["fields"] = {
+            # 'id' : 1,
+            'item_name': weapon_name,
+            'strength':random.randint(1,10),
+            'item_type': 'weapon',
+            'description': f"{weapon_name} attacks",
+            'playerID': None,
+            'roomID' : random.randint(1,110)
+        }
+        w.append(weapon)
+    return w
+
+def armorgen(armors):
+    i = 51
+    a = []
+    while i < 100:
+        armor = {}
+        armor_name = random.choice(armors)
+        armor['model'] = "tower_app.item"
+        armor["pk"] = i
+        armor["fields"] = {
+            # 'id' : 1,
+            'item_name': armor_name,
+            'strength':random.randint(1,10),
+            'item_type': 'armor',
+            'description': f"{armor_name} protects",
+            'playerID': None,
+            'roomID' : random.randint(1,110)
+        }
+        a.append(armor)
+        i = i +1
+    return a
+
+with open('./fixtures/weapon_fixture.json', 'w') as file:
+    json.dump(weapongen(weapons),file,indent=2)
 
 
+with open('./fixtures/armor_fixture.json', 'w') as file:
+    json.dump(armorgen(armors),file,indent=2)
 
-
-
-# words = requests.get("http://svnweb.freebsd.org/csrg/share/dict/words?view=co&content-type=text/plain").content.splitlines()
-
-# names = []
-# descriptions = []
-
-# for i in range(100):
-#     random_word = str(random.choice(words)).replace("b\'",'').capitalize()
-#     names.append(random_word)
-#     descriptions.append(f'Description for the {random_word} room ')
-
-# names = ['Emerald','Diamond','Ruby','Purgatory','Gully','Lair','Dungeon','Cabbage Patch','Tea','Staircase']
-# descriptions = ['description1', 'description2', 'desription3']
-
-# def stairs(pk,floor):
-#     stairs = {}
-#     stairs['model'] = "tower_app.room"
-#     stairs["pk"] = pk
-#     stairs["fields"] = {
-#         'id' : pk,
-#         'room_name': 'Staircase',
-#         'description': "Movin' On Up!!!",
-#         'up': '',
-#         'down': '',
-#         'left': '',
-#         'right': '',
-#         'floor':floor
-#     }
-#     stairs["fields"]['up'] = names[3]
-#     stairs['fields']['left'] = names[5]
-#     stairs['fields']['right'] = names[11]
-#     return stairs
-
-# def treasure():
-#     treasure = {}
-#     treasure['model'] = "tower_app.room"
-#     treasure["pk"] = 110
-#     treasure["fields"] = {
-#         'id' : 110,
-#         'room_name': 'Treasure',
-#         'description': "Made it to the top! Remember though, Money isn't everything",
-#         'up': '',
-#         'down': '',
-#         'left': '',
-#         'right': '',
-#         'floor': 110
-#     }
-    
-#     return treasure
-
-def roomgen(names,descriptions):
-    pk = 12
-    rooms = []
-    floor = 2
-
-    while floor <= 10:
-        for i in range(10):
-            room = {}
-            room['model'] = "tower_app.room"
-            room["pk"] = pk
-            room["fields"] = {
-                'id' : pk,
-                'room_name': names[i],
-                'description': descriptions[i],
-                'up': '',
-                'down': '',
-                'left': '',
-                'right': '',
-                'floor':floor
-            }
-            if i == 0:
-                room["fields"]['up'] = names[7]
-                room['fields']['right'] = names[1]
-            if i == 1:
-                room["fields"]['up'] = names[6]
-                room['fields']['left'] = names[0]
-                room['fields']['right'] = names[2]
-            if i == 2:
-                room["fields"]['down'] = names[5]
-                room['fields']['left'] = names[1]
-                room['fields']['right'] = names[3]
-            if i == 3:
-                room["fields"]['down'] = "Staircase"
-                room['fields']['left'] = names[2]
-            if i == 4:
-                room['fields']['right'] = names[8]
-            if i == 5:
-                room["fields"]['up'] = names[2]
-                room['fields']['right'] = "Staircase"
-            if i == 6:
-                room["fields"]['down'] = names[1]
-                room['fields']['left'] = names[7]
-            if i == 7:
-                room["fields"]['up'] = names[8]
-                room['fields']['down'] = names[0]
-                room['fields']['right'] = names[6]
-            if i == 8:
-                room["fields"]['up'] = names[9]
-                room['fields']['down'] = names[7]
-                room['fields']['left'] = names[4]
-            if i == 9:
-                room['fields']['down'] = names[8]
-            # if i == 10:
-                # room["fields"]['up'] = names[3]
-                # room['fields']['left'] = names[5]
-                # room['fields']['right'] = names[11]
-            rooms.append(room)
-            pk = pk + 1
-        if floor == 10:
-            rooms.append(treasure())
-        else:
-            rooms.append(stairs(pk,floor))
-            pk = pk + 1
-        floor = floor + 1
-        # del names[:9]
-        # del descriptions[:9]
-        names = names[10:]
-        descriptions = descriptions[10:]
-    return rooms
-
-roomgen(names,descriptions)
-
-with open('./fixtures/roomgen_fixture.json', 'w') as file:
-    json.dump(roomgen(names,descriptions),file,indent=2)
