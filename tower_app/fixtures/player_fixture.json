@@ -5,7 +5,8 @@
         "fields": {
             "name": "Warrior",
             "hp": 10,
-            "room": null
+            "room": null,
+            "strength":18
           }
     },
     {
@@ -14,7 +15,8 @@
         "fields": {
             "name": "Jedi",
             "hp": 15,
-            "room": null
+            "room": null,
+            "strength": 10
           }
     },
     {
@@ -22,8 +24,9 @@
         "pk": 3,
         "fields": {
             "name": "Barbarian",
-            "hp": 20,
-            "room": null
+            "hp": 7,
+            "room": null,
+            "strength": 12
           }
     },
     {
@@ -32,7 +35,8 @@
         "fields": {
             "name": "Prince",
             "hp": 8,
-            "room": null
+            "room": null,
+            "strength":6
           }
     },
     {
@@ -41,7 +45,19 @@
         "fields": {
             "name": "Queen of Sheeba",
             "hp": 30,
-            "room": null
+            "room": null,
+            "strength":11
+          }
+    },
+    {
+        "model": "tower_app.player",
+        "pk": 6,
+        "fields": {
+            "name": "Wise Man",
+            "hp": 27,
+            "room": null,
+            "strength":15
           }
     }
+
 ]

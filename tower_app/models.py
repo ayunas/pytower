@@ -15,13 +15,21 @@ class Room(models.Model):
     def items(self):
         items = Item.objects.filter(roomID=self.id)
         # return [i.item_name for i in items]
-        return items
+        return list(items)
 
     def enemies(self):
         # enemies = Enemy.objects.filter(roomID__gte=1, roomID__lte=11)
         enemies = Enemy.objects.filter(roomID = self.id)
         
         return enemies
+    
+    def mapping(self):
+        mapping = {'current room' : self.room_name, 'up' : None if not self.up else self.up,
+        'down' : None if not self.down else self.down,
+        'left' : None if not self.left else self.left,
+        'right' : None if not self.right else self.right,
+        }
+        return mapping
 
     def __str__(self):
         return self.room_name
@@ -32,6 +40,7 @@ class Player(models.Model):
                             default=f"Room {random.choice(string.ascii_letters)}")  # attempting to generate a random room name using ascii_letters from string library and random.choice()
     hp = models.IntegerField(default=10)
     room = models.ForeignKey(Room, on_delete=models.CASCADE, null=True)
+    strength = models.IntegerField(default=random.randint(1, 30))
 
     # default=Room.objects.get(room_name='Outside')
     # inventory = models.ForeignKey(Inventory)
@@ -42,13 +51,24 @@ class Player(models.Model):
 
     def pickup(self, item_name):
         items = Item.objects.filter(item_name=item_name, roomID=self.room.id)
-
         if items:
             item = items[0]
             item.roomID = 0
             item.playerID = self.id
-            item.save()
-            return f'{self.name} picked up the {item} from {self.room}'
+            if item.item_type == 'armor':
+                self.hp = self.hp + item.strength
+                item.save()
+                self.save()
+                return f'{self.name} picked up the {item} from {self.room}. Increased HP: {self.hp}'
+            if item.item_type == 'weapon':
+                self.strength = self.strength + item.strength
+                item.save()
+                self.save()
+                return f'{self.name} picked up the {item} from {self.room}. Increased strength: {self.strength}'
+
+            
+        
+            return f'{self.name} picked up the {item} from {self.room}. Increased HP: {self.hp}'
 
         return f"{item} is not in the room. can't pick it up."
 
@@ -57,10 +77,17 @@ class Player(models.Model):
 
         if items:
             item = items[0]
+            if item.item_type == 'weapon':
+                self.strength = self.strength - item.strength
+            if item.item_type == 'armor':
+                if self.hp - item.strength <= 0:
+                    return f"cannot drop {item.item_name}. You're HP is only {self.hp}."
+                self.hp = self.hp - item.strength
             item.roomID = self.room.id
             item.playerID = 0
             item.save()
-            return f'{self.name} dropped the {item} in {self.room}'
+            self.save()
+            return f'{self.name} dropped the {item} in {self.room}.  reduced HP : {self.hp}'
 
         return f"{item} is not in your inventory. You can't drop it."
 
@@ -68,28 +95,39 @@ class Player(models.Model):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest
         # on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
         self.room = Room.objects.get(room_name='Outside')
-        self.hp = 10
-        return self.room
+        self.hp = random.randint(10,30)
+        return {'player':self.name, 'HP':self.hp, 'strength':self.strength, 'room':self.room.room_name}
 
     def move(self, way=""):
+        
         if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
             self.room = Room.objects.get(id=stair.id + 1)
+            self.hp = self.hp + 10+self.room.floor
+           
             room_enemies = Enemy.objects.filter(roomID=self.room.id)
             for enemy in room_enemies:
-                enemy.enemy_strikes_player(self)
-            return f'Congratulations, {self.name} has moved to floor {self.room.floor}. Now in {self.room.room_name} Room.'
+                strike = random.randint(0,1)
+                if strike:
+                    print(f"{enemy.enemy_name} is attacking you!")
+                    enemy.enemy_strikes_player(self)
+        
+            return f'Congratulations, {self.name} has moved to floor {self.room.floor}. {self.name} HP increased to {self.hp}.  Now in {self.room.room_name} Room.'
 
         if way == 'up':
             if not self.room.up:
                 return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name=self.room.up)
-                print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
-                      'right:', self.room.right)
+                # print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
+                #       'right:', self.room.right)
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
                 for enemy in room_enemies:
-                    enemy.enemy_strikes_player(self)
+                    strike = random.randint(0,1)
+                    if strike:
+                        print(f"{enemy.enemy_name} is attacking you!")
+                        enemy.enemy_strikes_player(self)
+                print('room items',self.room.items())
                 return self.room
 
         elif way == 'down':
@@ -100,11 +138,16 @@ class Player(models.Model):
                 #     self.room = Room.objects.get(id = 11)
                 # else:
                 self.room = Room.objects.get(room_name=self.room.down)
-                print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
-                      'right:', self.room.right)
+                self.room.mapping()
+                # print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
+                #       'right:', self.room.right)
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
                 for enemy in room_enemies:
-                    enemy.enemy_strikes_player(self)
+                    strike = random.randint(0,1)
+                    if strike:
+                        print(f"{enemy.enemy_name} is attacking you!")
+                        enemy.enemy_strikes_player(self)
+                print('room items',self.room.items())
                 return self.room
 
         elif way == 'left':
@@ -112,11 +155,14 @@ class Player(models.Model):
                 return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name=self.room.left)
-                print('in room-', self.room, 'up-', self.room.up, 'down-', self.room.down, 'left-', self.room.left,
-                      'right-', self.room.right)
+                self.room.mapping()
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
                 for enemy in room_enemies:
-                    enemy.enemy_strikes_player(self)
+                    strike = random.randint(0,1)
+                    if strike:
+                        print(f"{enemy.enemy_name} is attacking you!")
+                        enemy.enemy_strikes_player(self)
+                print('room items',self.room.items())
                 return self.room
 
         elif way == 'right':
@@ -124,20 +170,23 @@ class Player(models.Model):
                 return 'you cannot go that way. no rooms there...'
             else:
                 self.room = Room.objects.get(room_name=self.room.right)
-                print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
-                      'right:', self.room.right)
+                self.room.mapping()
                 room_enemies = Enemy.objects.filter(roomID=self.room.id)
                 for enemy in room_enemies:
-                    enemy.enemy_strikes_player(self)
+                    strike = random.randint(0,1)
+                    if strike:
+                        print(f"{enemy.enemy_name} is attacking you!")
+                        enemy.enemy_strikes_player(self)
+                print('room items',self.room.items())
                 return self.room
         else:
             return 'you have entered an invalid direction'
 
     def __str__(self):
-        if not self.room:
-            return f"{self.name} is outside."
-        else:
-            return f"{self.name} in {self.room}"
+        # if not self.room:
+        #     return f"{self.name} is outside."
+        # else:
+        return self.name
 
 
 class Item(models.Model):
@@ -153,15 +202,9 @@ class Item(models.Model):
 
 
 class Enemy(models.Model):
-    # def random_string(self):
-    #     return str(randint(1, 21))
-
+ 
     enemy_name = models.CharField(max_length=64)
-    # # room = models.ForeignKey(Room,
-    #                          on_delete=models.CASCADE,
-    #                          blank=True,
-    #                          null=True)
-    # enemy_type = models.CharField(max_length=64)
+    # # room = models.ForeignKey(Room,on_delete=models.CASCADE,blank=True,null=True)
     roomID = models.IntegerField(default=random.randint(1, 110))
     hp = models.IntegerField(default=random.randint(1, 15))
     strength = models.IntegerField(default=random.randint(1, 15))
@@ -170,47 +213,15 @@ class Enemy(models.Model):
     def __str__(self):
         return self.enemy_name
 
-    # def spawn_enemies(self):
-    #
-    #     rooms = Room.objects.all()
-    #     room_1 = choice(rooms)
-    #     room_2 = choice(rooms)
-    #     enemy_1 = choice(self.enemy_list)
-    #     enemy_2 = choice(self.enemy_list)
-    #
-    #     spawn_enemy1 = Enemy(name=enemy_1)
-    #     spawn_enemy2 = Enemy(name=enemy_2)
-    #
-    #     spawn_enemy1.save()
-    #     spawn_enemy2.save()
-    #
-    #     spawn_enemy1.location = room_1.id
-    #     spawn_enemy2.location = room_2.id
-    #
-    #     spawn_enemy1.save()
-    #     spawn_enemy2.save()
-    #     # spawned_enemies = sample(self.enemy_list, 2)
-    #     # spawned_enemies[0] = choice(self.location)
-    #     # spawned_enemies[1] = choice(self.location)
-    #
-    #     #     return f'{self.name}, Beware of your enemies!, {self.location.room_name}'
-    #     # else:
-    #     #     return f'{self.name}, Are you afraid to fight?'
-
     def enemy_strikes_player(self, player):
+        
         player_room = player.room.id
-        # enemies_in_room = Enemy.objects.filter(roomID=player_room)
-        # if len(enemies_in_room) > 0:
-        #     # sleep(5)
-        #     for enemy in enemies_in_room:
-        print('An ememy attacks!')
-        print(f'{player.hp} HP.  {self.strength} enemy strength.')
+        print(f'{player.name} HP: {player.hp}, {self.enemy_name} strength: {self.strength}')
         player.hp = player.hp - self.strength
         player.save()
         if player.hp <= 0:
             player.initialize()
             player.save()
-            print(f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.')
             return f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.'
         print(f'{player.name}, You have been hit and now your HP is {player.hp}')
         return f'{player.name}, You have been hit and now your HP is {player.hp}'
