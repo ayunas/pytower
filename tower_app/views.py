@@ -41,8 +41,9 @@ def get_context(player_id, message=None):
     if len(room_items) == 0:
         room_items = None
     #TODO: change this later
-    #rooms = Room.objects.filter(floor=character.room.floor)
-    rooms = Room.objects.filter(floor=1)
+    print("Floor", player.room.floor)
+    rooms = Room.objects.filter(floor=player.room.floor)
+    #rooms = Room.objects.filter(floor=1)
     #if character.room.floor>1:
     #    minus = (character.room.floor-1) * 11
     #    print("MINUS", minus)
@@ -92,6 +93,22 @@ def play(request, id):
 
     print(f"FINAL CONTEXT ROOM: ", context["player"].room.room_name)
 #    player ={"name": "Player1", "location": "Foyer"}
+    context["rm10ids"] = [10,21,32,43,54,65,76,87,98,109]
+    context["rm9ids"] = [9, 20,31,42,53,64,75,86,97,108]
+    context["rm8ids"] = [8,19,30,41,52,63,74,85,96,107]
+    context["rm7ids"] = [7,18,29,40,51,62,73,84,95,106]
+    context["rm6ids"] = [6,17,28,39,50,61,72,83,94,105]
+    context["rm5ids"] = [5,16,27,38,49,60,71,82,93,104]
+    context["rm4ids"] = [4,15,26,37,48,59,70,81,92,103]
+    context["rm3ids"] = [3,14,25,36,47,58,69,80,91,102]
+    context["rm2ids"] = [2,13,24,35,46,57,68,79,90,101]
+    context["rm1ids"] = [1,12,23,34,45,56,67,78,89,100]
+    context["stairids"] = [11,22,33,44,55,66,77,88,99],
+    context["outsideids"]= [0]
+    
+    #print(f"room_ids1: {all_room_ids[1]}")
+    #context["room1_ids"]=all_room_ids[10]
+    #print("context ids", context["all_room_ids"][1])
     return render(request, "tower_app/play.html", context)
 
 def loginView(request):
