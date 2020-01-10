@@ -12,3 +12,8 @@ class UserRegistrationForm(forms.Form):
         max_length = 32,
         widget = forms.PasswordInput()
     )
+class CreateCharacter(forms.Form):
+    name = forms.CharField(label="Name", max_length=100)
+
+class MoveCharacter(forms.Form):
+    btn = forms.CharField()
