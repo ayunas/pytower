@@ -127,7 +127,7 @@ class Player(models.Model):
                     if strike:
                         print(f"{enemy.enemy_name} is attacking you!")
                         enemy.enemy_strikes_player(self)
-                print('room items',self.room.items())
+                print('PLAYER NEW room ',self.room)
                 return self.room
 
         elif way == 'down':

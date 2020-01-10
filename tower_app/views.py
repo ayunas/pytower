@@ -53,7 +53,7 @@ def get_context(player_id, message=None):
 def play(request, id):
     player_id=id
     context=get_context(player_id)
-    print("Context", context)
+    print("Context", context["player"].room.room_name)
     print("REFRESH")
     if request.method =="POST":
         #print("method is post")
@@ -61,7 +61,7 @@ def play(request, id):
         if form.is_valid():
             #print("form is valid")
             action=form.cleaned_data.get("btn")
-            #print("ACTION", action)
+            print("ACTION", action)
             #TODO: complete drop function models
             if action.startswith("take"):
                 #print("TAKE")
@@ -70,7 +70,7 @@ def play(request, id):
                 message=context["player"].pickup(item_name)
                 context=get_context(player_id, message)
                 print("Context", context)
-                #return HttpResponseRedirect(f'/play/{character.id}')
+                return HttpResponseRedirect(f'/play/{context["player"].id}')
             elif action.startswith("drop"):
                 item_name=action[5:]
                 message=context["player"].drop(item_name)
@@ -84,12 +84,13 @@ def play(request, id):
                 print("move")
                 message=context["player"].move(action)
                 context=get_context(player_id, message)
-                print("Context", context)
-                #return HttpResponseRedirect(f'/play/{character.id}')
+                print("Context MOVE", context["player"].room.room_name)
+                #return HttpResponseRedirect(f'/play/{context["player"].id}')
+                #return render(request, "tower_app/play.html", context)
         else:
             form = MoveCharacter()
 
-    #print(f"inventory: {inventory} \nroom_items:{room_items}\nmessage: {message}")
+    print(f"FINAL CONTEXT ROOM: ", context["player"].room.room_name)
 #    player ={"name": "Player1", "location": "Foyer"}
     return render(request, "tower_app/play.html", context)
 
