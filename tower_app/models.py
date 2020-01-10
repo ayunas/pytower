@@ -135,9 +135,7 @@ class Enemy(models.Model):
     def random_string(self):
         return str(randint(1, 21))
 
-
-
-    name = models.CharField(max_length=64)
+    enemy_name = models.CharField(max_length=64)
     location = models.ForeignKey(Room,
                                  on_delete=models.CASCADE,
                                  blank=True,
@@ -146,32 +144,32 @@ class Enemy(models.Model):
     HP = models.CharField(default=random_string)
     strength = models.CharField(default=random_string)
 
-    def spawn_enemies(self):
-
-        rooms = Room.objects.all()
-        room_1 = choice(rooms)
-        room_2 = choice(rooms)
-        enemy_1 = choice(self.enemy_list)
-        enemy_2 = choice(self.enemy_list)
-
-        spawn_enemy1 = Enemy(name=enemy_1)
-        spawn_enemy2 = Enemy(name=enemy_2)
-
-        spawn_enemy1.save()
-        spawn_enemy2.save()
-
-        spawn_enemy1.location = room_1.id
-        spawn_enemy2.location = room_2.id
-
-        spawn_enemy1.save()
-        spawn_enemy2.save()
-        # spawned_enemies = sample(self.enemy_list, 2)
-        # spawned_enemies[0] = choice(self.location)
-        # spawned_enemies[1] = choice(self.location)
-
-        #     return f'{self.name}, Beware of your enemies!, {self.location.room_name}'
-        # else:
-        #     return f'{self.name}, Are you afraid to fight?'
+    # def spawn_enemies(self):
+    #
+    #     rooms = Room.objects.all()
+    #     room_1 = choice(rooms)
+    #     room_2 = choice(rooms)
+    #     enemy_1 = choice(self.enemy_list)
+    #     enemy_2 = choice(self.enemy_list)
+    #
+    #     spawn_enemy1 = Enemy(name=enemy_1)
+    #     spawn_enemy2 = Enemy(name=enemy_2)
+    #
+    #     spawn_enemy1.save()
+    #     spawn_enemy2.save()
+    #
+    #     spawn_enemy1.location = room_1.id
+    #     spawn_enemy2.location = room_2.id
+    #
+    #     spawn_enemy1.save()
+    #     spawn_enemy2.save()
+    #     # spawned_enemies = sample(self.enemy_list, 2)
+    #     # spawned_enemies[0] = choice(self.location)
+    #     # spawned_enemies[1] = choice(self.location)
+    #
+    #     #     return f'{self.name}, Beware of your enemies!, {self.location.room_name}'
+    #     # else:
+    #     #     return f'{self.name}, Are you afraid to fight?'
 
     def enemy_strikes_player(self, player):
         player_room = player.room
