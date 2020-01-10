@@ -70,15 +70,15 @@
   <section class="right-content">
     <div class="player-info">
       <p>Name: {{player.name}}</p>
-      <p>HP: {{player.hp}}</p>
+      <p>HP: {{player.hp}}    Strength: {{player.strength}}</p>
       {% if player.inventory %}
-      <p>Inventory:</p>
+      <span>Inventory:</span>
       {% for item in inventory%}
-      <p>{{item.item_name}}</p>
+      <span>{{item.item_name}}</span>
       {% endfor %} {% endif%}
       <p>Description: {{player.room.description}}</p>
       {% if items %} 
-      <p>Items: </p>
+      <span>Items: </span>
       {% for item in items%}
       <span>{{item.item_name}}</span>
       {% endfor %} {% endif %} {% if message %}
