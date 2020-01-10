@@ -16,7 +16,7 @@ import json
 def test(request):
     return HttpResponse('test is working properly')
 
-def index(request):
+def start(request):
     if request.method == "POST":
         form = CreateCharacter(request.POST)
         if form.is_valid():
@@ -32,34 +32,31 @@ def index(request):
 
     return render(request, "tower_app/index.html", {"form": form})
 
-
-def play(request, id):
-    #print("REFRESH")
-    character=Player.objects.get(id=id)
-    print(f"character.floor: {character.floor}")
-
-    inventory=character.inventory()
+def get_context(player_id, message=None):
+    player=Player.objects.get(id=player_id)
+    inventory=player.inventory()
     if len(inventory) == 0:
         inventory=None
-
-    room_items = character.room.items()
-    #print(f"player current room ID: {character.room.id}")
+    room_items = player.room.items()
     if len(room_items) == 0:
         room_items = None
+    #TODO: change this later
+    #rooms = Room.objects.filter(floor=character.room.floor)
+    rooms = Room.objects.filter(floor=1)
+    #if character.room.floor>1:
+    #    minus = (character.room.floor-1) * 11
+    #    print("MINUS", minus)
+    #    for room in rooms:
+    #        room.id=room.id-minus
+    return {"player": player, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message}
 
-    rooms = Room.objects.filter(floor=character.room.floor)
-    if character.room.floor>1:
-        minus = (character.room.floor-1) * 11
-        print("MINUS", minus)
-        for room in rooms:
-            room.id=room.id-minus
-
-    message=None
-    #print("ROOM", character.room.room_name)
-
+def play(request, id):
+    player_id=id
+    context=get_context(player_id)
+    print("Context", context)
+    print("REFRESH")
     if request.method =="POST":
         #print("method is post")
-
         form = MoveCharacter(request.POST)
         if form.is_valid():
             #print("form is valid")
@@ -70,23 +67,29 @@ def play(request, id):
                 #print("TAKE")
                 item_name=action[5:]
                 #print("ITEM", item_name)
-                message=character.pickup(item_name)
-                return HttpResponseRedirect(f'/play/{character.id}')
-            elif action.startseith("drop"):
+                message=context["player"].pickup(item_name)
+                context=get_context(player_id, message)
+                print("Context", context)
+                #return HttpResponseRedirect(f'/play/{character.id}')
+            elif action.startswith("drop"):
                 item_name=action[5:]
-                message=character.drop(item_name)
+                message=context["player"].drop(item_name)
+
+                context=get_context(player_id, message)
+                print("Context", context)
             elif action=="attack":
                 pass
             
             else:
                 print("move")
-                message=character.move(action)
-                return HttpResponseRedirect(f'/play/{character.id}')
+                message=context["player"].move(action)
+                context=get_context(player_id, message)
+                print("Context", context)
+                #return HttpResponseRedirect(f'/play/{character.id}')
         else:
             form = MoveCharacter()
 
-    context = {"player": character, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message}
-    print(f"inventory: {inventory} \nroom_items:{room_items}\nmessage: {message}")
+    #print(f"inventory: {inventory} \nroom_items:{room_items}\nmessage: {message}")
 #    player ={"name": "Player1", "location": "Foyer"}
     return render(request, "tower_app/play.html", context)
 
@@ -106,7 +109,7 @@ def loginPost(request):
 
             if user is not None:
                 login(request, user)
-                return HttpResponseRedirect('/test')
+                return HttpResponseRedirect('/start')
             else:
                 form.add_error("username", "Username or password incorrect")
     else:
