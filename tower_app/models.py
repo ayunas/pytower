@@ -94,6 +94,10 @@ class Player(models.Model):
     def initialize(self):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest
         # on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
+        inventory = Item.objects.filter(playerID = self.id)
+        for item in inventory:
+            item.playerID = 0
+            item.save()
         self.room = Room.objects.get(room_name='Outside')
         self.hp = random.randint(10,30)
         return {'player':self.name, 'HP':self.hp, 'strength':self.strength, 'room':self.room.room_name}
@@ -116,7 +120,7 @@ class Player(models.Model):
         if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
             self.room = Room.objects.get(id=stair.id + 1)
-            self.hp = self.hp + 10+self.room.floor
+            self.hp = self.hp + 10*self.room.floor
             self.save()
             message=f'Congratulations, {self.name} has moved to floor {self.room.floor}. {self.name} HP increased to {self.hp}.  Now in {self.room.room_name} Room.'
             # room_enemies = Enemy.objects.filter(roomID=self.room.id)
