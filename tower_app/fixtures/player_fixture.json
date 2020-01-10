@@ -7,5 +7,41 @@
             "hp": 10,
             "room": null
           }
-      }
+    },
+    {
+        "model": "tower_app.player",
+        "pk": 2,
+        "fields": {
+            "name": "Jedi",
+            "hp": 15,
+            "room": null
+          }
+    },
+    {
+        "model": "tower_app.player",
+        "pk": 3,
+        "fields": {
+            "name": "Barbarian",
+            "hp": 20,
+            "room": null
+          }
+    },
+    {
+        "model": "tower_app.player",
+        "pk": 4,
+        "fields": {
+            "name": "Prince",
+            "hp": 8,
+            "room": null
+          }
+    },
+    {
+        "model": "tower_app.player",
+        "pk": 5,
+        "fields": {
+            "name": "Queen of Sheeba",
+            "hp": 30,
+            "room": null
+          }
+    }
 ]
