@@ -18,12 +18,13 @@ class Room(models.Model):
         return items
 
     def enemies(self):
-        enemies = Enemy.objects.filter(roomID__gte=1, roomID__lte=11)
+        # enemies = Enemy.objects.filter(roomID__gte=1, roomID__lte=11)
+        enemies = Enemy.objects.filter(roomID = self.id)
+        
         return enemies
 
     def __str__(self):
         return self.room_name
-
 
 class Player(models.Model):
     # uuid = models.UUIDField(default=uuid.uuid4, unique=True)
