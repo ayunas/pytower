@@ -13,7 +13,7 @@ class Room(models.Model):
 
     def items(self):
         items = Item.objects.filter(roomID = self.id)
-        return [i.item_name for i in items]
+        return [i for i in items]
 
     def __str__(self):
         return self.room_name
@@ -28,19 +28,20 @@ class Player(models.Model):
     
     def inventory(self):
         inventory = Item.objects.filter(playerID = self.id)
-        return [i.item_name for i in inventory]
+        return [i for i in inventory]
 
     def pickup(self, item_name):
         items = Item.objects.filter(item_name=item_name, roomID=self.room.id)
-
+        print("ITEMS FROM filter", items)
+        print(f"self.room.id: {self.room.id}")
         if items:
             item = items[0]
             item.roomID = 0
             item.playerID = self.id
             item.save()
             return f'{self.name} picked up the {item} from {self.room}'
-
-        return f"{item} is not in the room. can't pick it up."
+        
+        return f"{item_name} is not in the room. can't pick it up."
         
     def drop(self,item_name):
         items = Item.objects.filter(item_name = item_name, playerID=self.id)

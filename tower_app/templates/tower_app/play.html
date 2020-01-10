@@ -69,17 +69,18 @@
   <div class="right-content">
     <div class="player-info">
       <p>Name: {{player.name}}</p>
-      <p>HP: {{player.HP}}</p>
+      <p>HP: {{player.hp}}</p>
       {% if player.inventory %}
       <p>Inventory:</p>
-        {% for item in inventory%}
+      {% for item in inventory%}
       <p>{{item.item_name}}</p>
-        {% endfor %}
-      {% endif%}
+      {% endfor %} {% endif%}
       <p>Room: {{player.room.room_name}}</p>
+      <span>roomID: {{player.room.id}}</span>
       <p>Description: {{player.room.description}}</p>
       {% if items %} {% for item in items%}
-      <p>item.item_name</p>
+      <p>Item in Room:{{item.item_name}}</p>
+      <span>Item room id: {{item.roomID}}</span>
       {% endfor %} {% endif %} {% if message %}
       <p>Message: {{message}}</p>
       {% endif%}
@@ -119,18 +120,30 @@
             class="action move vertical"
           />
         </div>
+        {% if items %}
+        <p>Pick Up</p>
+        {% endif %}
         {% for item in items%}
-        <input type="submit" value="take {{item.item_name}}" id="take" name="btn" class="action" />
-        {% endfor %}
-        <input type="submit" value="drop" id="drop" name="btn" class="action" />
         <input
+          type="submit"
+          value="take {{ item.item_name }}"
+          id="{{item.id}}"
+          name="btn"
+          class="action"
+        />
+        {% endfor %}
+        {% for item in inventory %}
+        <input type="submit" value="drop" id="{{ item.item_name }}" name="btn" class="action" />
+        {% endfor %}
+        <!-- <input
           type="submit"
           value="attack"
           id="attack"
           name="btn"
           class="action"
-        />
+        /> -->
       </form>
+      <p>{{ form.errors.as_text }}</p>
     </div>
   </div>
   {% endblock %}
