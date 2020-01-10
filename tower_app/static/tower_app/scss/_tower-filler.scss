@@ -1,0 +1,158 @@
+@import "./mixins";
+@import "./variables";
+
+$content-padding: 2vw;
+
+.tower-filler {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-transform: uppercase;
+  color: tower-color("blue-charcoal");
+  @include cap-variable-widths(
+    (
+      padding: 1vw
+    )
+  );
+}
+
+.tower-filler--center {
+  justify-content: center;
+}
+
+.tower-group__horizontal-bar .tower-filler:last-child {
+  @include cap-variable-widths(
+    (
+      padding-right: 2vw
+    )
+  );
+}
+
+.tower-group__side-bar .tower-filler + .tower-filler {
+  @include cap-variable-widths(
+    (
+      margin-top: 1vw
+    )
+  );
+}
+
+.tower-group__horizontal-bar .tower-filler + .tower-filler {
+  @include cap-variable-widths(
+    (
+      margin-left: 1vw
+    )
+  );
+}
+
+.tower-filler--top-left {
+  @include cap-variable-widths(
+    (
+      border-top-left-radius: 4vw
+    )
+  );
+}
+
+.tower-filler--top-right {
+  @include cap-variable-widths(
+    (
+      border-top-right-radius: 4vw
+    )
+  );
+}
+
+.tower-filler--bottom-right {
+  @include cap-variable-widths(
+    (
+      border-bottom-right-radius: 4vw
+    )
+  );
+}
+
+.tower-filler--bottom-left {
+  @include cap-variable-widths(
+    (
+      border-bottom-left-radius: 4vw
+    )
+  );
+}
+
+@each $name, $color in $tower-colors {
+  .tower-filler--#{$name} {
+    background: $color;
+  }
+}
+
+.tower-filler--top-left-elbow::before,
+.tower-filler--top-left-elbow::after,
+.tower-filler--top-right-elbow::before,
+.tower-filler--top-right-elbow::after,
+.tower-filler--bottom-right-elbow::before,
+.tower-filler--bottom-right-elbow::after,
+.tower-filler--bottom-left-elbow::before,
+.tower-filler--bottom-left-elbow::after {
+  position: absolute;
+  content: "";
+
+  @include cap-variable-widths(
+    (
+      height: $content-padding,
+      width: $content-padding
+    )
+  );
+}
+
+.tower-filler--top-left-elbow::before,
+.tower-filler--top-right-elbow::before,
+.tower-filler--bottom-right-elbow::before,
+.tower-filler--bottom-left-elbow::before {
+  background: inherit;
+}
+
+.tower-filler--top-left-elbow::after,
+.tower-filler--top-right-elbow::after,
+.tower-filler--bottom-right-elbow::after,
+.tower-filler--bottom-left-elbow::after {
+  background: tower-color("blue-charcoal");
+}
+
+.tower-filler--top-left-elbow::before,
+.tower-filler--top-left-elbow::after {
+  left: 0;
+  top: 100%;
+}
+
+.tower-filler--top-left-elbow::after {
+  border-top-left-radius: 100%;
+}
+
+.tower-filler--top-right-elbow::before,
+.tower-filler--top-right-elbow::after {
+  right: 0;
+  top: 100%;
+}
+
+.tower-filler--top-right-elbow::after {
+  border-top-right-radius: 100%;
+}
+
+.tower-filler--bottom-right-elbow::before,
+.tower-filler--bottom-right-elbow::after {
+  right: 0;
+  bottom: 100%;
+}
+
+.tower-filler--bottom-right-elbow::after {
+  border-bottom-right-radius: 100%;
+}
+
+.tower-filler--bottom-left-elbow::before,
+.tower-filler--bottom-left-elbow::after {
+  left: 0;
+  bottom: 100%;
+}
+
+.tower-filler--bottom-left-elbow::after {
+  border-bottom-left-radius: 100%;
+}
