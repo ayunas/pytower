@@ -4,6 +4,8 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+libsass = "*"
+django-compressor = "*"
 
 [packages]
 django = "==3.0"
@@ -11,6 +13,8 @@ gunicorn = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 random-word = "*"
+django-debug-toolbar = "*"
+django-sass-processor = "*"
 
 [requires]
 python_version = "3.7"
