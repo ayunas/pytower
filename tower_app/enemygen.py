@@ -17,6 +17,7 @@ def enemy_gen(enemies, floor_num, pk):
     # i = 101
     e = []
     start = floor_num + 10 * (floor_num - 1)
+    enemy_stat = (floor_num-1) * 10
 
     for i in range(floor_num * 2):
         enemy = {}
@@ -26,8 +27,8 @@ def enemy_gen(enemies, floor_num, pk):
         enemy["fields"] = {
             # 'id' : 1,
             'enemy_name': enemy_name,
-            'strength': randint(1, 15),
-            'hp': randint(1, 15),
+            'strength': randint(enemy_stat, enemy_stat + 10),
+            'hp': randint(enemy_stat, enemy_stat + 10),
             'description': f"{enemy_name} fights",
             'roomID': randint(start, start + 10)
         }
