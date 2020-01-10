@@ -13,7 +13,8 @@ class Room(models.Model):
 
     def items(self):
         items = Item.objects.filter(roomID = self.id)
-        return [i.item_name for i in items]
+        # return [i.item_name for i in items]
+        return items
 
     def __str__(self):
         return self.room_name
