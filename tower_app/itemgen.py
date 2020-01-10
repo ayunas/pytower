@@ -44,10 +44,10 @@ def armorgen(armors):
         i = i +1
     return a
 
-with open('./fixtures/weapon_fixture.json', 'w') as file:
+with open('../../../../../Desktop/CS24-BW-MUD/CS24-BW-MUD/tower_app/fixtures/weapon_fixture.json', 'w') as file:
     json.dump(weapongen(weapons),file,indent=2)
 
 
-with open('./fixtures/armor_fixture.json', 'w') as file:
+with open('../../../../../Desktop/CS24-BW-MUD/CS24-BW-MUD/tower_app/fixtures/armor_fixture.json', 'w') as file:
     json.dump(armorgen(armors),file,indent=2)
 
