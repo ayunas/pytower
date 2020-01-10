@@ -174,25 +174,26 @@ class Enemy(models.Model):
     #     #     return f'{self.name}, Are you afraid to fight?'
 
     def enemy_strikes_player(self, player):
-        player_room = player.room
-        enemy_in_room = Enemy.objects.filter(location=player_room)
-        if len(enemy_in_room) > 0:
+        player_room = player.room.id
+        enemies_in_room = Enemy.objects.filter(roomID=player_room)
+        if len(enemies_in_room) > 0:
             # sleep(5)
-            player.HP = player.HP - enemy_in_room[0].strength
-            player.save()
-            return f'{player.name}, You have been hit and now your HP is {player.HP}'
-        if player.HP <= 0:
-            player.room = Room.objects.first().id
-            player.save()
-            return f'{player.name}, Oh no! You have been slain. Please try again from the beginning.'
+            for enemy in enemies_in_room:
+                player.hp = player.hp - enemy.strength
+                player.save()
+                if player.hp <= 0:
+                    player.initialize()
+                    player.save()
+                    return f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.'
+        return f'{player.name}, You have been hit and now your HP is {player.hp}'
 
     def player_strikes_enemy(self, player, enemy):
-        player_room = player.room
-        enemy_in_room = Enemy.objects.filter(location=player_room)
-        if len(enemy_in_room) > 0:
-            enemy.HP = enemy.HP - enemy_in_room[0].strength
-            return f"{player.name}, You have hit {enemy.name} and now {enemy.name}'s is {enemy.HP}"
-        if player.HP <= 0:
-            player.room = Room.objects.first().id
-            player.save()
+        # player_room = player.room.id
+        # enemies_in_room = Enemy.objects.filter(roomID=player_room)
+        # if len(enemies_in_room) > 0:
+        enemy.hp = enemy.hp - player.strength
+
+        if enemy.hp <= 0:
+            enemy.delete()
             return f'{player.name}, Victory! You have slayed {enemy.name}!'
+        return f"{player.name}, You have hit {enemy.name} and now {enemy.name}'s HP is {enemy.hp}"

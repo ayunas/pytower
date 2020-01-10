@@ -14,7 +14,7 @@ enemies = ['Giant Scorpion Spider',
 
 
 def enemy_gen(enemies, floor_num):
-    i = 101
+    # i = 101
     e = []
     start = floor_num + 10 * (floor_num - 1)
 
@@ -31,8 +31,8 @@ def enemy_gen(enemies, floor_num):
             'description': f"{enemy_name} fights",
             'roomID': randint(start, start + 10)
         }
-        e.append(enemy)
         # print(e)
+        e.append(enemy)
     return e
 
 # floor 1 = 1 + 10 * 0
@@ -46,7 +46,7 @@ def floor_spawn(enemies):
 
     while floor_num <= 10:
         floor_enemies = enemy_gen(enemies, floor_num)
-        total_enemies.append(floor_enemies)
+        total_enemies = total_enemies + floor_enemies
         floor_num = floor_num + 1
     return total_enemies
 
