@@ -5,7 +5,7 @@
         "fields": {
             "name": "Warrior",
             "hp": 10,
-            "room": null
+            "room": null,
           }
       }
 ]
