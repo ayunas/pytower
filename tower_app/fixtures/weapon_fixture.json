@@ -3,36 +3,36 @@
     "model": "tower_app.item",
     "pk": 1,
     "fields": {
-      "item_name": "Gold Dagger",
-      "strength": 4,
+      "item_name": "falchion",
+      "strength": 7,
       "item_type": "weapon",
-      "description": "Gold Dagger attacks",
+      "description": "falchion attacks",
       "playerID": null,
-      "roomID": 29
+      "roomID": 41
     }
   },
   {
     "model": "tower_app.item",
     "pk": 2,
     "fields": {
-      "item_name": "Scepter",
-      "strength": 5,
+      "item_name": "Stave",
+      "strength": 4,
       "item_type": "weapon",
-      "description": "Scepter attacks",
+      "description": "Stave attacks",
       "playerID": null,
-      "roomID": 4
+      "roomID": 64
     }
   },
   {
     "model": "tower_app.item",
     "pk": 3,
     "fields": {
-      "item_name": "falchion",
-      "strength": 1,
+      "item_name": "dimensional blade",
+      "strength": 5,
       "item_type": "weapon",
-      "description": "falchion attacks",
+      "description": "dimensional blade attacks",
       "playerID": null,
-      "roomID": 103
+      "roomID": 75
     }
   },
   {
@@ -40,64 +40,148 @@
     "pk": 4,
     "fields": {
       "item_name": "ancient sword",
-      "strength": 9,
+      "strength": 4,
       "item_type": "weapon",
       "description": "ancient sword attacks",
-      "playerID": null,
-      "roomID": 109
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 5,
-    "fields": {
-      "item_name": "Silver Mace",
-      "strength": 6,
-      "item_type": "weapon",
-      "description": "Silver Mace attacks",
-      "playerID": null,
-      "roomID": 9
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 6,
-    "fields": {
-      "item_name": "Bronze Axe",
-      "strength": 9,
-      "item_type": "weapon",
-      "description": "Bronze Axe attacks",
-      "playerID": null,
-      "roomID": 71
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 7,
-    "fields": {
-      "item_name": "scimitar",
-      "strength": 6,
-      "item_type": "weapon",
-      "description": "scimitar attacks",
       "playerID": null,
       "roomID": 39
     }
   },
   {
     "model": "tower_app.item",
+    "pk": 5,
+    "fields": {
+      "item_name": "short sword",
+      "strength": 4,
+      "item_type": "weapon",
+      "description": "short sword attacks",
+      "playerID": null,
+      "roomID": 44
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 6,
+    "fields": {
+      "item_name": "broad sword",
+      "strength": 2,
+      "item_type": "weapon",
+      "description": "broad sword attacks",
+      "playerID": null,
+      "roomID": 11
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 7,
+    "fields": {
+      "item_name": "Piercing Spear",
+      "strength": 6,
+      "item_type": "weapon",
+      "description": "Piercing Spear attacks",
+      "playerID": null,
+      "roomID": 78
+    }
+  },
+  {
+    "model": "tower_app.item",
     "pk": 8,
     "fields": {
-      "item_name": "Wooken Javelin",
-      "strength": 3,
+      "item_name": "Executioner Sword",
+      "strength": 6,
       "item_type": "weapon",
-      "description": "Wooken Javelin attacks",
+      "description": "Executioner Sword attacks",
       "playerID": null,
-      "roomID": 19
+      "roomID": 99
     }
   },
   {
     "model": "tower_app.item",
     "pk": 9,
+    "fields": {
+      "item_name": "broad sword",
+      "strength": 8,
+      "item_type": "weapon",
+      "description": "broad sword attacks",
+      "playerID": null,
+      "roomID": 58
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 10,
+    "fields": {
+      "item_name": "Gold Dagger",
+      "strength": 9,
+      "item_type": "weapon",
+      "description": "Gold Dagger attacks",
+      "playerID": null,
+      "roomID": 2
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 11,
+    "fields": {
+      "item_name": "crystal sword",
+      "strength": 7,
+      "item_type": "weapon",
+      "description": "crystal sword attacks",
+      "playerID": null,
+      "roomID": 7
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 12,
+    "fields": {
+      "item_name": "falchion",
+      "strength": 7,
+      "item_type": "weapon",
+      "description": "falchion attacks",
+      "playerID": null,
+      "roomID": 77
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 13,
+    "fields": {
+      "item_name": "Bows",
+      "strength": 5,
+      "item_type": "weapon",
+      "description": "Bows attacks",
+      "playerID": null,
+      "roomID": 6
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 14,
+    "fields": {
+      "item_name": "Scepter",
+      "strength": 4,
+      "item_type": "weapon",
+      "description": "Scepter attacks",
+      "playerID": null,
+      "roomID": 50
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 15,
+    "fields": {
+      "item_name": "Crossbows",
+      "strength": 8,
+      "item_type": "weapon",
+      "description": "Crossbows attacks",
+      "playerID": null,
+      "roomID": 65
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 16,
     "fields": {
       "item_name": "falchion",
       "strength": 2,
@@ -109,494 +193,410 @@
   },
   {
     "model": "tower_app.item",
-    "pk": 10,
-    "fields": {
-      "item_name": "Scepter",
-      "strength": 2,
-      "item_type": "weapon",
-      "description": "Scepter attacks",
-      "playerID": null,
-      "roomID": 73
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 11,
-    "fields": {
-      "item_name": "Bronze Axe",
-      "strength": 1,
-      "item_type": "weapon",
-      "description": "Bronze Axe attacks",
-      "playerID": null,
-      "roomID": 79
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 12,
-    "fields": {
-      "item_name": "crystal sword",
-      "strength": 10,
-      "item_type": "weapon",
-      "description": "crystal sword attacks",
-      "playerID": null,
-      "roomID": 84
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 13,
-    "fields": {
-      "item_name": "Executioner Sword",
-      "strength": 2,
-      "item_type": "weapon",
-      "description": "Executioner Sword attacks",
-      "playerID": null,
-      "roomID": 15
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 14,
-    "fields": {
-      "item_name": "short sword",
-      "strength": 4,
-      "item_type": "weapon",
-      "description": "short sword attacks",
-      "playerID": null,
-      "roomID": 6
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 15,
-    "fields": {
-      "item_name": "dimensional blade",
-      "strength": 9,
-      "item_type": "weapon",
-      "description": "dimensional blade attacks",
-      "playerID": null,
-      "roomID": 92
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 16,
-    "fields": {
-      "item_name": "Executioner Sword",
-      "strength": 2,
-      "item_type": "weapon",
-      "description": "Executioner Sword attacks",
-      "playerID": null,
-      "roomID": 19
-    }
-  },
-  {
-    "model": "tower_app.item",
     "pk": 17,
     "fields": {
-      "item_name": "Piercing Spear",
-      "strength": 2,
+      "item_name": "Bows",
+      "strength": 8,
       "item_type": "weapon",
-      "description": "Piercing Spear attacks",
+      "description": "Bows attacks",
       "playerID": null,
-      "roomID": 45
+      "roomID": 83
     }
   },
   {
     "model": "tower_app.item",
     "pk": 18,
     "fields": {
-      "item_name": "Bronze Axe",
+      "item_name": "crystal sword",
       "strength": 7,
       "item_type": "weapon",
-      "description": "Bronze Axe attacks",
+      "description": "crystal sword attacks",
       "playerID": null,
-      "roomID": 99
+      "roomID": 92
     }
   },
   {
     "model": "tower_app.item",
     "pk": 19,
     "fields": {
-      "item_name": "Silver Mace",
+      "item_name": "Piercing Spear",
       "strength": 2,
       "item_type": "weapon",
-      "description": "Silver Mace attacks",
+      "description": "Piercing Spear attacks",
       "playerID": null,
-      "roomID": 32
+      "roomID": 82
     }
   },
   {
     "model": "tower_app.item",
     "pk": 20,
     "fields": {
-      "item_name": "Polearm",
-      "strength": 5,
+      "item_name": "Gold Dagger",
+      "strength": 2,
       "item_type": "weapon",
-      "description": "Polearm attacks",
+      "description": "Gold Dagger attacks",
       "playerID": null,
-      "roomID": 110
+      "roomID": 31
     }
   },
   {
     "model": "tower_app.item",
     "pk": 21,
     "fields": {
-      "item_name": "falchion",
-      "strength": 7,
+      "item_name": "Silver Mace",
+      "strength": 2,
       "item_type": "weapon",
-      "description": "falchion attacks",
+      "description": "Silver Mace attacks",
       "playerID": null,
-      "roomID": 66
+      "roomID": 80
     }
   },
   {
     "model": "tower_app.item",
     "pk": 22,
     "fields": {
-      "item_name": "short sword",
-      "strength": 9,
+      "item_name": "Mystifying Wand",
+      "strength": 3,
       "item_type": "weapon",
-      "description": "short sword attacks",
+      "description": "Mystifying Wand attacks",
       "playerID": null,
-      "roomID": 22
+      "roomID": 28
     }
   },
   {
     "model": "tower_app.item",
     "pk": 23,
     "fields": {
-      "item_name": "Gold Dagger",
-      "strength": 6,
-      "item_type": "weapon",
-      "description": "Gold Dagger attacks",
-      "playerID": null,
-      "roomID": 78
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 24,
-    "fields": {
-      "item_name": "Piercing Spear",
-      "strength": 8,
-      "item_type": "weapon",
-      "description": "Piercing Spear attacks",
-      "playerID": null,
-      "roomID": 41
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 25,
-    "fields": {
-      "item_name": "Scepter",
-      "strength": 4,
-      "item_type": "weapon",
-      "description": "Scepter attacks",
-      "playerID": null,
-      "roomID": 26
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 26,
-    "fields": {
       "item_name": "Bronze Axe",
-      "strength": 4,
-      "item_type": "weapon",
-      "description": "Bronze Axe attacks",
-      "playerID": null,
-      "roomID": 93
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 27,
-    "fields": {
-      "item_name": "Gold Dagger",
-      "strength": 4,
-      "item_type": "weapon",
-      "description": "Gold Dagger attacks",
-      "playerID": null,
-      "roomID": 16
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 28,
-    "fields": {
-      "item_name": "war sword",
-      "strength": 8,
-      "item_type": "weapon",
-      "description": "war sword attacks",
-      "playerID": null,
-      "roomID": 78
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 29,
-    "fields": {
-      "item_name": "ancient sword",
-      "strength": 9,
-      "item_type": "weapon",
-      "description": "ancient sword attacks",
-      "playerID": null,
-      "roomID": 69
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 30,
-    "fields": {
-      "item_name": "Mystifying Wand",
-      "strength": 9,
-      "item_type": "weapon",
-      "description": "Mystifying Wand attacks",
-      "playerID": null,
-      "roomID": 72
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 31,
-    "fields": {
-      "item_name": "scimitar",
-      "strength": 6,
-      "item_type": "weapon",
-      "description": "scimitar attacks",
-      "playerID": null,
-      "roomID": 77
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 32,
-    "fields": {
-      "item_name": "Mystifying Wand",
-      "strength": 8,
-      "item_type": "weapon",
-      "description": "Mystifying Wand attacks",
-      "playerID": null,
-      "roomID": 34
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 33,
-    "fields": {
-      "item_name": "Polearm",
-      "strength": 5,
-      "item_type": "weapon",
-      "description": "Polearm attacks",
-      "playerID": null,
-      "roomID": 86
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 34,
-    "fields": {
-      "item_name": "scimitar",
-      "strength": 8,
-      "item_type": "weapon",
-      "description": "scimitar attacks",
-      "playerID": null,
-      "roomID": 37
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 35,
-    "fields": {
-      "item_name": "scimitar",
-      "strength": 5,
-      "item_type": "weapon",
-      "description": "scimitar attacks",
-      "playerID": null,
-      "roomID": 104
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 36,
-    "fields": {
-      "item_name": "short sword",
-      "strength": 6,
-      "item_type": "weapon",
-      "description": "short sword attacks",
-      "playerID": null,
-      "roomID": 107
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 37,
-    "fields": {
-      "item_name": "short sword",
       "strength": 3,
       "item_type": "weapon",
-      "description": "short sword attacks",
+      "description": "Bronze Axe attacks",
       "playerID": null,
       "roomID": 24
     }
   },
   {
     "model": "tower_app.item",
-    "pk": 38,
-    "fields": {
-      "item_name": "crystal sword",
-      "strength": 5,
-      "item_type": "weapon",
-      "description": "crystal sword attacks",
-      "playerID": null,
-      "roomID": 109
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 39,
+    "pk": 24,
     "fields": {
       "item_name": "Bronze Axe",
-      "strength": 5,
+      "strength": 10,
       "item_type": "weapon",
       "description": "Bronze Axe attacks",
       "playerID": null,
-      "roomID": 38
+      "roomID": 78
     }
   },
   {
     "model": "tower_app.item",
-    "pk": 40,
+    "pk": 25,
     "fields": {
-      "item_name": "Crossbows",
-      "strength": 2,
+      "item_name": "crystal sword",
+      "strength": 8,
       "item_type": "weapon",
-      "description": "Crossbows attacks",
+      "description": "crystal sword attacks",
       "playerID": null,
-      "roomID": 38
+      "roomID": 56
     }
   },
   {
     "model": "tower_app.item",
-    "pk": 41,
-    "fields": {
-      "item_name": "ancient sword",
-      "strength": 9,
-      "item_type": "weapon",
-      "description": "ancient sword attacks",
-      "playerID": null,
-      "roomID": 107
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 42,
+    "pk": 26,
     "fields": {
       "item_name": "Gold Dagger",
-      "strength": 6,
+      "strength": 9,
       "item_type": "weapon",
       "description": "Gold Dagger attacks",
       "playerID": null,
-      "roomID": 18
+      "roomID": 99
     }
   },
   {
     "model": "tower_app.item",
-    "pk": 43,
+    "pk": 27,
     "fields": {
-      "item_name": "Stave",
+      "item_name": "Piercing Spear",
+      "strength": 3,
+      "item_type": "weapon",
+      "description": "Piercing Spear attacks",
+      "playerID": null,
+      "roomID": 47
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 28,
+    "fields": {
+      "item_name": "Wooken Javelin",
+      "strength": 6,
+      "item_type": "weapon",
+      "description": "Wooken Javelin attacks",
+      "playerID": null,
+      "roomID": 12
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 29,
+    "fields": {
+      "item_name": "Scepter",
       "strength": 1,
       "item_type": "weapon",
-      "description": "Stave attacks",
+      "description": "Scepter attacks",
       "playerID": null,
-      "roomID": 39
+      "roomID": 83
     }
   },
   {
     "model": "tower_app.item",
-    "pk": 44,
+    "pk": 30,
     "fields": {
-      "item_name": "Bows",
+      "item_name": "Polearm",
+      "strength": 4,
+      "item_type": "weapon",
+      "description": "Polearm attacks",
+      "playerID": null,
+      "roomID": 68
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 31,
+    "fields": {
+      "item_name": "falchion",
       "strength": 9,
       "item_type": "weapon",
-      "description": "Bows attacks",
-      "playerID": null,
-      "roomID": 46
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 45,
-    "fields": {
-      "item_name": "Scepter",
-      "strength": 8,
-      "item_type": "weapon",
-      "description": "Scepter attacks",
-      "playerID": null,
-      "roomID": 100
-    }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 46,
-    "fields": {
-      "item_name": "Scepter",
-      "strength": 7,
-      "item_type": "weapon",
-      "description": "Scepter attacks",
+      "description": "falchion attacks",
       "playerID": null,
       "roomID": 22
     }
   },
   {
     "model": "tower_app.item",
-    "pk": 47,
+    "pk": 32,
     "fields": {
-      "item_name": "crystal sword",
+      "item_name": "Gold Dagger",
+      "strength": 5,
+      "item_type": "weapon",
+      "description": "Gold Dagger attacks",
+      "playerID": null,
+      "roomID": 31
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 33,
+    "fields": {
+      "item_name": "Bows",
+      "strength": 4,
+      "item_type": "weapon",
+      "description": "Bows attacks",
+      "playerID": null,
+      "roomID": 25
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 34,
+    "fields": {
+      "item_name": "dimensional blade",
+      "strength": 7,
+      "item_type": "weapon",
+      "description": "dimensional blade attacks",
+      "playerID": null,
+      "roomID": 41
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 35,
+    "fields": {
+      "item_name": "broad sword",
+      "strength": 2,
+      "item_type": "weapon",
+      "description": "broad sword attacks",
+      "playerID": null,
+      "roomID": 71
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 36,
+    "fields": {
+      "item_name": "Crossbows",
+      "strength": 6,
+      "item_type": "weapon",
+      "description": "Crossbows attacks",
+      "playerID": null,
+      "roomID": 63
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 37,
+    "fields": {
+      "item_name": "Gold Dagger",
+      "strength": 9,
+      "item_type": "weapon",
+      "description": "Gold Dagger attacks",
+      "playerID": null,
+      "roomID": 81
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 38,
+    "fields": {
+      "item_name": "Stave",
+      "strength": 5,
+      "item_type": "weapon",
+      "description": "Stave attacks",
+      "playerID": null,
+      "roomID": 23
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 39,
+    "fields": {
+      "item_name": "Piercing Spear",
+      "strength": 4,
+      "item_type": "weapon",
+      "description": "Piercing Spear attacks",
+      "playerID": null,
+      "roomID": 106
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 40,
+    "fields": {
+      "item_name": "ancient sword",
       "strength": 3,
       "item_type": "weapon",
-      "description": "crystal sword attacks",
+      "description": "ancient sword attacks",
       "playerID": null,
-      "roomID": 20
+      "roomID": 91
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 41,
+    "fields": {
+      "item_name": "Bows",
+      "strength": 1,
+      "item_type": "weapon",
+      "description": "Bows attacks",
+      "playerID": null,
+      "roomID": 4
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 42,
+    "fields": {
+      "item_name": "Silver Mace",
+      "strength": 4,
+      "item_type": "weapon",
+      "description": "Silver Mace attacks",
+      "playerID": null,
+      "roomID": 43
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 43,
+    "fields": {
+      "item_name": "Polearm",
+      "strength": 3,
+      "item_type": "weapon",
+      "description": "Polearm attacks",
+      "playerID": null,
+      "roomID": 65
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 44,
+    "fields": {
+      "item_name": "Silver Mace",
+      "strength": 1,
+      "item_type": "weapon",
+      "description": "Silver Mace attacks",
+      "playerID": null,
+      "roomID": 14
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 45,
+    "fields": {
+      "item_name": "falchion",
+      "strength": 3,
+      "item_type": "weapon",
+      "description": "falchion attacks",
+      "playerID": null,
+      "roomID": 60
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 46,
+    "fields": {
+      "item_name": "Silver Mace",
+      "strength": 1,
+      "item_type": "weapon",
+      "description": "Silver Mace attacks",
+      "playerID": null,
+      "roomID": 54
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 47,
+    "fields": {
+      "item_name": "Executioner Sword",
+      "strength": 3,
+      "item_type": "weapon",
+      "description": "Executioner Sword attacks",
+      "playerID": null,
+      "roomID": 14
     }
   },
   {
     "model": "tower_app.item",
     "pk": 48,
     "fields": {
-      "item_name": "ancient sword",
-      "strength": 7,
+      "item_name": "Bows",
+      "strength": 9,
       "item_type": "weapon",
-      "description": "ancient sword attacks",
+      "description": "Bows attacks",
       "playerID": null,
-      "roomID": 26
+      "roomID": 59
     }
   },
   {
     "model": "tower_app.item",
     "pk": 49,
     "fields": {
-      "item_name": "Gold Dagger",
-      "strength": 4,
+      "item_name": "Scepter",
+      "strength": 8,
       "item_type": "weapon",
-      "description": "Gold Dagger attacks",
+      "description": "Scepter attacks",
       "playerID": null,
-      "roomID": 77
+      "roomID": 21
     }
   },
   {
     "model": "tower_app.item",
     "pk": 50,
     "fields": {
-      "item_name": "Bows",
-      "strength": 6,
+      "item_name": "scimitar",
+      "strength": 5,
       "item_type": "weapon",
-      "description": "Bows attacks",
+      "description": "scimitar attacks",
       "playerID": null,
-      "roomID": 41
+      "roomID": 108
     }
   }
 ]
