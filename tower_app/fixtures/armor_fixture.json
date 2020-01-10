@@ -1,0 +1,590 @@
+[
+  {
+    "model": "tower_app.item",
+    "pk": 51,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 4,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 74
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 52,
+    "fields": {
+      "item_name": "quilted armor",
+      "strength": 8,
+      "item_type": "armor",
+      "description": "quilted armor protects",
+      "playerID": null,
+      "roomID": 104
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 53,
+    "fields": {
+      "item_name": "splint mail",
+      "strength": 10,
+      "item_type": "armor",
+      "description": "splint mail protects",
+      "playerID": null,
+      "roomID": 77
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 54,
+    "fields": {
+      "item_name": "splint mail",
+      "strength": 2,
+      "item_type": "armor",
+      "description": "splint mail protects",
+      "playerID": null,
+      "roomID": 46
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 55,
+    "fields": {
+      "item_name": "kite shield",
+      "strength": 4,
+      "item_type": "armor",
+      "description": "kite shield protects",
+      "playerID": null,
+      "roomID": 15
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 56,
+    "fields": {
+      "item_name": "gothic shield",
+      "strength": 10,
+      "item_type": "armor",
+      "description": "gothic shield protects",
+      "playerID": null,
+      "roomID": 9
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 57,
+    "fields": {
+      "item_name": "quilted armor",
+      "strength": 2,
+      "item_type": "armor",
+      "description": "quilted armor protects",
+      "playerID": null,
+      "roomID": 71
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 58,
+    "fields": {
+      "item_name": "bone shield",
+      "strength": 1,
+      "item_type": "armor",
+      "description": "bone shield protects",
+      "playerID": null,
+      "roomID": 102
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 59,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 4,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 71
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 60,
+    "fields": {
+      "item_name": "small shield",
+      "strength": 3,
+      "item_type": "armor",
+      "description": "small shield protects",
+      "playerID": null,
+      "roomID": 21
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 61,
+    "fields": {
+      "item_name": "bone shield",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "bone shield protects",
+      "playerID": null,
+      "roomID": 13
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 62,
+    "fields": {
+      "item_name": "breast plate",
+      "strength": 8,
+      "item_type": "armor",
+      "description": "breast plate protects",
+      "playerID": null,
+      "roomID": 27
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 63,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 7,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 37
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 64,
+    "fields": {
+      "item_name": "studded leather",
+      "strength": 3,
+      "item_type": "armor",
+      "description": "studded leather protects",
+      "playerID": null,
+      "roomID": 94
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 65,
+    "fields": {
+      "item_name": "chain mail",
+      "strength": 3,
+      "item_type": "armor",
+      "description": "chain mail protects",
+      "playerID": null,
+      "roomID": 41
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 66,
+    "fields": {
+      "item_name": "gothic shield",
+      "strength": 5,
+      "item_type": "armor",
+      "description": "gothic shield protects",
+      "playerID": null,
+      "roomID": 70
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 67,
+    "fields": {
+      "item_name": "kite shield",
+      "strength": 8,
+      "item_type": "armor",
+      "description": "kite shield protects",
+      "playerID": null,
+      "roomID": 14
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 68,
+    "fields": {
+      "item_name": "breast plate",
+      "strength": 8,
+      "item_type": "armor",
+      "description": "breast plate protects",
+      "playerID": null,
+      "roomID": 97
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 69,
+    "fields": {
+      "item_name": "breast plate",
+      "strength": 7,
+      "item_type": "armor",
+      "description": "breast plate protects",
+      "playerID": null,
+      "roomID": 12
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 70,
+    "fields": {
+      "item_name": "gothic shield",
+      "strength": 5,
+      "item_type": "armor",
+      "description": "gothic shield protects",
+      "playerID": null,
+      "roomID": 58
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 71,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 1,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 61
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 72,
+    "fields": {
+      "item_name": "full plate mail",
+      "strength": 2,
+      "item_type": "armor",
+      "description": "full plate mail protects",
+      "playerID": null,
+      "roomID": 7
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 73,
+    "fields": {
+      "item_name": "bone shield",
+      "strength": 10,
+      "item_type": "armor",
+      "description": "bone shield protects",
+      "playerID": null,
+      "roomID": 21
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 74,
+    "fields": {
+      "item_name": "ring mail",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "ring mail protects",
+      "playerID": null,
+      "roomID": 86
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 75,
+    "fields": {
+      "item_name": "chain mail",
+      "strength": 10,
+      "item_type": "armor",
+      "description": "chain mail protects",
+      "playerID": null,
+      "roomID": 90
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 76,
+    "fields": {
+      "item_name": "chain mail",
+      "strength": 1,
+      "item_type": "armor",
+      "description": "chain mail protects",
+      "playerID": null,
+      "roomID": 44
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 77,
+    "fields": {
+      "item_name": "splint mail",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "splint mail protects",
+      "playerID": null,
+      "roomID": 39
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 78,
+    "fields": {
+      "item_name": "full plate mail",
+      "strength": 8,
+      "item_type": "armor",
+      "description": "full plate mail protects",
+      "playerID": null,
+      "roomID": 8
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 79,
+    "fields": {
+      "item_name": "kite shield",
+      "strength": 1,
+      "item_type": "armor",
+      "description": "kite shield protects",
+      "playerID": null,
+      "roomID": 103
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 80,
+    "fields": {
+      "item_name": "small shield",
+      "strength": 10,
+      "item_type": "armor",
+      "description": "small shield protects",
+      "playerID": null,
+      "roomID": 8
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 81,
+    "fields": {
+      "item_name": "chain mail",
+      "strength": 6,
+      "item_type": "armor",
+      "description": "chain mail protects",
+      "playerID": null,
+      "roomID": 78
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 82,
+    "fields": {
+      "item_name": "quilted armor",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "quilted armor protects",
+      "playerID": null,
+      "roomID": 22
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 83,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 5,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 28
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 84,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 3,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 57
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 85,
+    "fields": {
+      "item_name": "ring mail",
+      "strength": 3,
+      "item_type": "armor",
+      "description": "ring mail protects",
+      "playerID": null,
+      "roomID": 79
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 86,
+    "fields": {
+      "item_name": "breast plate",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "breast plate protects",
+      "playerID": null,
+      "roomID": 73
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 87,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 6,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 76
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 88,
+    "fields": {
+      "item_name": "splint mail",
+      "strength": 1,
+      "item_type": "armor",
+      "description": "splint mail protects",
+      "playerID": null,
+      "roomID": 101
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 89,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 2,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 42
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 90,
+    "fields": {
+      "item_name": "chain mail",
+      "strength": 6,
+      "item_type": "armor",
+      "description": "chain mail protects",
+      "playerID": null,
+      "roomID": 59
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 91,
+    "fields": {
+      "item_name": "ring mail",
+      "strength": 5,
+      "item_type": "armor",
+      "description": "ring mail protects",
+      "playerID": null,
+      "roomID": 41
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 92,
+    "fields": {
+      "item_name": "bone shield",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "bone shield protects",
+      "playerID": null,
+      "roomID": 100
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 93,
+    "fields": {
+      "item_name": "quilted armor",
+      "strength": 3,
+      "item_type": "armor",
+      "description": "quilted armor protects",
+      "playerID": null,
+      "roomID": 18
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 94,
+    "fields": {
+      "item_name": "buckler",
+      "strength": 5,
+      "item_type": "armor",
+      "description": "buckler protects",
+      "playerID": null,
+      "roomID": 44
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 95,
+    "fields": {
+      "item_name": "ring mail",
+      "strength": 7,
+      "item_type": "armor",
+      "description": "ring mail protects",
+      "playerID": null,
+      "roomID": 103
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 96,
+    "fields": {
+      "item_name": "ring mail",
+      "strength": 4,
+      "item_type": "armor",
+      "description": "ring mail protects",
+      "playerID": null,
+      "roomID": 99
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 97,
+    "fields": {
+      "item_name": "ancient armor",
+      "strength": 9,
+      "item_type": "armor",
+      "description": "ancient armor protects",
+      "playerID": null,
+      "roomID": 22
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 98,
+    "fields": {
+      "item_name": "bone shield",
+      "strength": 2,
+      "item_type": "armor",
+      "description": "bone shield protects",
+      "playerID": null,
+      "roomID": 44
+    }
+  },
+  {
+    "model": "tower_app.item",
+    "pk": 99,
+    "fields": {
+      "item_name": "studded leather",
+      "strength": 5,
+      "item_type": "armor",
+      "description": "studded leather protects",
+      "playerID": null,
+      "roomID": 104
+    }
+  }
+]

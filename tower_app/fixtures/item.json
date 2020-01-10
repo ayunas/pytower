@@ -4,9 +4,9 @@
         "pk": 1,
         "fields": {
             "item_name": "Black Stone",
-            "description": "a white stone from Paradise, blackened by the sins of mankind.",
             "strength": 10,
             "item_type": "weapon",
+            "description": "a white stone from Paradise, blackened by the sins of mankind.",
             "playerID" : null,
             "roomID" : 4
           }

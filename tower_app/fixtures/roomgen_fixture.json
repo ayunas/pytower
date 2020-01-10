@@ -1,0 +1,1388 @@
+[
+  {
+    "model": "tower_app.room",
+    "pk": 12,
+    "fields": {
+      "id": 12,
+      "room_name": "Inclement'",
+      "description": "Description for the Inclement' room ",
+      "up": "Optimism'",
+      "down": "",
+      "left": "",
+      "right": "Oakwood'",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 13,
+    "fields": {
+      "id": 13,
+      "room_name": "Oakwood'",
+      "description": "Description for the Oakwood' room ",
+      "up": "Ralston'",
+      "down": "",
+      "left": "Inclement'",
+      "right": "Destroy'",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 14,
+    "fields": {
+      "id": 14,
+      "room_name": "Destroy'",
+      "description": "Description for the Destroy' room ",
+      "up": "",
+      "down": "Propellant'",
+      "left": "Oakwood'",
+      "right": "Roister'",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 15,
+    "fields": {
+      "id": 15,
+      "room_name": "Roister'",
+      "description": "Description for the Roister' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Destroy'",
+      "right": "",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 16,
+    "fields": {
+      "id": 16,
+      "room_name": "Declarative'",
+      "description": "Description for the Declarative' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Cotangent'",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 17,
+    "fields": {
+      "id": 17,
+      "room_name": "Propellant'",
+      "description": "Description for the Propellant' room ",
+      "up": "Destroy'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 18,
+    "fields": {
+      "id": 18,
+      "room_name": "Ralston'",
+      "description": "Description for the Ralston' room ",
+      "up": "",
+      "down": "Oakwood'",
+      "left": "Optimism'",
+      "right": "",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 19,
+    "fields": {
+      "id": 19,
+      "room_name": "Optimism'",
+      "description": "Description for the Optimism' room ",
+      "up": "Cotangent'",
+      "down": "Inclement'",
+      "left": "",
+      "right": "Ralston'",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 20,
+    "fields": {
+      "id": 20,
+      "room_name": "Cotangent'",
+      "description": "Description for the Cotangent' room ",
+      "up": "Barr'",
+      "down": "Optimism'",
+      "left": "Declarative'",
+      "right": "",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 21,
+    "fields": {
+      "id": 21,
+      "room_name": "Barr'",
+      "description": "Description for the Barr' room ",
+      "up": "",
+      "down": "Cotangent'",
+      "left": "",
+      "right": "",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 22,
+    "fields": {
+      "id": 22,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 2
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 23,
+    "fields": {
+      "id": 23,
+      "room_name": "Kronecker'",
+      "description": "Description for the Kronecker' room ",
+      "up": "Frivolity'",
+      "down": "",
+      "left": "",
+      "right": "Eb",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 24,
+    "fields": {
+      "id": 24,
+      "room_name": "Eb",
+      "description": "Description for the Eb room ",
+      "up": "Non'",
+      "down": "",
+      "left": "Kronecker'",
+      "right": "Junta'",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 25,
+    "fields": {
+      "id": 25,
+      "room_name": "Junta'",
+      "description": "Description for the Junta' room ",
+      "up": "",
+      "down": "Minute'",
+      "left": "Eb",
+      "right": "Dismal'",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 26,
+    "fields": {
+      "id": 26,
+      "room_name": "Dismal'",
+      "description": "Description for the Dismal' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Junta'",
+      "right": "",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 27,
+    "fields": {
+      "id": 27,
+      "room_name": "Indignant'",
+      "description": "Description for the Indignant' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Architectural'",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 28,
+    "fields": {
+      "id": 28,
+      "room_name": "Minute'",
+      "description": "Description for the Minute' room ",
+      "up": "Junta'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 29,
+    "fields": {
+      "id": 29,
+      "room_name": "Non'",
+      "description": "Description for the Non' room ",
+      "up": "",
+      "down": "Eb",
+      "left": "Frivolity'",
+      "right": "",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 30,
+    "fields": {
+      "id": 30,
+      "room_name": "Frivolity'",
+      "description": "Description for the Frivolity' room ",
+      "up": "Architectural'",
+      "down": "Kronecker'",
+      "left": "",
+      "right": "Non'",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 31,
+    "fields": {
+      "id": 31,
+      "room_name": "Architectural'",
+      "description": "Description for the Architectural' room ",
+      "up": "Mutate'",
+      "down": "Frivolity'",
+      "left": "Indignant'",
+      "right": "",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 32,
+    "fields": {
+      "id": 32,
+      "room_name": "Mutate'",
+      "description": "Description for the Mutate' room ",
+      "up": "",
+      "down": "Architectural'",
+      "left": "",
+      "right": "",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 33,
+    "fields": {
+      "id": 33,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 3
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 34,
+    "fields": {
+      "id": 34,
+      "room_name": "B\"o'leary\"",
+      "description": "Description for the B\"o'leary\" room ",
+      "up": "Supplant'",
+      "down": "",
+      "left": "",
+      "right": "Grille'",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 35,
+    "fields": {
+      "id": 35,
+      "room_name": "Grille'",
+      "description": "Description for the Grille' room ",
+      "up": "Blissful'",
+      "down": "",
+      "left": "B\"o'leary\"",
+      "right": "Healey'",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 36,
+    "fields": {
+      "id": 36,
+      "room_name": "Healey'",
+      "description": "Description for the Healey' room ",
+      "up": "",
+      "down": "Draftsman'",
+      "left": "Grille'",
+      "right": "Manumitted'",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 37,
+    "fields": {
+      "id": 37,
+      "room_name": "Manumitted'",
+      "description": "Description for the Manumitted' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Healey'",
+      "right": "",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 38,
+    "fields": {
+      "id": 38,
+      "room_name": "Partisan'",
+      "description": "Description for the Partisan' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Opera'",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 39,
+    "fields": {
+      "id": 39,
+      "room_name": "Draftsman'",
+      "description": "Description for the Draftsman' room ",
+      "up": "Healey'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 40,
+    "fields": {
+      "id": 40,
+      "room_name": "Blissful'",
+      "description": "Description for the Blissful' room ",
+      "up": "",
+      "down": "Grille'",
+      "left": "Supplant'",
+      "right": "",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 41,
+    "fields": {
+      "id": 41,
+      "room_name": "Supplant'",
+      "description": "Description for the Supplant' room ",
+      "up": "Opera'",
+      "down": "B\"o'leary\"",
+      "left": "",
+      "right": "Blissful'",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 42,
+    "fields": {
+      "id": 42,
+      "room_name": "Opera'",
+      "description": "Description for the Opera' room ",
+      "up": "Doctrine'",
+      "down": "Supplant'",
+      "left": "Partisan'",
+      "right": "",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 43,
+    "fields": {
+      "id": 43,
+      "room_name": "Doctrine'",
+      "description": "Description for the Doctrine' room ",
+      "up": "",
+      "down": "Opera'",
+      "left": "",
+      "right": "",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 44,
+    "fields": {
+      "id": 44,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 4
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 45,
+    "fields": {
+      "id": 45,
+      "room_name": "Foible'",
+      "description": "Description for the Foible' room ",
+      "up": "Buttress'",
+      "down": "",
+      "left": "",
+      "right": "Suction'",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 46,
+    "fields": {
+      "id": 46,
+      "room_name": "Suction'",
+      "description": "Description for the Suction' room ",
+      "up": "Missionary'",
+      "down": "",
+      "left": "Foible'",
+      "right": "Thalia'",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 47,
+    "fields": {
+      "id": 47,
+      "room_name": "Thalia'",
+      "description": "Description for the Thalia' room ",
+      "up": "",
+      "down": "Brindle'",
+      "left": "Suction'",
+      "right": "Bushnell'",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 48,
+    "fields": {
+      "id": 48,
+      "room_name": "Bushnell'",
+      "description": "Description for the Bushnell' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Thalia'",
+      "right": "",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 49,
+    "fields": {
+      "id": 49,
+      "room_name": "Feldman'",
+      "description": "Description for the Feldman' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Bhoy'",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 50,
+    "fields": {
+      "id": 50,
+      "room_name": "Brindle'",
+      "description": "Description for the Brindle' room ",
+      "up": "Thalia'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 51,
+    "fields": {
+      "id": 51,
+      "room_name": "Missionary'",
+      "description": "Description for the Missionary' room ",
+      "up": "",
+      "down": "Suction'",
+      "left": "Buttress'",
+      "right": "",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 52,
+    "fields": {
+      "id": 52,
+      "room_name": "Buttress'",
+      "description": "Description for the Buttress' room ",
+      "up": "Bhoy'",
+      "down": "Foible'",
+      "left": "",
+      "right": "Missionary'",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 53,
+    "fields": {
+      "id": 53,
+      "room_name": "Bhoy'",
+      "description": "Description for the Bhoy' room ",
+      "up": "Mustard'",
+      "down": "Buttress'",
+      "left": "Feldman'",
+      "right": "",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 54,
+    "fields": {
+      "id": 54,
+      "room_name": "Mustard'",
+      "description": "Description for the Mustard' room ",
+      "up": "",
+      "down": "Bhoy'",
+      "left": "",
+      "right": "",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 55,
+    "fields": {
+      "id": 55,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 5
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 56,
+    "fields": {
+      "id": 56,
+      "room_name": "Rhodonite'",
+      "description": "Description for the Rhodonite' room ",
+      "up": "Insurrect'",
+      "down": "",
+      "left": "",
+      "right": "Java'",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 57,
+    "fields": {
+      "id": 57,
+      "room_name": "Java'",
+      "description": "Description for the Java' room ",
+      "up": "Earthenware'",
+      "down": "",
+      "left": "Rhodonite'",
+      "right": "Oboist'",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 58,
+    "fields": {
+      "id": 58,
+      "room_name": "Oboist'",
+      "description": "Description for the Oboist' room ",
+      "up": "",
+      "down": "Sprawl'",
+      "left": "Java'",
+      "right": "Whitman'",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 59,
+    "fields": {
+      "id": 59,
+      "room_name": "Whitman'",
+      "description": "Description for the Whitman' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Oboist'",
+      "right": "",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 60,
+    "fields": {
+      "id": 60,
+      "room_name": "Backbone'",
+      "description": "Description for the Backbone' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Beef'",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 61,
+    "fields": {
+      "id": 61,
+      "room_name": "Sprawl'",
+      "description": "Description for the Sprawl' room ",
+      "up": "Oboist'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 62,
+    "fields": {
+      "id": 62,
+      "room_name": "Earthenware'",
+      "description": "Description for the Earthenware' room ",
+      "up": "",
+      "down": "Java'",
+      "left": "Insurrect'",
+      "right": "",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 63,
+    "fields": {
+      "id": 63,
+      "room_name": "Insurrect'",
+      "description": "Description for the Insurrect' room ",
+      "up": "Beef'",
+      "down": "Rhodonite'",
+      "left": "",
+      "right": "Earthenware'",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 64,
+    "fields": {
+      "id": 64,
+      "room_name": "Beef'",
+      "description": "Description for the Beef' room ",
+      "up": "Frock'",
+      "down": "Insurrect'",
+      "left": "Backbone'",
+      "right": "",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 65,
+    "fields": {
+      "id": 65,
+      "room_name": "Frock'",
+      "description": "Description for the Frock' room ",
+      "up": "",
+      "down": "Beef'",
+      "left": "",
+      "right": "",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 66,
+    "fields": {
+      "id": 66,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 6
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 67,
+    "fields": {
+      "id": 67,
+      "room_name": "Either'",
+      "description": "Description for the Either' room ",
+      "up": "Inc'",
+      "down": "",
+      "left": "",
+      "right": "Winnie'",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 68,
+    "fields": {
+      "id": 68,
+      "room_name": "Winnie'",
+      "description": "Description for the Winnie' room ",
+      "up": "Carouse'",
+      "down": "",
+      "left": "Either'",
+      "right": "Pisces'",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 69,
+    "fields": {
+      "id": 69,
+      "room_name": "Pisces'",
+      "description": "Description for the Pisces' room ",
+      "up": "",
+      "down": "Diaper'",
+      "left": "Winnie'",
+      "right": "Lourdes'",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 70,
+    "fields": {
+      "id": 70,
+      "room_name": "Lourdes'",
+      "description": "Description for the Lourdes' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Pisces'",
+      "right": "",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 71,
+    "fields": {
+      "id": 71,
+      "room_name": "Floc'",
+      "description": "Description for the Floc' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Hangar'",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 72,
+    "fields": {
+      "id": 72,
+      "room_name": "Diaper'",
+      "description": "Description for the Diaper' room ",
+      "up": "Pisces'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 73,
+    "fields": {
+      "id": 73,
+      "room_name": "Carouse'",
+      "description": "Description for the Carouse' room ",
+      "up": "",
+      "down": "Winnie'",
+      "left": "Inc'",
+      "right": "",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 74,
+    "fields": {
+      "id": 74,
+      "room_name": "Inc'",
+      "description": "Description for the Inc' room ",
+      "up": "Hangar'",
+      "down": "Either'",
+      "left": "",
+      "right": "Carouse'",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 75,
+    "fields": {
+      "id": 75,
+      "room_name": "Hangar'",
+      "description": "Description for the Hangar' room ",
+      "up": "Humanitarian'",
+      "down": "Inc'",
+      "left": "Floc'",
+      "right": "",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 76,
+    "fields": {
+      "id": 76,
+      "room_name": "Humanitarian'",
+      "description": "Description for the Humanitarian' room ",
+      "up": "",
+      "down": "Hangar'",
+      "left": "",
+      "right": "",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 77,
+    "fields": {
+      "id": 77,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 7
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 78,
+    "fields": {
+      "id": 78,
+      "room_name": "Spaulding'",
+      "description": "Description for the Spaulding' room ",
+      "up": "Kitten'",
+      "down": "",
+      "left": "",
+      "right": "Durward'",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 79,
+    "fields": {
+      "id": 79,
+      "room_name": "Durward'",
+      "description": "Description for the Durward' room ",
+      "up": "Tithing'",
+      "down": "",
+      "left": "Spaulding'",
+      "right": "Splay'",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 80,
+    "fields": {
+      "id": 80,
+      "room_name": "Splay'",
+      "description": "Description for the Splay' room ",
+      "up": "",
+      "down": "Mantis'",
+      "left": "Durward'",
+      "right": "Henrietta'",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 81,
+    "fields": {
+      "id": 81,
+      "room_name": "Henrietta'",
+      "description": "Description for the Henrietta' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Splay'",
+      "right": "",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 82,
+    "fields": {
+      "id": 82,
+      "room_name": "Wrongful'",
+      "description": "Description for the Wrongful' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Syracuse'",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 83,
+    "fields": {
+      "id": 83,
+      "room_name": "Mantis'",
+      "description": "Description for the Mantis' room ",
+      "up": "Splay'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 84,
+    "fields": {
+      "id": 84,
+      "room_name": "Tithing'",
+      "description": "Description for the Tithing' room ",
+      "up": "",
+      "down": "Durward'",
+      "left": "Kitten'",
+      "right": "",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 85,
+    "fields": {
+      "id": 85,
+      "room_name": "Kitten'",
+      "description": "Description for the Kitten' room ",
+      "up": "Syracuse'",
+      "down": "Spaulding'",
+      "left": "",
+      "right": "Tithing'",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 86,
+    "fields": {
+      "id": 86,
+      "room_name": "Syracuse'",
+      "description": "Description for the Syracuse' room ",
+      "up": "Attend'",
+      "down": "Kitten'",
+      "left": "Wrongful'",
+      "right": "",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 87,
+    "fields": {
+      "id": 87,
+      "room_name": "Attend'",
+      "description": "Description for the Attend' room ",
+      "up": "",
+      "down": "Syracuse'",
+      "left": "",
+      "right": "",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 88,
+    "fields": {
+      "id": 88,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 8
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 89,
+    "fields": {
+      "id": 89,
+      "room_name": "Wardrobe'",
+      "description": "Description for the Wardrobe' room ",
+      "up": "Maniac'",
+      "down": "",
+      "left": "",
+      "right": "Herbarium'",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 90,
+    "fields": {
+      "id": 90,
+      "room_name": "Herbarium'",
+      "description": "Description for the Herbarium' room ",
+      "up": "Salesperson'",
+      "down": "",
+      "left": "Wardrobe'",
+      "right": "Acquiescent'",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 91,
+    "fields": {
+      "id": 91,
+      "room_name": "Acquiescent'",
+      "description": "Description for the Acquiescent' room ",
+      "up": "",
+      "down": "Censorial'",
+      "left": "Herbarium'",
+      "right": "Hempstead'",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 92,
+    "fields": {
+      "id": 92,
+      "room_name": "Hempstead'",
+      "description": "Description for the Hempstead' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Acquiescent'",
+      "right": "",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 93,
+    "fields": {
+      "id": 93,
+      "room_name": "Sicklewort'",
+      "description": "Description for the Sicklewort' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Clamp'",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 94,
+    "fields": {
+      "id": 94,
+      "room_name": "Censorial'",
+      "description": "Description for the Censorial' room ",
+      "up": "Acquiescent'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 95,
+    "fields": {
+      "id": 95,
+      "room_name": "Salesperson'",
+      "description": "Description for the Salesperson' room ",
+      "up": "",
+      "down": "Herbarium'",
+      "left": "Maniac'",
+      "right": "",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 96,
+    "fields": {
+      "id": 96,
+      "room_name": "Maniac'",
+      "description": "Description for the Maniac' room ",
+      "up": "Clamp'",
+      "down": "Wardrobe'",
+      "left": "",
+      "right": "Salesperson'",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 97,
+    "fields": {
+      "id": 97,
+      "room_name": "Clamp'",
+      "description": "Description for the Clamp' room ",
+      "up": "Go",
+      "down": "Maniac'",
+      "left": "Sicklewort'",
+      "right": "",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 98,
+    "fields": {
+      "id": 98,
+      "room_name": "Go",
+      "description": "Description for the Go room ",
+      "up": "",
+      "down": "Clamp'",
+      "left": "",
+      "right": "",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 99,
+    "fields": {
+      "id": 99,
+      "room_name": "Staircase",
+      "description": "Movin' On Up!!!",
+      "up": "Roister'",
+      "down": "",
+      "left": "Propellant'",
+      "right": "Eb",
+      "floor": 9
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 100,
+    "fields": {
+      "id": 100,
+      "room_name": "O'",
+      "description": "Description for the O' room ",
+      "up": "Pi'",
+      "down": "",
+      "left": "",
+      "right": "Slit'",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 101,
+    "fields": {
+      "id": 101,
+      "room_name": "Slit'",
+      "description": "Description for the Slit' room ",
+      "up": "Curtsey'",
+      "down": "",
+      "left": "O'",
+      "right": "Humpty'",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 102,
+    "fields": {
+      "id": 102,
+      "room_name": "Humpty'",
+      "description": "Description for the Humpty' room ",
+      "up": "",
+      "down": "Orangeroot'",
+      "left": "Slit'",
+      "right": "Remediable'",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 103,
+    "fields": {
+      "id": 103,
+      "room_name": "Remediable'",
+      "description": "Description for the Remediable' room ",
+      "up": "",
+      "down": "Staircase",
+      "left": "Humpty'",
+      "right": "",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 104,
+    "fields": {
+      "id": 104,
+      "room_name": "Cinema'",
+      "description": "Description for the Cinema' room ",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "Cynic'",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 105,
+    "fields": {
+      "id": 105,
+      "room_name": "Orangeroot'",
+      "description": "Description for the Orangeroot' room ",
+      "up": "Humpty'",
+      "down": "",
+      "left": "",
+      "right": "Staircase",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 106,
+    "fields": {
+      "id": 106,
+      "room_name": "Curtsey'",
+      "description": "Description for the Curtsey' room ",
+      "up": "",
+      "down": "Slit'",
+      "left": "Pi'",
+      "right": "",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 107,
+    "fields": {
+      "id": 107,
+      "room_name": "Pi'",
+      "description": "Description for the Pi' room ",
+      "up": "Cynic'",
+      "down": "O'",
+      "left": "",
+      "right": "Curtsey'",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 108,
+    "fields": {
+      "id": 108,
+      "room_name": "Cynic'",
+      "description": "Description for the Cynic' room ",
+      "up": "Affiliate'",
+      "down": "Pi'",
+      "left": "Cinema'",
+      "right": "",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 109,
+    "fields": {
+      "id": 109,
+      "room_name": "Affiliate'",
+      "description": "Description for the Affiliate' room ",
+      "up": "",
+      "down": "Cynic'",
+      "left": "",
+      "right": "",
+      "floor": 10
+    }
+  },
+  {
+    "model": "tower_app.room",
+    "pk": 110,
+    "fields": {
+      "id": 110,
+      "room_name": "Treasure",
+      "description": "Made it to the top! Remember though, Money isn't everything",
+      "up": "",
+      "down": "",
+      "left": "",
+      "right": "",
+      "floor": 110
+    }
+  }
+]
