@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b6e505b-8cd1-48c6-acf5-33850b951ef7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/tower_app/migrations/0003_auto_20200109_2321.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tower_app/migrations/0004_auto_20200109_2328.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tower_app/enemygen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/enemygen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tower_app/fixtures/enemies_fixture.json" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/fixtures/enemies_fixture.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tower_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +121,7 @@
       <workItem from="1578608861779" duration="3207000" />
       <workItem from="1578619771727" duration="432000" />
       <workItem from="1578626203760" duration="63000" />
-      <workItem from="1578626278703" duration="734000" />
+      <workItem from="1578626278703" duration="4563000" />
     </task>
     <servers />
   </component>
@@ -136,28 +140,38 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="186" key="FileChooserDialogImpl/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578619768420" />
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom" timestamp="1578626945937">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom" timestamp="1578630554990">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578626945937" />
-    <state width="1493" height="223" key="GridCell.Tab.0.center" timestamp="1578626945936">
+    <state width="1493" height="2" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578630554990" />
+    <state width="1493" height="2" key="GridCell.Tab.0.center" timestamp="1578630554990">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578626945936" />
-    <state width="1493" height="223" key="GridCell.Tab.0.left" timestamp="1578626945936">
+    <state width="1493" height="2" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578630554990" />
+    <state width="1493" height="2" key="GridCell.Tab.0.left" timestamp="1578630554990">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578626945936" />
-    <state width="1493" height="223" key="GridCell.Tab.0.right" timestamp="1578626945937">
+    <state width="1493" height="2" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578630554990" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right" timestamp="1578630554990">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state width="1493" height="223" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578626945937" />
+    <state width="1493" height="2" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578630554990" />
     <state x="578" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578598146698">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="578" y="348" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1578598146698" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tower_app/models.py</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS24_BW_MUD$enemygen.coverage" NAME="enemygen Coverage Results" MODIFIED="1578626945929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tower_app" />
+    <SUITE FILE_PATH="coverage/CS24_BW_MUD$enemygen.coverage" NAME="enemygen Coverage Results" MODIFIED="1578630540783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tower_app" />
   </component>
 </project>

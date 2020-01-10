@@ -1,101 +1,1232 @@
 [
-  {
-    "model": "tower_app.item",
-    "pk": 101,
-    "fields": {
-      "enemy_name": "Red Dragon",
-      "strength": 11,
-      "HP": 7,
-      "description": "Red Dragon fights",
-      "roomID": 74
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 14,
+        "hp": 9,
+        "description": "Goblin fights",
+        "roomID": 9
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 15,
+        "hp": 13,
+        "description": "Stone Beast fights",
+        "roomID": 10
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 102,
-    "fields": {
-      "enemy_name": "Warlock",
-      "strength": 9,
-      "HP": 1,
-      "description": "Warlock fights",
-      "roomID": 75
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 8,
+        "hp": 15,
+        "description": "Reaper fights",
+        "roomID": 14
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 12,
+        "hp": 13,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 16
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 3,
+        "hp": 14,
+        "description": "Creeper fights",
+        "roomID": 12
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 3,
+        "hp": 12,
+        "description": "Ogre fights",
+        "roomID": 21
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 103,
-    "fields": {
-      "enemy_name": "Troll",
-      "strength": 6,
-      "HP": 9,
-      "description": "Troll fights",
-      "roomID": 41
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 3,
+        "hp": 10,
+        "description": "Witch fights",
+        "roomID": 26
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 9,
+        "hp": 1,
+        "description": "Ogre fights",
+        "roomID": 31
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 10,
+        "hp": 10,
+        "description": "Warlock fights",
+        "roomID": 29
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 10,
+        "hp": 1,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 25
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 14,
+        "hp": 4,
+        "description": "Troll fights",
+        "roomID": 29
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 13,
+        "hp": 7,
+        "description": "Reaper fights",
+        "roomID": 28
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 104,
-    "fields": {
-      "enemy_name": "Troll",
-      "strength": 3,
-      "HP": 9,
-      "description": "Troll fights",
-      "roomID": 63
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 15,
+        "hp": 13,
+        "description": "Stone Beast fights",
+        "roomID": 40
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 12,
+        "hp": 9,
+        "description": "Troll fights",
+        "roomID": 34
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 15,
+        "hp": 5,
+        "description": "Goblin fights",
+        "roomID": 39
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 15,
+        "hp": 1,
+        "description": "Witch fights",
+        "roomID": 43
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 1,
+        "hp": 13,
+        "description": "Creeper fights",
+        "roomID": 39
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 8,
+        "hp": 5,
+        "description": "Stone Beast fights",
+        "roomID": 39
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 12,
+        "hp": 4,
+        "description": "Troll fights",
+        "roomID": 36
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 11,
+        "hp": 6,
+        "description": "Witch fights",
+        "roomID": 43
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 105,
-    "fields": {
-      "enemy_name": "Red Dragon",
-      "strength": 1,
-      "HP": 6,
-      "description": "Red Dragon fights",
-      "roomID": 95
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 3,
+        "hp": 3,
+        "description": "Goblin fights",
+        "roomID": 55
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 5,
+        "hp": 9,
+        "description": "Creeper fights",
+        "roomID": 52
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 1,
+        "hp": 15,
+        "description": "Ogre fights",
+        "roomID": 46
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 6,
+        "hp": 7,
+        "description": "Warlock fights",
+        "roomID": 46
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Red Dragon",
+        "strength": 5,
+        "hp": 10,
+        "description": "Red Dragon fights",
+        "roomID": 51
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 9,
+        "hp": 7,
+        "description": "Warlock fights",
+        "roomID": 46
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 14,
+        "hp": 9,
+        "description": "Creeper fights",
+        "roomID": 55
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 11,
+        "hp": 10,
+        "description": "Goblin fights",
+        "roomID": 53
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 8,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 7,
+        "hp": 14,
+        "description": "Troll fights",
+        "roomID": 47
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 9,
+      "fields": {
+        "enemy_name": "Red Dragon",
+        "strength": 11,
+        "hp": 9,
+        "description": "Red Dragon fights",
+        "roomID": 55
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 106,
-    "fields": {
-      "enemy_name": "Ogre",
-      "strength": 5,
-      "HP": 11,
-      "description": "Ogre fights",
-      "roomID": 52
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 15,
+        "hp": 13,
+        "description": "Ogre fights",
+        "roomID": 65
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 8,
+        "hp": 3,
+        "description": "Creeper fights",
+        "roomID": 58
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 1,
+        "hp": 8,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 63
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 10,
+        "hp": 5,
+        "description": "Troll fights",
+        "roomID": 61
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 7,
+        "hp": 8,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 60
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 3,
+        "hp": 2,
+        "description": "Ogre fights",
+        "roomID": 66
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 7,
+        "hp": 12,
+        "description": "Creeper fights",
+        "roomID": 66
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 11,
+        "hp": 15,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 60
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 8,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 3,
+        "hp": 15,
+        "description": "Reaper fights",
+        "roomID": 63
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 9,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 7,
+        "hp": 4,
+        "description": "Goblin fights",
+        "roomID": 56
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 10,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 14,
+        "hp": 5,
+        "description": "Reaper fights",
+        "roomID": 65
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 11,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 9,
+        "hp": 9,
+        "description": "Ogre fights",
+        "roomID": 62
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 107,
-    "fields": {
-      "enemy_name": "Giant Scorpion Spider",
-      "strength": 1,
-      "HP": 3,
-      "description": "Giant Scorpion Spider fights",
-      "roomID": 7
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 11,
+        "hp": 14,
+        "description": "Troll fights",
+        "roomID": 67
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 14,
+        "hp": 11,
+        "description": "Reaper fights",
+        "roomID": 76
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 4,
+        "hp": 4,
+        "description": "Stone Beast fights",
+        "roomID": 76
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 15,
+        "hp": 7,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 68
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 6,
+        "hp": 3,
+        "description": "Stone Beast fights",
+        "roomID": 74
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 15,
+        "hp": 11,
+        "description": "Reaper fights",
+        "roomID": 77
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 2,
+        "hp": 14,
+        "description": "Witch fights",
+        "roomID": 73
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 11,
+        "hp": 9,
+        "description": "Reaper fights",
+        "roomID": 71
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 8,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 7,
+        "hp": 2,
+        "description": "Stone Beast fights",
+        "roomID": 72
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 9,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 12,
+        "hp": 6,
+        "description": "Ogre fights",
+        "roomID": 72
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 10,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 13,
+        "hp": 7,
+        "description": "Warlock fights",
+        "roomID": 71
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 11,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 5,
+        "hp": 8,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 67
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 12,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 2,
+        "hp": 3,
+        "description": "Troll fights",
+        "roomID": 68
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 13,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 2,
+        "hp": 10,
+        "description": "Warlock fights",
+        "roomID": 68
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 108,
-    "fields": {
-      "enemy_name": "Troll",
-      "strength": 4,
-      "HP": 11,
-      "description": "Troll fights",
-      "roomID": 20
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 2,
+        "hp": 2,
+        "description": "Ogre fights",
+        "roomID": 88
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 10,
+        "hp": 6,
+        "description": "Reaper fights",
+        "roomID": 85
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 14,
+        "hp": 10,
+        "description": "Stone Beast fights",
+        "roomID": 87
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 10,
+        "hp": 2,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 82
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 7,
+        "hp": 12,
+        "description": "Stone Beast fights",
+        "roomID": 83
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 15,
+        "hp": 3,
+        "description": "Witch fights",
+        "roomID": 82
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 13,
+        "hp": 6,
+        "description": "Ogre fights",
+        "roomID": 88
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 6,
+        "hp": 8,
+        "description": "Troll fights",
+        "roomID": 88
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 8,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 10,
+        "hp": 6,
+        "description": "Ogre fights",
+        "roomID": 86
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 9,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 2,
+        "hp": 14,
+        "description": "Goblin fights",
+        "roomID": 85
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 10,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 5,
+        "hp": 7,
+        "description": "Reaper fights",
+        "roomID": 81
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 11,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 1,
+        "hp": 15,
+        "description": "Troll fights",
+        "roomID": 85
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 12,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 11,
+        "hp": 5,
+        "description": "Troll fights",
+        "roomID": 88
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 13,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 11,
+        "hp": 4,
+        "description": "Goblin fights",
+        "roomID": 80
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 14,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 2,
+        "hp": 2,
+        "description": "Warlock fights",
+        "roomID": 78
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 15,
+      "fields": {
+        "enemy_name": "Red Dragon",
+        "strength": 8,
+        "hp": 2,
+        "description": "Red Dragon fights",
+        "roomID": 85
+      }
     }
-  },
-  {
-    "model": "tower_app.item",
-    "pk": 109,
-    "fields": {
-      "enemy_name": "Stone Beast",
-      "strength": 8,
-      "HP": 5,
-      "description": "Stone Beast fights",
-      "roomID": 38
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 14,
+        "hp": 13,
+        "description": "Witch fights",
+        "roomID": 95
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 3,
+        "hp": 11,
+        "description": "Ogre fights",
+        "roomID": 94
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 14,
+        "hp": 5,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 93
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 2,
+        "hp": 8,
+        "description": "Ogre fights",
+        "roomID": 93
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 7,
+        "hp": 14,
+        "description": "Warlock fights",
+        "roomID": 92
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 5,
+        "hp": 3,
+        "description": "Warlock fights",
+        "roomID": 97
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 3,
+        "hp": 5,
+        "description": "Ogre fights",
+        "roomID": 97
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 9,
+        "hp": 14,
+        "description": "Ogre fights",
+        "roomID": 93
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 8,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 1,
+        "hp": 12,
+        "description": "Goblin fights",
+        "roomID": 96
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 9,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 15,
+        "hp": 12,
+        "description": "Reaper fights",
+        "roomID": 95
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 10,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 14,
+        "hp": 4,
+        "description": "Troll fights",
+        "roomID": 93
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 11,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 11,
+        "hp": 1,
+        "description": "Goblin fights",
+        "roomID": 89
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 12,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 9,
+        "hp": 9,
+        "description": "Witch fights",
+        "roomID": 94
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 13,
+      "fields": {
+        "enemy_name": "Red Dragon",
+        "strength": 9,
+        "hp": 9,
+        "description": "Red Dragon fights",
+        "roomID": 90
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 14,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 11,
+        "hp": 3,
+        "description": "Ogre fights",
+        "roomID": 98
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 15,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 13,
+        "hp": 4,
+        "description": "Reaper fights",
+        "roomID": 98
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 16,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 14,
+        "hp": 13,
+        "description": "Warlock fights",
+        "roomID": 96
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 17,
+      "fields": {
+        "enemy_name": "Creeper",
+        "strength": 1,
+        "hp": 3,
+        "description": "Creeper fights",
+        "roomID": 89
+      }
     }
-  }
+  ],
+  [
+    {
+      "model": "tower_app.enemy",
+      "pk": 0,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 11,
+        "hp": 13,
+        "description": "Goblin fights",
+        "roomID": 110
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 1,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 2,
+        "hp": 4,
+        "description": "Ogre fights",
+        "roomID": 109
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 2,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 15,
+        "hp": 2,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 108
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 3,
+      "fields": {
+        "enemy_name": "Goblin",
+        "strength": 8,
+        "hp": 13,
+        "description": "Goblin fights",
+        "roomID": 109
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 4,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 2,
+        "hp": 8,
+        "description": "Troll fights",
+        "roomID": 104
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 5,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 8,
+        "hp": 6,
+        "description": "Witch fights",
+        "roomID": 103
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 6,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 12,
+        "hp": 3,
+        "description": "Ogre fights",
+        "roomID": 105
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 7,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 10,
+        "hp": 13,
+        "description": "Warlock fights",
+        "roomID": 109
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 8,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 2,
+        "hp": 6,
+        "description": "Warlock fights",
+        "roomID": 106
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 9,
+      "fields": {
+        "enemy_name": "Warlock",
+        "strength": 6,
+        "hp": 15,
+        "description": "Warlock fights",
+        "roomID": 107
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 10,
+      "fields": {
+        "enemy_name": "Witch",
+        "strength": 6,
+        "hp": 6,
+        "description": "Witch fights",
+        "roomID": 108
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 11,
+      "fields": {
+        "enemy_name": "Stone Beast",
+        "strength": 3,
+        "hp": 9,
+        "description": "Stone Beast fights",
+        "roomID": 102
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 12,
+      "fields": {
+        "enemy_name": "Reaper",
+        "strength": 4,
+        "hp": 8,
+        "description": "Reaper fights",
+        "roomID": 110
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 13,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 2,
+        "hp": 5,
+        "description": "Troll fights",
+        "roomID": 101
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 14,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 7,
+        "hp": 10,
+        "description": "Ogre fights",
+        "roomID": 107
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 15,
+      "fields": {
+        "enemy_name": "Troll",
+        "strength": 1,
+        "hp": 8,
+        "description": "Troll fights",
+        "roomID": 102
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 16,
+      "fields": {
+        "enemy_name": "Ogre",
+        "strength": 2,
+        "hp": 10,
+        "description": "Ogre fights",
+        "roomID": 103
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 17,
+      "fields": {
+        "enemy_name": "Giant Scorpion Spider",
+        "strength": 4,
+        "hp": 7,
+        "description": "Giant Scorpion Spider fights",
+        "roomID": 100
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 18,
+      "fields": {
+        "enemy_name": "Red Dragon",
+        "strength": 13,
+        "hp": 14,
+        "description": "Red Dragon fights",
+        "roomID": 102
+      }
+    },
+    {
+      "model": "tower_app.enemy",
+      "pk": 19,
+      "fields": {
+        "enemy_name": "Red Dragon",
+        "strength": 8,
+        "hp": 13,
+        "description": "Red Dragon fights",
+        "roomID": 106
+      }
+    }
+  ]
 ]

@@ -60,7 +60,8 @@ class Player(models.Model):
         return f"{item} is not in your inventory. You can't drop it."
 
     def initialize(self):
-        # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
+        # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest
+        # on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
         self.room = Room.objects.get(room_name='Outside')
         return self.room
 
@@ -131,18 +132,19 @@ class Item(models.Model):
 
 
 class Enemy(models.Model):
-
-    def random_string(self):
-        return str(randint(1, 21))
+    # def random_string(self):
+    #     return str(randint(1, 21))
 
     enemy_name = models.CharField(max_length=64)
-    location = models.ForeignKey(Room,
-                                 on_delete=models.CASCADE,
-                                 blank=True,
-                                 null=True)
+    # # room = models.ForeignKey(Room,
+    #                          on_delete=models.CASCADE,
+    #                          blank=True,
+    #                          null=True)
     # enemy_type = models.CharField(max_length=64)
-    HP = models.CharField(default=random_string)
-    strength = models.CharField(default=random_string)
+    roomID = models.IntegerField(default=random.randint(1, 110))
+    hp = models.IntegerField(default=random.randint(1, 15))
+    strength = models.IntegerField(default=random.randint(1, 15))
+    description = models.CharField(max_length=500, default='enemy description')
 
     # def spawn_enemies(self):
     #
@@ -175,7 +177,7 @@ class Enemy(models.Model):
         player_room = player.room
         enemy_in_room = Enemy.objects.filter(location=player_room)
         if len(enemy_in_room) > 0:
-            sleep(5)
+            # sleep(5)
             player.HP = player.HP - enemy_in_room[0].strength
             player.save()
             return f'{player.name}, You have been hit and now your HP is {player.HP}'
