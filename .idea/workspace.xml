@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b6e505b-8cd1-48c6-acf5-33850b951ef7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower_app/enemygen.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/enemygen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tower_app/fixtures/enemies_fixture.json" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/fixtures/enemies_fixture.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tower_app/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tower_app/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,7 +115,7 @@
       <workItem from="1578608861779" duration="3207000" />
       <workItem from="1578619771727" duration="432000" />
       <workItem from="1578626203760" duration="63000" />
-      <workItem from="1578626278703" duration="6872000" />
+      <workItem from="1578626278703" duration="7873000" />
     </task>
     <servers />
   </component>

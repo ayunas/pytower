@@ -69,7 +69,10 @@ class Player(models.Model):
         if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
             self.room = Room.objects.get(id=stair.id + 1)
-            return f'Congratulations, {self.name} has moved to floor {self.room.floor}. Now in {self.room.room_name} Room'
+            room_enemies = Enemy.objects.filter(roomID=self.room.id)
+            for enemy in room_enemies:
+                enemy.enemy_strikes_player(self)
+            return f'Congratulations, {self.name} has moved to floor {self.room.floor}. Now in {self.room.room_name} Room.'
 
         if way == 'up':
             if not self.room.up:
@@ -78,6 +81,9 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name=self.room.up)
                 print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                       'right:', self.room.right)
+                room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                for enemy in room_enemies:
+                    enemy.enemy_strikes_player(self)
                 return self.room
 
         elif way == 'down':
@@ -90,6 +96,9 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name=self.room.down)
                 print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                       'right:', self.room.right)
+                room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                for enemy in room_enemies:
+                    enemy.enemy_strikes_player(self)
                 return self.room
 
         elif way == 'left':
@@ -99,6 +108,9 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name=self.room.left)
                 print('in room-', self.room, 'up-', self.room.up, 'down-', self.room.down, 'left-', self.room.left,
                       'right-', self.room.right)
+                room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                for enemy in room_enemies:
+                    enemy.enemy_strikes_player(self)
                 return self.room
 
         elif way == 'right':
@@ -108,6 +120,9 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name=self.room.right)
                 print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                       'right:', self.room.right)
+                room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                for enemy in room_enemies:
+                    enemy.enemy_strikes_player(self)
                 return self.room
         else:
             return 'you have entered an invalid direction'
@@ -175,25 +190,25 @@ class Enemy(models.Model):
 
     def enemy_strikes_player(self, player):
         player_room = player.room.id
-        enemies_in_room = Enemy.objects.filter(roomID=player_room)
-        if len(enemies_in_room) > 0:
-            # sleep(5)
-            for enemy in enemies_in_room:
-                player.hp = player.hp - enemy.strength
-                player.save()
-                if player.hp <= 0:
-                    player.initialize()
-                    player.save()
-                    return f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.'
+        # enemies_in_room = Enemy.objects.filter(roomID=player_room)
+        # if len(enemies_in_room) > 0:
+        #     # sleep(5)
+        #     for enemy in enemies_in_room:
+        player.hp = player.hp - self.strength
+        player.save()
+        if player.hp <= 0:
+            player.initialize()
+            player.save()
+            return f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.'
         return f'{player.name}, You have been hit and now your HP is {player.hp}'
 
-    def player_strikes_enemy(self, player, enemy):
+    def player_strikes_enemy(self, player):
         # player_room = player.room.id
         # enemies_in_room = Enemy.objects.filter(roomID=player_room)
         # if len(enemies_in_room) > 0:
-        enemy.hp = enemy.hp - player.strength
+        self.hp = self.hp - player.strength
 
-        if enemy.hp <= 0:
-            enemy.delete()
-            return f'{player.name}, Victory! You have slayed {enemy.name}!'
-        return f"{player.name}, You have hit {enemy.name} and now {enemy.name}'s HP is {enemy.hp}"
+        if self.hp <= 0:
+            self.delete()
+            return f'{player.name}, Victory! You have slayed {self.enemy_name}!'
+        return f"{player.name}, You have hit {self.enemy_name} and now {self.enemy_name}'s HP is {self.hp}"
