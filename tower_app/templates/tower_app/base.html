@@ -8,6 +8,9 @@
         background-color: black;
         margin: 0px
       }
+      #content-wrapper {
+        margin: 20px;
+      }
       .movement-wrapper {
         width: 15vw;
       }
@@ -39,7 +42,7 @@
         padding:1vw
       }
       .wrapper {
-        display: flex
+        display: flex;
       }
       .right-content {
         width: 34vw;
@@ -57,7 +60,6 @@
       .material-icons {
         color: white
       }
-      
 
     </style>
     <link
@@ -66,7 +68,7 @@
     />
   </head>
   <body>
-    <div name="content">
+    <div name="content" id="content-wrapper">
       {% block content%} {% endblock %}
     </div>
  

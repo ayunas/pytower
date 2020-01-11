@@ -1,11 +1,8 @@
 {% extends 'tower_app/base.html'%} {% block content %}
 <div class="wrapper">
-  <section
-    class="map-wrapper"
-    style="display: grid; grid-template-columns: repeat(5, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 0px;grid-row-gap: 0px; width:65vw; max-width:910px; height:50vw; max-height:700px; background-color: rgb(50, 50, 50); padding:2vw"
+  <section class="map-wrapper" style="display: grid; grid-template-columns: repeat(5, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 0px;grid-row-gap: 0px; width:65vw; max-width:910px; height:50vw; max-height:700px; background-color: rgb(50, 50, 50); padding:2vw"
   >
     <div class="1 room" style="grid-area: 1 / 2 / 2 / 3;">
-      
       {% if player.room.id in rm10ids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
@@ -60,7 +57,8 @@
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
-    <div class="outside room" style="grid-area: 4 / 1 / 5 / 2; ">
+    
+    <div class="outside room" style="grid-area: 4 / 1 / 5 / 2;">
       {% if player.room.id in outsideids %}
       <p>{{player.room.room_name}}</p>
       <i class="material-icons">directions_walk</i> {%endif%}
