@@ -76,12 +76,8 @@
       {% for item in inventory%}
       <span>{{item.item_name}}</span>
       {% endfor %} {% endif%}
-      <p>Description: {{player.room.description}}</p>
-      {% if items %} 
-      <span>Items: </span>
-      {% for item in items%}
-      <span>{{item.item_name}}</span>
-      {% endfor %} {% endif %} {% if message %}
+      <p>Room: {{player.room.room_name}}--{{player.room.description}}</p>
+      {% if message %}
       <p>Message: {{message}}</p>
       {% endif%}
     </div>
@@ -133,13 +129,19 @@
         {% for item in inventory %}
         <input type="submit" value="drop {{ item.item_name }}" id="{{ item.id }}" name="btn" class="action" />
         {% endfor %}
-        <!-- <input
+        {% for enemy in enemies%}
+        <input
           type="submit"
-          value="attack"
+          value="attack {{enemy.enemy_name}}"
           id="attack"
           name="btn"
           class="action"
-        /> -->
+        />
+        {% endfor %}
+        {% if player.room.id in stairids %}
+        <input type="submit" value ="stair" name="btn" class="action">
+        {% endif %}
+
       </form>
       <p>{{ form.errors.as_text }}</p>
     </div>

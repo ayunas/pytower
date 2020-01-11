@@ -13,7 +13,7 @@ class Room(models.Model):
     floor = models.IntegerField(default=1)
 
     def items(self):
-        items = Item.objects.filter(roomID=self.id)
+        items = Item.objects.filter(roomID=self.id, playerID__isnull=True)
         # return [i.item_name for i in items]
         return list(items)
 
@@ -84,7 +84,7 @@ class Player(models.Model):
                     return f"cannot drop {item.item_name}. You're HP is only {self.hp}."
                 self.hp = self.hp - item.strength
             item.roomID = self.room.id
-            item.playerID = 0
+            item.playerID = None
             item.save()
             self.save()
             return f'{self.name} dropped the {item} in {self.room}.  reduced HP : {self.hp}'
@@ -113,7 +113,7 @@ class Player(models.Model):
 
     def move(self, way=""):
         
-        if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
+        if self.room.left == 'Staircase' and way=="left" or self.room.right == 'Staircase' and way =="right" or self.room.up == 'Staircase' and way=="up" or self.room.down == 'Staircase' and way=="down":
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
             self.room = Room.objects.get(id=stair.id + 1)
             self.hp = self.hp + 10+self.room.floor
@@ -253,11 +253,13 @@ class Enemy(models.Model):
         return f'{player.name}, You have been hit and now your HP is {player.hp}'
 
     def player_strikes_enemy(self, player):
+        print("PLAYER STRIKING ENEMY")
         # player_room = player.room.id
         # enemies_in_room = Enemy.objects.filter(roomID=player_room)
         # if len(enemies_in_room) > 0:
         self.hp = self.hp - player.strength
-
+        self.save()
+        print("ENEMY HP: ", self.hp)
         if self.hp <= 0:
             self.delete()
             return f'{player.name}, Victory! You have slayed {self.enemy_name}!'

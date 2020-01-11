@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
 from .forms import CreateCharacter, MoveCharacter, UserRegistrationForm
-from .models import Player, Room, Item
+from .models import Player, Room, Item, Enemy
 from django.http import HttpResponse, HttpResponseBadRequest, HttpResponseRedirect
 
 from django.contrib.auth import login, authenticate
@@ -42,10 +42,12 @@ def get_context(player_id, message=None):
     room_items = player.room.items()
     if len(room_items) == 0:
         room_items = None
-
+    enemies = Enemy.objects.filter(roomID=player.room.id)
+    if len(enemies) == 0:
+        enemies = None
     rooms = Room.objects.filter(floor=player.room.floor)
 
-    return {"player": player, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message}
+    return {"player": player, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message, "enemies": enemies}
 
 def play(request, id):
     player_id=id
@@ -73,11 +75,23 @@ def play(request, id):
 
                 context=get_context(player_id, message)
 
-
-            elif action=="attack":
-                pass
+            elif action.startswith("attack"):
+                action_enemy_name=action[7:]
+                print(f"ATTACKING ENEMY {action_enemy_name}")
+                if context["enemies"] is not None:
+                    for enemy in context["enemies"]:
+                        print(f"ENEMY: {enemy.enemy_name}")
+                        print(f".{enemy.enemy_name}., .{action_enemy_name}.")
+                        if enemy.enemy_name == action_enemy_name:
+                            print("ENEMY.Enemy_name = action_enemy_name")
+                            message = enemy.player_strikes_enemy(context["player"])
+                            print(f"MESSAGE: {message}")
+                            break
+                        else:
+                            print("ENEMY DOES NOT MATCH")
             
             else:
+                print("ELSE")
                 message=context["player"].move(action)
                 context=get_context(player_id, message)
 
