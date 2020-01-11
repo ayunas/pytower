@@ -85,7 +85,7 @@ def play(request, id):
                         if enemy.enemy_name == action_enemy_name:
                             print("ENEMY.Enemy_name = action_enemy_name")
                             message = enemy.player_strikes_enemy(context["player"])
-                            print(f"MESSAGE: {message}")
+                            context=get_context(player_id, message)
                             break
                         else:
                             print("ENEMY DOES NOT MATCH")
@@ -97,6 +97,7 @@ def play(request, id):
 
         else:
             form = MoveCharacter()
+
     context["rm10ids"] = [10,21,32,43,54,65,76,87,98,109]
     context["rm9ids"] = [9, 20,31,42,53,64,75,86,97,108]
     context["rm8ids"] = [8,19,30,41,52,63,74,85,96,107]
