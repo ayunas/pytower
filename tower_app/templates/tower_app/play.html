@@ -132,9 +132,7 @@
             class="action move vertical"
           />
         </div>
-        {% if items %}
-        <p>Pick Up</p>
-        {% endif %}
+
         {% for item in items%}
         <input
           type="submit"
@@ -145,7 +143,7 @@
         />
         {% endfor %}
         {% for item in inventory %}
-        <input type="submit" value="drop" id="{{ item.item_name }}" name="btn" class="action" />
+        <input type="submit" value="drop {{ item.item_name }}" id="{{ item.id }}" name="btn" class="action" />
         {% endfor %}
         <!-- <input
           type="submit"
@@ -157,15 +155,11 @@
       </form>
       <p>{{ form.errors.as_text }}</p>
     </div>
-
-
-  </div>
-  
 </div>
 <div class="wrapper">
     <div class="player-info">
       <p class="game-info">Name: {{player.name}}</p>
-      <p class="game-info">HP: {{player.hp}}</p>
+      <p class="game-info">HP: {{player.hp}}  Strength: {{player.strength}}</p>
       {% if player.inventory %}
       <p class="game-info">Inventory:</p>
       {% for item in inventory%}

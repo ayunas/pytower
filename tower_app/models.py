@@ -70,7 +70,7 @@ class Player(models.Model):
         
             return f'{self.name} picked up the {item} from {self.room}. Increased HP: {self.hp}'
 
-        return f"{item} is not in the room. can't pick it up."
+        return f"{item_name} is not in the room. can't pick it up."
 
     def drop(self, item_name):
         items = Item.objects.filter(item_name=item_name, playerID=self.id)
@@ -89,31 +89,49 @@ class Player(models.Model):
             self.save()
             return f'{self.name} dropped the {item} in {self.room}.  reduced HP : {self.hp}'
 
-        return f"{item} is not in your inventory. You can't drop it."
+        return f"{item_name} is not in your inventory. You can't drop it."
 
     def initialize(self):
         # start = input(f"{self.name}, you are outside the PyTower. It is a 10 story tower. There is a treasure chest
         # on the top floor. Do you have what it takes to reach the top??? type 'y' to enter Pytower: ")
+        inventory = Item.objects.filter(playerID = self.id)
+        for item in inventory:
+            item.playerID = 0
+            item.save()
         self.room = Room.objects.get(room_name='Outside')
         self.hp = random.randint(10,30)
         return {'player':self.name, 'HP':self.hp, 'strength':self.strength, 'room':self.room.room_name}
+
+    def enemy_attack(self, message=None):
+        room_enemies = Enemy.objects.filter(roomID=self.room.id)
+        for enemy in room_enemies:
+            strike = random.randint(0,1)
+            if strike:
+                if message is None:
+                    message=f"\n{enemy.enemy_name} is attacking you!"
+                else:
+                    message=message + f"\n{enemy.enemy_name} is attacking you!"
+                attack_message = enemy.enemy_strikes_player(self)
+                message=message + attack_message
+        return message
 
     def move(self, way=""):
         
         if self.room.left == 'Staircase' or self.room.right == 'Staircase' or self.room.up == 'Staircase' or self.room.down == 'Staircase':
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
             self.room = Room.objects.get(id=stair.id + 1)
-            self.hp = self.hp + 10+self.room.floor
+            self.hp = self.hp + 10*self.room.floor
             self.save()
-           
-            room_enemies = Enemy.objects.filter(roomID=self.room.id)
-            for enemy in room_enemies:
-                strike = random.randint(0,1)
-                if strike:
-                    print(f"{enemy.enemy_name} is attacking you!")
-                    enemy.enemy_strikes_player(self)
+            message=f'Congratulations, {self.name} has moved to floor {self.room.floor}. {self.name} HP increased to {self.hp}.  Now in {self.room.room_name} Room.'
+            # room_enemies = Enemy.objects.filter(roomID=self.room.id)
+            # for enemy in room_enemies:
+            #     strike = random.randint(0,1)
+            #     if strike:
+            #         message=message + f"{enemy.enemy_name} is attacking you!"
+            #         enemy.enemy_strikes_player(self)
+            message = self.enemy_attack(message)
         
-            return f'Congratulations, {self.name} has moved to floor {self.room.floor}. {self.name} HP increased to {self.hp}.  Now in {self.room.room_name} Room.'
+            return message
 
         if way == 'up':
             if not self.room.up:
@@ -123,14 +141,16 @@ class Player(models.Model):
                 self.save()
                 # print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                 #       'right:', self.room.right)
-                room_enemies = Enemy.objects.filter(roomID=self.room.id)
-                for enemy in room_enemies:
-                    strike = random.randint(0,1)
-                    if strike:
-                        print(f"{enemy.enemy_name} is attacking you!")
-                        enemy.enemy_strikes_player(self)
-                print('PLAYER NEW room ',self.room)
-                return self.room
+                # room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                # for enemy in room_enemies:
+                #     strike = random.randint(0,1)
+                #     if strike:
+                #         message = f"{enemy.enemy_name} is attacking you!"
+                #         enemy.enemy_strikes_player(self)
+                #         return message
+                # print('PLAYER NEW room ',self.room)
+                message= self.enemy_attack()
+                return message
 
         elif way == 'down':
             if not self.room.down:
@@ -144,14 +164,16 @@ class Player(models.Model):
                 self.room.mapping()
                 # print('in room: ', self.room, 'up:', self.room.up, 'down:', self.room.down, 'left:', self.room.left,
                 #       'right:', self.room.right)
-                room_enemies = Enemy.objects.filter(roomID=self.room.id)
-                for enemy in room_enemies:
-                    strike = random.randint(0,1)
-                    if strike:
-                        print(f"{enemy.enemy_name} is attacking you!")
-                        enemy.enemy_strikes_player(self)
-                print('room items',self.room.items())
-                return self.room
+                # room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                # for enemy in room_enemies:
+                #     strike = random.randint(0,1)
+                #     if strike:
+                #         message=f"{enemy.enemy_name} is attacking you!"
+                #         enemy.enemy_strikes_player(self)
+                #         return message
+                # print('room items',self.room.items())
+                message = self.enemy_attack()
+                return message
 
         elif way == 'left':
             if not self.room.left:
@@ -160,14 +182,16 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name=self.room.left)
                 self.save()
                 self.room.mapping()
-                room_enemies = Enemy.objects.filter(roomID=self.room.id)
-                for enemy in room_enemies:
-                    strike = random.randint(0,1)
-                    if strike:
-                        print(f"{enemy.enemy_name} is attacking you!")
-                        enemy.enemy_strikes_player(self)
-                print('room items',self.room.items())
-                return self.room
+                # room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                # for enemy in room_enemies:
+                #     strike = random.randint(0,1)
+                #     if strike:
+                #         message=f"{enemy.enemy_name} is attacking you!"
+                #         enemy.enemy_strikes_player(self)
+                #         return message
+                # print('room items',self.room.items())
+                message= self.enemy_attack()
+                return message
 
         elif way == 'right':
             if not self.room.right:
@@ -176,14 +200,15 @@ class Player(models.Model):
                 self.room = Room.objects.get(room_name=self.room.right)
                 self.save()
                 self.room.mapping()
-                room_enemies = Enemy.objects.filter(roomID=self.room.id)
-                for enemy in room_enemies:
-                    strike = random.randint(0,1)
-                    if strike:
-                        print(f"{enemy.enemy_name} is attacking you!")
-                        enemy.enemy_strikes_player(self)
-                print('room items',self.room.items())
-                return self.room
+                # room_enemies = Enemy.objects.filter(roomID=self.room.id)
+                # for enemy in room_enemies:
+                #     strike = random.randint(0,1)
+                #     if strike:
+                #         print(f"{enemy.enemy_name} is attacking you!")
+                #         enemy.enemy_strikes_player(self)
+                # print('room items',self.room.items())
+                message = self.enemy_attack()
+                return message
         else:
             return 'you have entered an invalid direction'
 
@@ -236,7 +261,6 @@ class Enemy(models.Model):
         # enemies_in_room = Enemy.objects.filter(roomID=player_room)
         # if len(enemies_in_room) > 0:
         self.hp = self.hp - player.strength
-
         if self.hp <= 0:
             self.delete()
             return f'{player.name}, Victory! You have slayed {self.enemy_name}!'

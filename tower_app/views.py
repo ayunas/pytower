@@ -35,26 +35,22 @@ def start(request):
 def get_context(player_id, message=None):
     player=Player.objects.get(id=player_id)
     inventory=player.inventory()
+    for item in inventory:
+        print(item.item_name)
     if len(inventory) == 0:
         inventory=None
     room_items = player.room.items()
     if len(room_items) == 0:
         room_items = None
-    #TODO: change this later
-    print("Floor", player.room.floor)
+
     rooms = Room.objects.filter(floor=player.room.floor)
-    #rooms = Room.objects.filter(floor=1)
-    #if character.room.floor>1:
-    #    minus = (character.room.floor-1) * 11
-    #    print("MINUS", minus)
-    #    for room in rooms:
-    #        room.id=room.id-minus
+
     return {"player": player, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message}
 
 def play(request, id):
     player_id=id
     context=get_context(player_id)
-    print("Context", context["player"].room.room_name)
+    #print("Context", context["player"].room.room_name)
     print("REFRESH")
     if request.method =="POST":
         #print("method is post")
@@ -70,29 +66,23 @@ def play(request, id):
                 #print("ITEM", item_name)
                 message=context["player"].pickup(item_name)
                 context=get_context(player_id, message)
-                print("Context", context)
-                return HttpResponseRedirect(f'/play/{context["player"].id}')
+
             elif action.startswith("drop"):
                 item_name=action[5:]
                 message=context["player"].drop(item_name)
 
                 context=get_context(player_id, message)
-                print("Context", context)
+
+
             elif action=="attack":
                 pass
             
             else:
-                print("move")
                 message=context["player"].move(action)
                 context=get_context(player_id, message)
-                print("Context MOVE", context["player"].room.room_name)
-                #return HttpResponseRedirect(f'/play/{context["player"].id}')
-                #return render(request, "tower_app/play.html", context)
+
         else:
             form = MoveCharacter()
-
-    print(f"FINAL CONTEXT ROOM: ", context["player"].room.room_name)
-#    player ={"name": "Player1", "location": "Foyer"}
     context["rm10ids"] = [10,21,32,43,54,65,76,87,98,109]
     context["rm9ids"] = [9, 20,31,42,53,64,75,86,97,108]
     context["rm8ids"] = [8,19,30,41,52,63,74,85,96,107]
@@ -103,12 +93,9 @@ def play(request, id):
     context["rm3ids"] = [3,14,25,36,47,58,69,80,91,102]
     context["rm2ids"] = [2,13,24,35,46,57,68,79,90,101]
     context["rm1ids"] = [1,12,23,34,45,56,67,78,89,100]
-    context["stairids"] = [11,22,33,44,55,66,77,88,99],
+    context["stairids"] = [11,22,33,44,55,66,77,88,99]
     context["outsideids"]= [0]
-    
-    #print(f"room_ids1: {all_room_ids[1]}")
-    #context["room1_ids"]=all_room_ids[10]
-    #print("context ids", context["all_room_ids"][1])
+
     return render(request, "tower_app/play.html", context)
 
 def loginView(request):
