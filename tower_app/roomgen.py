@@ -44,7 +44,7 @@ def treasure():
         'down': '',
         'left': '',
         'right': '',
-        'floor': 110
+        'floor': 10
     }
     
     return treasure
