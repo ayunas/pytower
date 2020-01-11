@@ -1,0 +1,79 @@
+@import "./variables";
+@import "./mixins";
+
+$even-color: tower-color("medium-carmine");
+
+      .body {
+        box-sizing: border-box;
+        background-color: black;
+        margin: 0px
+      }
+      .movement-wrapper {
+        width: 15vw;
+      }
+      .row {
+        display: flex;
+      }
+      .action {
+        width: 5vw;
+        height: 5vw;
+        border-radius: 50%;
+        color: white;
+        background-color: green;
+      }
+      .move {
+        background-color: blue;
+      }
+      .left {
+        margin-right: 5vw;
+      }
+      .vertical {
+        margin-left: 5vw;
+      }
+      .action {
+        border: none;
+        font-size:12px;
+      }
+      .player-info {
+        background-color:gray;
+        height: 25vw;
+        padding:1vw;
+        margin:1vw;
+        margin-left:6vw;
+        margin-right:6vw;
+        width:100%;
+      }
+      .wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .right-content {
+        width: 34vw;
+        font-size:48px;
+      }
+      .actions-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+      .actions-form {
+        padding: 5vw;
+      }
+      .room {
+        border: 1px white solid;
+        border-color: $even-color;
+        color: $even-color;
+          border-width: 1px;
+      font-size: 26px;
+      }
+      .material-icons {
+        color: white
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .game-info {
+       font-size: 16px; 
+       margin: 0;
+      }
