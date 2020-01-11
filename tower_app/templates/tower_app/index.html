@@ -1,13 +1,103 @@
+<!DOCTYPE html>
 {% extends 'tower_app/base.html'%}
-
 {% block content %}
-<h1> Welcome! </h1>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <title>Pytower Start</title>
+        <style>
+            * {
+                font-family: 'Roboto', sans-serif;
+                color: white;
+            }
+            html {
+                height: 100%;
+                background-color: #292929;
+            }
+            body {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin: 0;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 400px;
+                margin: 15px auto;
+                padding: 25px;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, .1);
+            }
+            input {
+                margin-bottom: 25px;
+                font-size: 1.5rem;
+                outline: 0;
+                border: none;
+                padding: 5px;
+                color: black;
+            }
+            .submit {
+                margin-top: 15px;
+                padding: 15px 0;
+                width: 100%;
+                font-size: 1.2rem;
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: #25a0ed  ;
+                border: none;
+                transition: background-color 0.5s linear;
+            }
+            button:hover {
+                background-color: #1183ca;
+            }
+            h1 {
+                text-align: center;
+                font-size: 3rem;
+                margin-top: 0;
+            }
+            h3 {
+                margin: 0;
+                margin-bottom: 25px;
+                font-size: 1.8rem;
+            }
+            h6 {
+                margin: 0;
+                margin-bottom: 3px;
+                font-size: 1.2rem;
+            }
+            a {
+                margin-top: 25px;
+            }
+            p#error {
+                color: red;
+            }
+            p {
+                display: flex;
+                flex-direction: column;
+            }
+            ul.errorlist li {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+
+<h1> Welcome to Pytower! </h1>
 <p>To start playing, enter a character name below and submit</p>
 <p>Get familiar with the player actions on the right</p>
 <p>You are outside the PyTower. It is a 10 story tower. There is a treasure chest on the top floor. Do you have what it takes to reach the top???</p>
 <form method="post" action="">
     {% csrf_token %}
     {{form}}
-    <button type="submit", name="Create Character">Create Character</button>
+    <button type="submit" class="submit" name="Create Character">Create Character</button>
 </form>
 {% endblock %}

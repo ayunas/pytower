@@ -12,6 +12,7 @@ from django import forms
 
 import json
 
+
 # Create your views here.
 def test(request):
     return HttpResponse('test is working properly')
@@ -113,15 +114,18 @@ def play(request, id):
 
     return render(request, "tower_app/play.html", context)
 
+
 def loginView(request):
     return render(request, "auth/login.html")
+
 
 def register(request):
     return render(request, "auth/register.html")
 
+
 def loginPost(request):
     if request.method == 'POST':
-        form = AuthenticationForm(request=request, data = request.POST)
+        form = AuthenticationForm(request=request, data=request.POST)
         if form.is_valid():
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password')
@@ -136,13 +140,14 @@ def loginPost(request):
         form = AuthenticationForm()
     return render(request, 'auth/login.html', {'form': form})
 
+
 def registerPost(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
         if form.is_valid():
             userObj = form.cleaned_data
             username = userObj['username']
-            password =  userObj['password1']
+            password = userObj['password1']
             if not (User.objects.filter(username=username).exists()):
                 user = form.save()
                 login(request, user, backend='django.contrib.auth.backends.ModelBackend')
@@ -151,7 +156,7 @@ def registerPost(request):
                 form.add_error("username", "that username is already taken")
         else:
             form.add_error("password1", "Check to make sure your password fills requirements")
-                
+
     else:
         form = UserCreationForm()
         
