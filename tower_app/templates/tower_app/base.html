@@ -2,18 +2,28 @@
 <html lang="en">
   <head>
     <title>PyTower</title>
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
     <style type="text/css">
-      .body {
-        box-sizing: border-box;
-        background-color: black;
-        font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
+      html {
+        margin: 0;
+        padding: 0;
       }
+
+      body {
+        box-sizing: border-box;
+      }
+
+      h2 {
+        text-align: center;
+        margin: 0;
+      }
+
       #content-wrapper {
         margin: 40px;
       }
       p {
-        font-family: fantasy;
-        font-size: 3vh;
+        font-family: 'Cute Font';
+        font-size: 20px;
       }
       .wrapper {
         height: 50vh;
@@ -22,9 +32,13 @@
       #map {
         width:75%; 
         max-width:910px; 
-        height:90vh;
+        height:85vh;
         /* max-height:700px;  */
-        background-color: rgba(245, 245, 245, 0.836);
+        background-color: whitesmoke;
+        background-image: url('https://previews.123rf.com/images/pzuh/pzuh1712/pzuh171200008/91083760-forest-parallax-image-scrolling-for-video-game-background.jpg');
+        z-index: -1;
+        background-repeat: no-repeat;
+        background-size: cover;
         border: 5px double black;
         display: grid; 
         grid-template-columns: repeat(5, 1fr);
@@ -32,6 +46,12 @@
         grid-column-gap: 0px;
         grid-row-gap: 0px; 
         padding:2vw"
+      }
+
+      #floorname {
+        font-size: 35px;
+        padding: 0;
+        margin: 0;
       }
       .movement-wrapper {
         width: 15vw;
@@ -95,11 +115,15 @@
         margin-left: 5vw;
       } */
       .player-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         background-color:lightgrey;
-        height: 25vw;
+        height: 20vw;
         padding:1vw;
         /* font-weight:bolder; */
       }
+
       .wrapper {
         display: flex;
       }
@@ -120,23 +144,22 @@
       }
       .room {
         border: 5px double black;
-        background-color: rgb(243, 164, 164);
       }
 
       .one {
-        background-color: aqua;
+        background-color: gold;
       }
 
       .two {
-        background-color : yellow;
+        background-color : rgb(121, 92, 92);
       }
 
       .three {
-        background-color : violet;
+        background-color : blue;
       }
 
       .four {
-        background-color : blue;
+        background-color : grey;
       }
 
       .five {
@@ -148,7 +171,7 @@
       }
 
       .seven {
-        background-color : grey;
+        background-color : fuchsia;
       }
 
       .eight {
@@ -164,21 +187,33 @@
       }
 
       .outside {
-        border: none;
-        background-color: white;
+        background-color: whitesmoke;
+        background-image: url('https://www.netclipart.com/pp/m/38-383467_email-clipart-white-object-open-door-clipart.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
       }
 
       .stair {
         border: none;
-        background-color: white;
+        background-color: whitesmoke;
+        background-image: url('http://clipart-library.com/data_images/144180.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+      }
+
+      .room p {
+        font-size: 16px;
+        margin: 5px;
       }
 
       .material-icons {
         color: black;
       }
-      section.map-wrapper#map {
+      /* section.map-wrapper#map {
         
-      }
+      } */
       
       </style>
 
@@ -194,6 +229,7 @@ href="https://fonts.googleapis.com/icon?family=Material+Icons"
   </head>
   <body>
     <div name="content" id="content-wrapper">
+      <h2>PyTower</h2>
       {% block content%} {% endblock %}
     </div>
  
