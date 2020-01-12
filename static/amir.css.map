@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "amir.css",
+	"sources": [
+		"amir.scss"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,IAAI,CAAC;EACD,gBAAgB,EAAG,OAAO;EAC1B,KAAK,EAAG,OAAO,GAMlB;EARD,AAII,IAJA,CAIA,QAAQ,CAAC;IACL,MAAM,EAAG,mBAAmB,GAC/B"
+}

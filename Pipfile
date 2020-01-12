@@ -11,6 +11,10 @@ gunicorn = "*"
 psycopg2 = "*"
 dj-database-url = "*"
 random-word = "*"
+django-debug-toolbar = "*"
+django-sass-processor = "*"
+libsass = "*"
+django-compressor = "*"
 
 [requires]
 python_version = "3.7"

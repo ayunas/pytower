@@ -6,7 +6,32 @@
       .body {
         box-sizing: border-box;
         background-color: black;
-        margin: 0px
+        font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
+      }
+      #content-wrapper {
+        margin: 40px;
+      }
+      p {
+        font-family: fantasy;
+        font-size: 3vh;
+      }
+      .wrapper {
+        height: 50vh;
+        font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
+      }
+      #map {
+        width:75%; 
+        max-width:910px; 
+        height:90vh;
+        /* max-height:700px;  */
+        background-color: rgba(245, 245, 245, 0.836);
+        border: 5px double black;
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        padding:2vw"
       }
       .movement-wrapper {
         width: 15vw;
@@ -14,59 +39,161 @@
       .row {
         display: flex;
       }
-      .action {
-        width: 5vw;
-        height: 5vw;
-        border-radius: 50%;
+      form.actions-form {
+        border : 10px solid black;
+        margin : 10px;
+      }
+    
+      #attacks {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      #attack {
+        background-color: red;
+        margin: 5px;
+      }
+      
+    .action {
+        /* height: 5vw; */
+        /* border-radius: 20%; */
         color: white;
-        background-color: green;
-      }
-      .move {
         background-color: blue;
+        flex-basis: content;
+        padding: 10px;
+        border-radius: 10px;
       }
-      .left {
+
+      div.lr {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+      }
+
+      #left,#right {
+        flex-basis: 40%;
+      }
+
+      .left .right {
+        width: 100px;
+      }
+
+      /* .move {
+          background-color: blue;
+      } */
+      /* .left {
         margin-right: 5vw;
+      } */
+      .movement-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
-      .vertical {
+      /* .vertical {
         margin-left: 5vw;
-      }
-      .action {
-        border: none;
-      }
+      } */
       .player-info {
-        background-color:gray;
+        background-color:lightgrey;
         height: 25vw;
-        padding:1vw
+        padding:1vw;
+        /* font-weight:bolder; */
       }
       .wrapper {
-        display: flex
+        display: flex;
       }
       .right-content {
         width: 34vw;
       }
-      .actions-wrapper {
+      /* .actions-wrapper {
         display: flex;
         justify-content: center;
-      }
+      } */
       .actions-form {
-        padding: 5vw;
+        /* padding: 5vw; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content : center;
+        align-items : center;
       }
       .room {
-        border: 1px white solid;
+        border: 5px double black;
+        background-color: rgb(243, 164, 164);
       }
+
+      .one {
+        background-color: aqua;
+      }
+
+      .two {
+        background-color : yellow;
+      }
+
+      .three {
+        background-color : violet;
+      }
+
+      .four {
+        background-color : blue;
+      }
+
+      .five {
+        background-color : maroon;
+      }
+
+      .six {
+        background-color: rgb(175, 118, 118);
+      }
+
+      .seven {
+        background-color : grey;
+      }
+
+      .eight {
+        background-color : skyblue;
+      }
+
+      .nine {
+        background-color : rgb(112, 23, 163);
+      }
+
+      .ten {
+        background-color: rgb(243, 59, 59);
+      }
+
+      .outside {
+        border: none;
+        background-color: white;
+      }
+
+      .stair {
+        border: none;
+        background-color: white;
+      }
+
       .material-icons {
-        color: white
+        color: black;
+      }
+      section.map-wrapper#map {
+        
       }
       
+      </style>
 
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+{% load sass_tags %}
+<link href="{% sass_src 'amir.scss' %}" re="stylesheet" type="text/css" />
+
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+
+
   </head>
   <body>
-    <div name="content">
+    <div name="content" id="content-wrapper">
       {% block content%} {% endblock %}
     </div>
  
