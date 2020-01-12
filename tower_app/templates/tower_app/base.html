@@ -6,10 +6,16 @@
       .body {
         box-sizing: border-box;
         background-color: black;
-        margin: 0px
       }
       #content-wrapper {
-        margin: 20px;
+        margin: 40px;
+      }
+      .wrapper {
+        height: 50vh;
+      }
+      #map {
+        width: 50vw;
+        height: 50%;
       }
       .movement-wrapper {
         width: 15vw;
@@ -17,25 +23,38 @@
       .row {
         display: flex;
       }
-      .action {
-        width: 5vw;
-        height: 5vw;
-        border-radius: 50%;
-        color: white;
-        background-color: green;
+      form.actions-form {
+        border : 10px solid fuchsia;
       }
-      .move {
+      
+    .action {
+        /* height: 5vw; */
+        /* border-radius: 20%; */
+        color: white;
         background-color: blue;
       }
-      .left {
+
+      .left .right {
+        width: 50%;
+      }
+
+      /* .move {
+          background-color: blue;
+      } */
+      /* .left {
         margin-right: 5vw;
+      } */
+      .movement-wrapper {
+        border : 1px solid red;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
-      .vertical {
+      /* .vertical {
         margin-left: 5vw;
-      }
-      .action {
-        border: none;
-      }
+      } */
       .player-info {
         background-color:gray;
         height: 25vw;
@@ -47,12 +66,17 @@
       .right-content {
         width: 34vw;
       }
-      .actions-wrapper {
+      /* .actions-wrapper {
         display: flex;
         justify-content: center;
-      }
+      } */
       .actions-form {
-        padding: 5vw;
+        /* padding: 5vw; */
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content : center;
+        align-items : center;
       }
       .room {
         border: 1px white solid;
@@ -60,12 +84,18 @@
       .material-icons {
         color: white
       }
+      
+      </style>
 
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+{% load sass_tags %}
+<link href="{% sass_src 'amir.scss' %}" re="stylesheet" type="text/css" />
+
+<link
+rel="stylesheet"
+href="https://fonts.googleapis.com/icon?family=Material+Icons"
+/>
+
+
   </head>
   <body>
     <div name="content" id="content-wrapper">

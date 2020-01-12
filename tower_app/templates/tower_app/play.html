@@ -1,6 +1,6 @@
 {% extends 'tower_app/base.html'%} {% block content %}
 <div class="wrapper">
-  <section class="map-wrapper" style="display: grid; grid-template-columns: repeat(5, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 0px;grid-row-gap: 0px; width:65vw; max-width:910px; height:50vw; max-height:700px; background-color: rgb(50, 50, 50); padding:2vw"
+  <section class="map-wrapper" id="map" style="display: grid; grid-template-columns: repeat(5, 1fr);grid-template-rows: repeat(5, 1fr);grid-column-gap: 0px;grid-row-gap: 0px; width:65vw; max-width:910px; height:50vw; max-height:700px; background-color: rgb(50, 50, 50); padding:2vw"
   >
     <div class="1 room" style="grid-area: 1 / 2 / 2 / 3;">
       {% if player.room.id in rm10ids %}
@@ -68,7 +68,7 @@
   <section class="right-content">
     <div class="player-info">
       <p>Name: {{player.name}}</p>
-      <p>HP: {{player.hp}}    Strength: {{player.strength}}</p>
+      <p>HP: {{player.hp}}  Strength: {{player.strength}}</p>
       {% if player.inventory %}
       <span>Inventory:</span>
       {% for item in inventory%}
@@ -83,46 +83,16 @@
       <form method="POST" class="actions-form">
         {% csrf_token %}
         <div class="movement-wrapper">
-          <input
-            type="submit"
-            value="up"
-            id="up"
-            name="btn"
-            class="action move vertical"
-          />
-          <div class="row">
-            <input
-              type="submit"
-              value="left"
-              id="left"
-              name="btn"
-              class="action move left"
-            />
-            <input
-              type="submit"
-              value="right"
-              id="right"
-              name="btn"
-              class="action move right"
-            />
+          <input type="submit" value="up" id="up" name="btn" class="action move vertical"/>
+          <div class="lr">
+            <input type="submit" value="left" id="left" name="btn" class="action move left"/>
+            <input type="submit" value="right" id="right" name="btn" class="action move right"/>
           </div>
-          <input
-            type="submit"
-            value="down"
-            id="down"
-            name="btn"
-            class="action move vertical"
-          />
+          <input type="submit" value="down" id="down" name="btn" class="action move vertical"/>
         </div>
 
         {% for item in items%}
-        <input
-          type="submit"
-          value="take {{ item.item_name }}"
-          id="{{item.id}}"
-          name="btn"
-          class="action"
-        />
+        <input type="submit" value="take {{ item.item_name }}" id="{{item.id}}" name="btn" class="action"/>
         {% endfor %}
         {% for item in inventory %}
         <input type="submit" value="drop {{ item.item_name }}" id="{{ item.id }}" name="btn" class="action" />
@@ -139,7 +109,6 @@
         {% if player.room.id in stairids %}
         <input type="submit" value ="stair" name="btn" class="action">
         {% endif %}
-
       </form>
       <p>{{ form.errors.as_text }}</p>
     </div>
