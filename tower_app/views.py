@@ -35,6 +35,7 @@ def start(request):
 
 def get_context(player_id, message=None):
     player=Player.objects.get(id=player_id)
+    player.name = player.name.capitalize()
     inventory=player.inventory()
     for item in inventory:
         print(item.item_name)
@@ -46,7 +47,9 @@ def get_context(player_id, message=None):
     enemies = Enemy.objects.filter(roomID=player.room.id)
     if len(enemies) == 0:
         enemies = None
-    rooms = Room.objects.filter(floor=player.room.floor)
+    rooms = list(Room.objects.filter(floor=player.room.floor))
+    if player.room.floor == 1:
+        rooms = rooms[1:]
 
     return {"player": player, "rooms": rooms, "inventory": inventory, "items": room_items, "message": message, "enemies": enemies}
 

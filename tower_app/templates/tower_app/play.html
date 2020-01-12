@@ -1,61 +1,93 @@
 {% extends 'tower_app/base.html'%} {% block content %}
+
 <div class="wrapper">
   <section class="map-wrapper" id="map">
     <p id="floorname">Floor {{player.room.floor}}</p>
-    <div class="room one" style="grid-area: 1 / 2 / 2 / 3;">
+    
+    <div id="player-stats"> 
+
+      <div class="stat">
+        <i class="material-icons player">portrait</i>
+        <p>{{player.name}}</p>
+      </div>
+
+      <div class="stat">
+        <i class="material-icons heart">favorite</i>
+        <p id="hp">HP: {{player.hp}}</p>
+      </div>
+
+      <div class="stat">
+        <i class="material-icons strength">flash_on</i>
+        <p id="strength">Strength: {{player.strength}}</p>
+      </div>
+
+    </div>
+   
+    <div class="room one">
+      <p>{{rooms.9}}</p>
       {% if player.room.id in rm10ids %}
-      <p>{{player.room.room_name}}</p>
-      <i class="material-icons">directions_walk</i>{% endif %}
+      <!-- <p>{{player.room.room_name}}</p> -->
+      <i class="material-icons">directions_walk</i>
+      {% endif %}
     </div>
     <div class="room two" style="grid-area: 2 / 1 / 3 / 2; ">
+      <p>{{rooms.4}}</p>
       {% if player.room.id in rm5ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room three" style="grid-area: 2 / 2 / 3 / 3; ">
+      <p>{{rooms.8}}</p>
       {% if player.room.id in rm9ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room four" style="grid-area: 3 / 2 / 4 / 3; ">
+      <p>{{rooms.7}}</p>
       {% if player.room.id in rm8ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room five" style="grid-area: 3 / 3 / 4 / 4; ">
+      <p>{{rooms.6}}</p>
       {% if player.room.id in rm7ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room six" style="grid-area: 4 / 2 / 5 / 3;">
+      <p>{{rooms.0}}</p>
       {% if player.room.id in rm1ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room seven" style="grid-area: 4 / 3 / 5 / 4; ">
+      <p>{{rooms.1}}</p>
       {% if player.room.id in rm2ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room eight" style="grid-area: 4 / 4 / 5 / 5; ">
+      <p>{{rooms.2}}</p>
       {% if player.room.id in rm3ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room nine" style="grid-area: 4 / 5 / 5 / 6; ">
+      <p>{{rooms.3}}</p>
       {% if player.room.id in rm4ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="room ten" style="grid-area: 5 / 4 / 6 / 5; ">
+      <p>{{rooms.5}}</p>
       {% if player.room.id in rm6ids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     <div class="stair room" style="grid-area: 5 / 5 / 6 / 6; ">
       <p>Stairs</p>
       {% if player.room.id in stairids %}
-      <p>{{player.room.room_name}}</p>
+      <!-- <p>{{player.room.room_name}}</p> -->
       <i class="material-icons">directions_walk</i>{% endif %}
     </div>
     {% if player.room.floor == 1 %}
@@ -71,8 +103,8 @@
 
   <section class="right-content">
     <div class="player-info">
-      <p>Name: {{player.name}}</p>
-      <p>HP: {{player.hp}}  Strength: {{player.strength}}</p>
+      <!-- <p>Name: {{player.name}}</p>
+      <p>HP: {{player.hp}}  Strength: {{player.strength}}</p> -->
       {% if player.inventory %}
       <span>Inventory:</span>
       {% for item in inventory%}
@@ -118,7 +150,7 @@
         {% endif %}
       
       <p>{{ form.errors.as_text }}</p>
-    </div>
+</div>
   </section>
   {% endblock %}
 </div>

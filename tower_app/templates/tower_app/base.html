@@ -4,12 +4,11 @@
     <title>PyTower</title>
     <link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
     <style type="text/css">
-      html {
-        margin: 0;
-        padding: 0;
-      }
 
-      body {
+      html {
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
         box-sizing: border-box;
       }
 
@@ -25,22 +24,21 @@
         font-family: 'Cute Font';
         font-size: 20px;
       }
-      .wrapper {
+      /* .wrapper {
         height: 50vh;
         font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
-      }
+      } */
       #map {
+        display: grid; 
         width:75%; 
         max-width:910px; 
         height:85vh;
         /* max-height:700px;  */
         background-color: whitesmoke;
         background-image: url('https://previews.123rf.com/images/pzuh/pzuh1712/pzuh171200008/91083760-forest-parallax-image-scrolling-for-video-game-background.jpg');
-        z-index: -1;
         background-repeat: no-repeat;
         background-size: cover;
         border: 5px double black;
-        display: grid; 
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
@@ -52,6 +50,7 @@
         font-size: 35px;
         padding: 0;
         margin: 0;
+        margin-left: 5px;
       }
       .movement-wrapper {
         width: 15vw;
@@ -98,12 +97,6 @@
         width: 100px;
       }
 
-      /* .move {
-          background-color: blue;
-      } */
-      /* .left {
-        margin-right: 5vw;
-      } */
       .movement-wrapper {
         display: flex;
         flex-direction: column;
@@ -111,9 +104,7 @@
         justify-content: center;
         align-items: center;
       }
-      /* .vertical {
-        margin-left: 5vw;
-      } */
+
       .player-info {
         display: flex;
         flex-direction: column;
@@ -122,6 +113,30 @@
         height: 20vw;
         padding:1vw;
         /* font-weight:bolder; */
+      }
+
+      #player-stats {
+        text-align: end;
+        grid-area: 1 / 5 / 2 / 6;
+        border : 5px double black;
+        margin : 5px 5px 0 0;
+        background-color: white;
+        border-radius: 10px;
+      }
+
+      #player-stats p {
+        font-size: 24px;
+        margin: 0 5px 0 0;
+        border: 3px;
+        border-bottom: black;
+      }
+
+      #hp {
+        color : red;
+      }
+
+      #strength {
+        color: blue;
       }
 
       .wrapper {
@@ -144,10 +159,13 @@
       }
       .room {
         border: 5px double black;
+        color : white;
       }
+
 
       .one {
         background-color: gold;
+        grid-area: 1 / 2 / 2 / 3;
       }
 
       .two {
@@ -155,7 +173,7 @@
       }
 
       .three {
-        background-color : blue;
+        background-color : rgb(64, 64, 228);
       }
 
       .four {
@@ -171,22 +189,23 @@
       }
 
       .seven {
-        background-color : fuchsia;
+        background-color : indigo;
       }
 
       .eight {
-        background-color : skyblue;
+        background-color :red;
       }
 
       .nine {
-        background-color : rgb(112, 23, 163);
+        background-color : orange;
       }
 
       .ten {
-        background-color: rgb(243, 59, 59);
+        background-color: fuchsia;
       }
 
       .outside {
+        color : black;
         background-color: whitesmoke;
         background-image: url('https://www.netclipart.com/pp/m/38-383467_email-clipart-white-object-open-door-clipart.png');
         background-size: contain;
@@ -201,16 +220,34 @@
         background-size: contain;
         background-repeat: no-repeat;
         background-position: right bottom;
+        color: black;
       }
 
       .room p {
-        font-size: 16px;
+        font-size: 24px;
         margin: 5px;
       }
 
       .material-icons {
         color: black;
       }
+
+      .stat {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .heart {
+        color: red;
+      }
+
+      .strength {
+        color: blue;
+      }
+
+      .player {
+        color : green;
+      }
+
       /* section.map-wrapper#map {
         
       } */
@@ -220,10 +257,7 @@
 {% load sass_tags %}
 <link href="{% sass_src 'amir.scss' %}" re="stylesheet" type="text/css" />
 
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/icon?family=Material+Icons"
-/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 
   </head>
