@@ -66,8 +66,6 @@ class Player(models.Model):
                 self.save()
                 return f'{self.name} picked up the {item} from {self.room}. Increased strength: {self.strength}'
 
-            
-        
             return f'{self.name} picked up the {item} from {self.room}. Increased HP: {self.hp}'
 
         return f"{item_name} is not in the room. can't pick it up."

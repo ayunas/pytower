@@ -6,16 +6,32 @@
       .body {
         box-sizing: border-box;
         background-color: black;
+        font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
       }
       #content-wrapper {
         margin: 40px;
       }
+      p {
+        font-family: fantasy;
+        font-size: 3vh;
+      }
       .wrapper {
         height: 50vh;
+        font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
       }
       #map {
-        width: 50vw;
-        height: 50%;
+        width:75%; 
+        max-width:910px; 
+        height:90vh;
+        /* max-height:700px;  */
+        background-color: rgba(245, 245, 245, 0.836);
+        border: 5px double black;
+        display: grid; 
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px; 
+        padding:2vw"
       }
       .movement-wrapper {
         width: 15vw;
@@ -24,7 +40,18 @@
         display: flex;
       }
       form.actions-form {
-        border : 10px solid fuchsia;
+        border : 10px solid black;
+        margin : 10px;
+      }
+    
+      #attacks {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      #attack {
+        background-color: red;
+        margin: 5px;
       }
       
     .action {
@@ -32,10 +59,23 @@
         /* border-radius: 20%; */
         color: white;
         background-color: blue;
+        flex-basis: content;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      div.lr {
+        display: flex;
+        justify-content: space-between;
+        align-self: stretch;
+      }
+
+      #left,#right {
+        flex-basis: 40%;
       }
 
       .left .right {
-        width: 50%;
+        width: 100px;
       }
 
       /* .move {
@@ -45,7 +85,6 @@
         margin-right: 5vw;
       } */
       .movement-wrapper {
-        border : 1px solid red;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -56,9 +95,10 @@
         margin-left: 5vw;
       } */
       .player-info {
-        background-color:gray;
+        background-color:lightgrey;
         height: 25vw;
-        padding:1vw
+        padding:1vw;
+        /* font-weight:bolder; */
       }
       .wrapper {
         display: flex;
@@ -79,10 +119,65 @@
         align-items : center;
       }
       .room {
-        border: 1px white solid;
+        border: 5px double black;
+        background-color: rgb(243, 164, 164);
       }
+
+      .one {
+        background-color: aqua;
+      }
+
+      .two {
+        background-color : yellow;
+      }
+
+      .three {
+        background-color : violet;
+      }
+
+      .four {
+        background-color : blue;
+      }
+
+      .five {
+        background-color : maroon;
+      }
+
+      .six {
+        background-color: rgb(175, 118, 118);
+      }
+
+      .seven {
+        background-color : grey;
+      }
+
+      .eight {
+        background-color : skyblue;
+      }
+
+      .nine {
+        background-color : rgb(112, 23, 163);
+      }
+
+      .ten {
+        background-color: rgb(243, 59, 59);
+      }
+
+      .outside {
+        border: none;
+        background-color: white;
+      }
+
+      .stair {
+        border: none;
+        background-color: white;
+      }
+
       .material-icons {
-        color: white
+        color: black;
+      }
+      section.map-wrapper#map {
+        
       }
       
       </style>
