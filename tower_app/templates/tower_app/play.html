@@ -3,7 +3,7 @@
 <div class="wrapper">
   <section class="map-wrapper" id="map">
     <p id="floorname">Floor {{player.room.floor}}</p>
-    
+
     <div id="player-stats"> 
 
       <div class="stat">
@@ -106,13 +106,17 @@
       <!-- <p>Name: {{player.name}}</p>
       <p>HP: {{player.hp}}  Strength: {{player.strength}}</p> -->
       {% if player.inventory %}
-      <span>Inventory:</span>
-      {% for item in inventory%}
-      <span>{{item.item_name}}</span>
-      {% endfor %} {% endif%}
-      <p>Room: {{player.room.room_name}}--{{player.room.description}}</p>
+        <span>Inventory:</span>
+        {% for item in inventory%}
+            <span>{{item.item_name}}</span>
+        {% endfor %} 
+      {% endif%}
+
+      <p>{{player.room.room_name}} Room</p>
+      <p>{{player.room.description}}</p>
+
       {% if message %}
-      <p>Message: {{message}}</p>
+        <pre><p>{{message}}</p></pre>
       {% endif%}
     </div>
     <div class="actions-wrapper">
