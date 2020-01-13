@@ -9,5 +9,6 @@
     <li>Fix the info panel to display text properly.  some indents and overflow in some cases</li>
     <li>Minor bug on floor 10, moving from room above treasure room pressing left, it goes diagnolly to the room to the left of the treasure room</li>
     <li>Add descriptions for all the rooms</li>
+    <li>Add favicon to tab</li>
 </ol>
 
