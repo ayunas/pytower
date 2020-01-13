@@ -108,7 +108,7 @@ class Player(models.Model):
                 if not message:
                     message = f"\n{enemy.enemy_name} is attacking you! "
                 else:
-                    message= message + f"\n{enemy.enemy_name} is attacking you! "
+                    message= message + f"\n{enemy.enemy_name} is attacking you!"
                 attack_message = enemy.enemy_strikes_player(self)
                 message = message + attack_message
         return message

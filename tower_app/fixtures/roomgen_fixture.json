@@ -4,12 +4,12 @@
     "pk": 12,
     "fields": {
       "id": 12,
-      "room_name": "Agatha'",
-      "description": "Description for the Agatha' room ",
-      "up": "Lithology'",
+      "room_name": "Toponymy'",
+      "description": "Description for the Toponymy' room ",
+      "up": "Motorcycle'",
       "down": "",
       "left": "",
-      "right": "Teammate'",
+      "right": "Qua'",
       "floor": 2
     }
   },
@@ -18,12 +18,12 @@
     "pk": 13,
     "fields": {
       "id": 13,
-      "room_name": "Teammate'",
-      "description": "Description for the Teammate' room ",
-      "up": "Include'",
+      "room_name": "Qua'",
+      "description": "Description for the Qua' room ",
+      "up": "Segmentation'",
       "down": "",
-      "left": "Agatha'",
-      "right": "Doctrinal'",
+      "left": "Toponymy'",
+      "right": "Capacity'",
       "floor": 2
     }
   },
@@ -32,12 +32,12 @@
     "pk": 14,
     "fields": {
       "id": 14,
-      "room_name": "Doctrinal'",
-      "description": "Description for the Doctrinal' room ",
+      "room_name": "Capacity'",
+      "description": "Description for the Capacity' room ",
       "up": "",
-      "down": "Spire'",
-      "left": "Teammate'",
-      "right": "Unital'",
+      "down": "Chinese'",
+      "left": "Qua'",
+      "right": "Jazz'",
       "floor": 2
     }
   },
@@ -46,11 +46,11 @@
     "pk": 15,
     "fields": {
       "id": 15,
-      "room_name": "Unital'",
-      "description": "Description for the Unital' room ",
+      "room_name": "Jazz'",
+      "description": "Description for the Jazz' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Doctrinal'",
+      "left": "Capacity'",
       "right": "",
       "floor": 2
     }
@@ -60,12 +60,12 @@
     "pk": 16,
     "fields": {
       "id": 16,
-      "room_name": "Collimate'",
-      "description": "Description for the Collimate' room ",
+      "room_name": "Spermatozoon'",
+      "description": "Description for the Spermatozoon' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Monoceros'",
+      "right": "Irreducible'",
       "floor": 2
     }
   },
@@ -74,9 +74,9 @@
     "pk": 17,
     "fields": {
       "id": 17,
-      "room_name": "Spire'",
-      "description": "Description for the Spire' room ",
-      "up": "Doctrinal'",
+      "room_name": "Chinese'",
+      "description": "Description for the Chinese' room ",
+      "up": "Capacity'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -88,11 +88,11 @@
     "pk": 18,
     "fields": {
       "id": 18,
-      "room_name": "Include'",
-      "description": "Description for the Include' room ",
+      "room_name": "Segmentation'",
+      "description": "Description for the Segmentation' room ",
       "up": "",
-      "down": "Teammate'",
-      "left": "Lithology'",
+      "down": "Qua'",
+      "left": "Motorcycle'",
       "right": "",
       "floor": 2
     }
@@ -102,12 +102,12 @@
     "pk": 19,
     "fields": {
       "id": 19,
-      "room_name": "Lithology'",
-      "description": "Description for the Lithology' room ",
-      "up": "Monoceros'",
-      "down": "Agatha'",
+      "room_name": "Motorcycle'",
+      "description": "Description for the Motorcycle' room ",
+      "up": "Irreducible'",
+      "down": "Toponymy'",
       "left": "",
-      "right": "Include'",
+      "right": "Segmentation'",
       "floor": 2
     }
   },
@@ -116,11 +116,11 @@
     "pk": 20,
     "fields": {
       "id": 20,
-      "room_name": "Monoceros'",
-      "description": "Description for the Monoceros' room ",
-      "up": "B\"h's\"",
-      "down": "Lithology'",
-      "left": "Collimate'",
+      "room_name": "Irreducible'",
+      "description": "Description for the Irreducible' room ",
+      "up": "Farnsworth'",
+      "down": "Motorcycle'",
+      "left": "Spermatozoon'",
       "right": "",
       "floor": 2
     }
@@ -130,10 +130,10 @@
     "pk": 21,
     "fields": {
       "id": 21,
-      "room_name": "B\"h's\"",
-      "description": "Description for the B\"h's\" room ",
+      "room_name": "Farnsworth'",
+      "description": "Description for the Farnsworth' room ",
       "up": "",
-      "down": "Monoceros'",
+      "down": "Irreducible'",
       "left": "",
       "right": "",
       "floor": 2
@@ -146,10 +146,10 @@
       "id": 22,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 2
     }
   },
@@ -158,12 +158,12 @@
     "pk": 23,
     "fields": {
       "id": 23,
-      "room_name": "Checkpoint'",
-      "description": "Description for the Checkpoint' room ",
-      "up": "Alchemy'",
+      "room_name": "Billy'",
+      "description": "Description for the Billy' room ",
+      "up": "Peru'",
       "down": "",
       "left": "",
-      "right": "Comptroller'",
+      "right": "Jutland'",
       "floor": 3
     }
   },
@@ -172,12 +172,12 @@
     "pk": 24,
     "fields": {
       "id": 24,
-      "room_name": "Comptroller'",
-      "description": "Description for the Comptroller' room ",
-      "up": "Shorthand'",
+      "room_name": "Jutland'",
+      "description": "Description for the Jutland' room ",
+      "up": "Whitlock'",
       "down": "",
-      "left": "Checkpoint'",
-      "right": "Faustus'",
+      "left": "Billy'",
+      "right": "Whizzing'",
       "floor": 3
     }
   },
@@ -186,12 +186,12 @@
     "pk": 25,
     "fields": {
       "id": 25,
-      "room_name": "Faustus'",
-      "description": "Description for the Faustus' room ",
+      "room_name": "Whizzing'",
+      "description": "Description for the Whizzing' room ",
       "up": "",
-      "down": "Verdi'",
-      "left": "Comptroller'",
-      "right": "Replete'",
+      "down": "Sleet'",
+      "left": "Jutland'",
+      "right": "Lent'",
       "floor": 3
     }
   },
@@ -200,11 +200,11 @@
     "pk": 26,
     "fields": {
       "id": 26,
-      "room_name": "Replete'",
-      "description": "Description for the Replete' room ",
+      "room_name": "Lent'",
+      "description": "Description for the Lent' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Faustus'",
+      "left": "Whizzing'",
       "right": "",
       "floor": 3
     }
@@ -214,12 +214,12 @@
     "pk": 27,
     "fields": {
       "id": 27,
-      "room_name": "Belfry'",
-      "description": "Description for the Belfry' room ",
+      "room_name": "Perry'",
+      "description": "Description for the Perry' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Intrusion'",
+      "right": "Sinh'",
       "floor": 3
     }
   },
@@ -228,9 +228,9 @@
     "pk": 28,
     "fields": {
       "id": 28,
-      "room_name": "Verdi'",
-      "description": "Description for the Verdi' room ",
-      "up": "Faustus'",
+      "room_name": "Sleet'",
+      "description": "Description for the Sleet' room ",
+      "up": "Whizzing'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -242,11 +242,11 @@
     "pk": 29,
     "fields": {
       "id": 29,
-      "room_name": "Shorthand'",
-      "description": "Description for the Shorthand' room ",
+      "room_name": "Whitlock'",
+      "description": "Description for the Whitlock' room ",
       "up": "",
-      "down": "Comptroller'",
-      "left": "Alchemy'",
+      "down": "Jutland'",
+      "left": "Peru'",
       "right": "",
       "floor": 3
     }
@@ -256,12 +256,12 @@
     "pk": 30,
     "fields": {
       "id": 30,
-      "room_name": "Alchemy'",
-      "description": "Description for the Alchemy' room ",
-      "up": "Intrusion'",
-      "down": "Checkpoint'",
+      "room_name": "Peru'",
+      "description": "Description for the Peru' room ",
+      "up": "Sinh'",
+      "down": "Billy'",
       "left": "",
-      "right": "Shorthand'",
+      "right": "Whitlock'",
       "floor": 3
     }
   },
@@ -270,11 +270,11 @@
     "pk": 31,
     "fields": {
       "id": 31,
-      "room_name": "Intrusion'",
-      "description": "Description for the Intrusion' room ",
-      "up": "Dereference'",
-      "down": "Alchemy'",
-      "left": "Belfry'",
+      "room_name": "Sinh'",
+      "description": "Description for the Sinh' room ",
+      "up": "Tamarack'",
+      "down": "Peru'",
+      "left": "Perry'",
       "right": "",
       "floor": 3
     }
@@ -284,10 +284,10 @@
     "pk": 32,
     "fields": {
       "id": 32,
-      "room_name": "Dereference'",
-      "description": "Description for the Dereference' room ",
+      "room_name": "Tamarack'",
+      "description": "Description for the Tamarack' room ",
       "up": "",
-      "down": "Intrusion'",
+      "down": "Sinh'",
       "left": "",
       "right": "",
       "floor": 3
@@ -300,10 +300,10 @@
       "id": 33,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 3
     }
   },
@@ -312,12 +312,12 @@
     "pk": 34,
     "fields": {
       "id": 34,
-      "room_name": "Valine'",
-      "description": "Description for the Valine' room ",
-      "up": "Salk'",
+      "room_name": "Class'",
+      "description": "Description for the Class' room ",
+      "up": "Bedimming'",
       "down": "",
       "left": "",
-      "right": "Astraddle'",
+      "right": "Dianne'",
       "floor": 4
     }
   },
@@ -326,12 +326,12 @@
     "pk": 35,
     "fields": {
       "id": 35,
-      "room_name": "Astraddle'",
-      "description": "Description for the Astraddle' room ",
-      "up": "Mineral'",
+      "room_name": "Dianne'",
+      "description": "Description for the Dianne' room ",
+      "up": "Lobelia'",
       "down": "",
-      "left": "Valine'",
-      "right": "Megawatt'",
+      "left": "Class'",
+      "right": "Fill'",
       "floor": 4
     }
   },
@@ -340,12 +340,12 @@
     "pk": 36,
     "fields": {
       "id": 36,
-      "room_name": "Megawatt'",
-      "description": "Description for the Megawatt' room ",
+      "room_name": "Fill'",
+      "description": "Description for the Fill' room ",
       "up": "",
-      "down": "Tectonic'",
-      "left": "Astraddle'",
-      "right": "Now'",
+      "down": "Aniline'",
+      "left": "Dianne'",
+      "right": "Lauren'",
       "floor": 4
     }
   },
@@ -354,11 +354,11 @@
     "pk": 37,
     "fields": {
       "id": 37,
-      "room_name": "Now'",
-      "description": "Description for the Now' room ",
+      "room_name": "Lauren'",
+      "description": "Description for the Lauren' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Megawatt'",
+      "left": "Fill'",
       "right": "",
       "floor": 4
     }
@@ -368,12 +368,12 @@
     "pk": 38,
     "fields": {
       "id": 38,
-      "room_name": "Deduce'",
-      "description": "Description for the Deduce' room ",
+      "room_name": "Forest'",
+      "description": "Description for the Forest' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Annulling'",
+      "right": "Coagulate'",
       "floor": 4
     }
   },
@@ -382,9 +382,9 @@
     "pk": 39,
     "fields": {
       "id": 39,
-      "room_name": "Tectonic'",
-      "description": "Description for the Tectonic' room ",
-      "up": "Megawatt'",
+      "room_name": "Aniline'",
+      "description": "Description for the Aniline' room ",
+      "up": "Fill'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -396,11 +396,11 @@
     "pk": 40,
     "fields": {
       "id": 40,
-      "room_name": "Mineral'",
-      "description": "Description for the Mineral' room ",
+      "room_name": "Lobelia'",
+      "description": "Description for the Lobelia' room ",
       "up": "",
-      "down": "Astraddle'",
-      "left": "Salk'",
+      "down": "Dianne'",
+      "left": "Bedimming'",
       "right": "",
       "floor": 4
     }
@@ -410,12 +410,12 @@
     "pk": 41,
     "fields": {
       "id": 41,
-      "room_name": "Salk'",
-      "description": "Description for the Salk' room ",
-      "up": "Annulling'",
-      "down": "Valine'",
+      "room_name": "Bedimming'",
+      "description": "Description for the Bedimming' room ",
+      "up": "Coagulate'",
+      "down": "Class'",
       "left": "",
-      "right": "Mineral'",
+      "right": "Lobelia'",
       "floor": 4
     }
   },
@@ -424,11 +424,11 @@
     "pk": 42,
     "fields": {
       "id": 42,
-      "room_name": "Annulling'",
-      "description": "Description for the Annulling' room ",
-      "up": "Helpmate'",
-      "down": "Salk'",
-      "left": "Deduce'",
+      "room_name": "Coagulate'",
+      "description": "Description for the Coagulate' room ",
+      "up": "Dora'",
+      "down": "Bedimming'",
+      "left": "Forest'",
       "right": "",
       "floor": 4
     }
@@ -438,10 +438,10 @@
     "pk": 43,
     "fields": {
       "id": 43,
-      "room_name": "Helpmate'",
-      "description": "Description for the Helpmate' room ",
+      "room_name": "Dora'",
+      "description": "Description for the Dora' room ",
       "up": "",
-      "down": "Annulling'",
+      "down": "Coagulate'",
       "left": "",
       "right": "",
       "floor": 4
@@ -454,10 +454,10 @@
       "id": 44,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 4
     }
   },
@@ -466,12 +466,12 @@
     "pk": 45,
     "fields": {
       "id": 45,
-      "room_name": "Screenful'",
-      "description": "Description for the Screenful' room ",
-      "up": "Harass'",
+      "room_name": "Regard'",
+      "description": "Description for the Regard' room ",
+      "up": "Kenyon'",
       "down": "",
       "left": "",
-      "right": "Posey'",
+      "right": "Hurwitz'",
       "floor": 5
     }
   },
@@ -480,12 +480,12 @@
     "pk": 46,
     "fields": {
       "id": 46,
-      "room_name": "Posey'",
-      "description": "Description for the Posey' room ",
-      "up": "Veteran'",
+      "room_name": "Hurwitz'",
+      "description": "Description for the Hurwitz' room ",
+      "up": "Excise'",
       "down": "",
-      "left": "Screenful'",
-      "right": "Cast'",
+      "left": "Regard'",
+      "right": "At'",
       "floor": 5
     }
   },
@@ -494,12 +494,12 @@
     "pk": 47,
     "fields": {
       "id": 47,
-      "room_name": "Cast'",
-      "description": "Description for the Cast' room ",
+      "room_name": "At'",
+      "description": "Description for the At' room ",
       "up": "",
-      "down": "Chest'",
-      "left": "Posey'",
-      "right": "Aeneas'",
+      "down": "Pastry'",
+      "left": "Hurwitz'",
+      "right": "Amity'",
       "floor": 5
     }
   },
@@ -508,11 +508,11 @@
     "pk": 48,
     "fields": {
       "id": 48,
-      "room_name": "Aeneas'",
-      "description": "Description for the Aeneas' room ",
+      "room_name": "Amity'",
+      "description": "Description for the Amity' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Cast'",
+      "left": "At'",
       "right": "",
       "floor": 5
     }
@@ -522,12 +522,12 @@
     "pk": 49,
     "fields": {
       "id": 49,
-      "room_name": "Rear'",
-      "description": "Description for the Rear' room ",
+      "room_name": "Clifford'",
+      "description": "Description for the Clifford' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Illimitable'",
+      "right": "Noun'",
       "floor": 5
     }
   },
@@ -536,9 +536,9 @@
     "pk": 50,
     "fields": {
       "id": 50,
-      "room_name": "Chest'",
-      "description": "Description for the Chest' room ",
-      "up": "Cast'",
+      "room_name": "Pastry'",
+      "description": "Description for the Pastry' room ",
+      "up": "At'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -550,11 +550,11 @@
     "pk": 51,
     "fields": {
       "id": 51,
-      "room_name": "Veteran'",
-      "description": "Description for the Veteran' room ",
+      "room_name": "Excise'",
+      "description": "Description for the Excise' room ",
       "up": "",
-      "down": "Posey'",
-      "left": "Harass'",
+      "down": "Hurwitz'",
+      "left": "Kenyon'",
       "right": "",
       "floor": 5
     }
@@ -564,12 +564,12 @@
     "pk": 52,
     "fields": {
       "id": 52,
-      "room_name": "Harass'",
-      "description": "Description for the Harass' room ",
-      "up": "Illimitable'",
-      "down": "Screenful'",
+      "room_name": "Kenyon'",
+      "description": "Description for the Kenyon' room ",
+      "up": "Noun'",
+      "down": "Regard'",
       "left": "",
-      "right": "Veteran'",
+      "right": "Excise'",
       "floor": 5
     }
   },
@@ -578,11 +578,11 @@
     "pk": 53,
     "fields": {
       "id": 53,
-      "room_name": "Illimitable'",
-      "description": "Description for the Illimitable' room ",
-      "up": "Della'",
-      "down": "Harass'",
-      "left": "Rear'",
+      "room_name": "Noun'",
+      "description": "Description for the Noun' room ",
+      "up": "Bien'",
+      "down": "Kenyon'",
+      "left": "Clifford'",
       "right": "",
       "floor": 5
     }
@@ -592,10 +592,10 @@
     "pk": 54,
     "fields": {
       "id": 54,
-      "room_name": "Della'",
-      "description": "Description for the Della' room ",
+      "room_name": "Bien'",
+      "description": "Description for the Bien' room ",
       "up": "",
-      "down": "Illimitable'",
+      "down": "Noun'",
       "left": "",
       "right": "",
       "floor": 5
@@ -608,10 +608,10 @@
       "id": 55,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 5
     }
   },
@@ -620,12 +620,12 @@
     "pk": 56,
     "fields": {
       "id": 56,
-      "room_name": "Retinue'",
-      "description": "Description for the Retinue' room ",
-      "up": "Billie'",
+      "room_name": "Bad'",
+      "description": "Description for the Bad' room ",
+      "up": "Astronaut'",
       "down": "",
       "left": "",
-      "right": "Nouveau'",
+      "right": "Supremum'",
       "floor": 6
     }
   },
@@ -634,12 +634,12 @@
     "pk": 57,
     "fields": {
       "id": 57,
-      "room_name": "Nouveau'",
-      "description": "Description for the Nouveau' room ",
-      "up": "Euterpe'",
+      "room_name": "Supremum'",
+      "description": "Description for the Supremum' room ",
+      "up": "Ounce'",
       "down": "",
-      "left": "Retinue'",
-      "right": "Occur'",
+      "left": "Bad'",
+      "right": "Inkling'",
       "floor": 6
     }
   },
@@ -648,12 +648,12 @@
     "pk": 58,
     "fields": {
       "id": 58,
-      "room_name": "Occur'",
-      "description": "Description for the Occur' room ",
+      "room_name": "Inkling'",
+      "description": "Description for the Inkling' room ",
       "up": "",
-      "down": "Legitimate'",
-      "left": "Nouveau'",
-      "right": "Implausible'",
+      "down": "Tax'",
+      "left": "Supremum'",
+      "right": "Kirkland'",
       "floor": 6
     }
   },
@@ -662,11 +662,11 @@
     "pk": 59,
     "fields": {
       "id": 59,
-      "room_name": "Implausible'",
-      "description": "Description for the Implausible' room ",
+      "room_name": "Kirkland'",
+      "description": "Description for the Kirkland' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Occur'",
+      "left": "Inkling'",
       "right": "",
       "floor": 6
     }
@@ -676,12 +676,12 @@
     "pk": 60,
     "fields": {
       "id": 60,
-      "room_name": "Swordtail'",
-      "description": "Description for the Swordtail' room ",
+      "room_name": "Hew'",
+      "description": "Description for the Hew' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Mobcap'",
+      "right": "B\"we've\"",
       "floor": 6
     }
   },
@@ -690,9 +690,9 @@
     "pk": 61,
     "fields": {
       "id": 61,
-      "room_name": "Legitimate'",
-      "description": "Description for the Legitimate' room ",
-      "up": "Occur'",
+      "room_name": "Tax'",
+      "description": "Description for the Tax' room ",
+      "up": "Inkling'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -704,11 +704,11 @@
     "pk": 62,
     "fields": {
       "id": 62,
-      "room_name": "Euterpe'",
-      "description": "Description for the Euterpe' room ",
+      "room_name": "Ounce'",
+      "description": "Description for the Ounce' room ",
       "up": "",
-      "down": "Nouveau'",
-      "left": "Billie'",
+      "down": "Supremum'",
+      "left": "Astronaut'",
       "right": "",
       "floor": 6
     }
@@ -718,12 +718,12 @@
     "pk": 63,
     "fields": {
       "id": 63,
-      "room_name": "Billie'",
-      "description": "Description for the Billie' room ",
-      "up": "Mobcap'",
-      "down": "Retinue'",
+      "room_name": "Astronaut'",
+      "description": "Description for the Astronaut' room ",
+      "up": "B\"we've\"",
+      "down": "Bad'",
       "left": "",
-      "right": "Euterpe'",
+      "right": "Ounce'",
       "floor": 6
     }
   },
@@ -732,11 +732,11 @@
     "pk": 64,
     "fields": {
       "id": 64,
-      "room_name": "Mobcap'",
-      "description": "Description for the Mobcap' room ",
-      "up": "Intricate'",
-      "down": "Billie'",
-      "left": "Swordtail'",
+      "room_name": "B\"we've\"",
+      "description": "Description for the B\"we've\" room ",
+      "up": "Vacuolate'",
+      "down": "Astronaut'",
+      "left": "Hew'",
       "right": "",
       "floor": 6
     }
@@ -746,10 +746,10 @@
     "pk": 65,
     "fields": {
       "id": 65,
-      "room_name": "Intricate'",
-      "description": "Description for the Intricate' room ",
+      "room_name": "Vacuolate'",
+      "description": "Description for the Vacuolate' room ",
       "up": "",
-      "down": "Mobcap'",
+      "down": "B\"we've\"",
       "left": "",
       "right": "",
       "floor": 6
@@ -762,10 +762,10 @@
       "id": 66,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 6
     }
   },
@@ -774,12 +774,12 @@
     "pk": 67,
     "fields": {
       "id": 67,
-      "room_name": "Ectopic'",
-      "description": "Description for the Ectopic' room ",
-      "up": "Mcknight'",
+      "room_name": "Agronomy'",
+      "description": "Description for the Agronomy' room ",
+      "up": "Ridicule'",
       "down": "",
       "left": "",
-      "right": "Interpret'",
+      "right": "Northwest'",
       "floor": 7
     }
   },
@@ -788,12 +788,12 @@
     "pk": 68,
     "fields": {
       "id": 68,
-      "room_name": "Interpret'",
-      "description": "Description for the Interpret' room ",
-      "up": "Collimate'",
+      "room_name": "Northwest'",
+      "description": "Description for the Northwest' room ",
+      "up": "Curricula'",
       "down": "",
-      "left": "Ectopic'",
-      "right": "Frolicking'",
+      "left": "Agronomy'",
+      "right": "Lamellar'",
       "floor": 7
     }
   },
@@ -802,12 +802,12 @@
     "pk": 69,
     "fields": {
       "id": 69,
-      "room_name": "Frolicking'",
-      "description": "Description for the Frolicking' room ",
+      "room_name": "Lamellar'",
+      "description": "Description for the Lamellar' room ",
       "up": "",
-      "down": "Doltish'",
-      "left": "Interpret'",
-      "right": "Surmise'",
+      "down": "Childrearing'",
+      "left": "Northwest'",
+      "right": "Goober'",
       "floor": 7
     }
   },
@@ -816,11 +816,11 @@
     "pk": 70,
     "fields": {
       "id": 70,
-      "room_name": "Surmise'",
-      "description": "Description for the Surmise' room ",
+      "room_name": "Goober'",
+      "description": "Description for the Goober' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Frolicking'",
+      "left": "Lamellar'",
       "right": "",
       "floor": 7
     }
@@ -830,12 +830,12 @@
     "pk": 71,
     "fields": {
       "id": 71,
-      "room_name": "Emit'",
-      "description": "Description for the Emit' room ",
+      "room_name": "Doctrine'",
+      "description": "Description for the Doctrine' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Bertram'",
+      "right": "Argus'",
       "floor": 7
     }
   },
@@ -844,9 +844,9 @@
     "pk": 72,
     "fields": {
       "id": 72,
-      "room_name": "Doltish'",
-      "description": "Description for the Doltish' room ",
-      "up": "Frolicking'",
+      "room_name": "Childrearing'",
+      "description": "Description for the Childrearing' room ",
+      "up": "Lamellar'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -858,11 +858,11 @@
     "pk": 73,
     "fields": {
       "id": 73,
-      "room_name": "Collimate'",
-      "description": "Description for the Collimate' room ",
+      "room_name": "Curricula'",
+      "description": "Description for the Curricula' room ",
       "up": "",
-      "down": "Interpret'",
-      "left": "Mcknight'",
+      "down": "Northwest'",
+      "left": "Ridicule'",
       "right": "",
       "floor": 7
     }
@@ -872,12 +872,12 @@
     "pk": 74,
     "fields": {
       "id": 74,
-      "room_name": "Mcknight'",
-      "description": "Description for the Mcknight' room ",
-      "up": "Bertram'",
-      "down": "Ectopic'",
+      "room_name": "Ridicule'",
+      "description": "Description for the Ridicule' room ",
+      "up": "Argus'",
+      "down": "Agronomy'",
       "left": "",
-      "right": "Collimate'",
+      "right": "Curricula'",
       "floor": 7
     }
   },
@@ -886,11 +886,11 @@
     "pk": 75,
     "fields": {
       "id": 75,
-      "room_name": "Bertram'",
-      "description": "Description for the Bertram' room ",
-      "up": "Hymn'",
-      "down": "Mcknight'",
-      "left": "Emit'",
+      "room_name": "Argus'",
+      "description": "Description for the Argus' room ",
+      "up": "Cadillac'",
+      "down": "Ridicule'",
+      "left": "Doctrine'",
       "right": "",
       "floor": 7
     }
@@ -900,10 +900,10 @@
     "pk": 76,
     "fields": {
       "id": 76,
-      "room_name": "Hymn'",
-      "description": "Description for the Hymn' room ",
+      "room_name": "Cadillac'",
+      "description": "Description for the Cadillac' room ",
       "up": "",
-      "down": "Bertram'",
+      "down": "Argus'",
       "left": "",
       "right": "",
       "floor": 7
@@ -916,10 +916,10 @@
       "id": 77,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 7
     }
   },
@@ -928,12 +928,12 @@
     "pk": 78,
     "fields": {
       "id": 78,
-      "room_name": "Concertina'",
-      "description": "Description for the Concertina' room ",
-      "up": "Devolve'",
+      "room_name": "Glamor'",
+      "description": "Description for the Glamor' room ",
+      "up": "Cachalot'",
       "down": "",
       "left": "",
-      "right": "Candela'",
+      "right": "Clara'",
       "floor": 8
     }
   },
@@ -942,12 +942,12 @@
     "pk": 79,
     "fields": {
       "id": 79,
-      "room_name": "Candela'",
-      "description": "Description for the Candela' room ",
-      "up": "Scientific'",
+      "room_name": "Clara'",
+      "description": "Description for the Clara' room ",
+      "up": "Pigment'",
       "down": "",
-      "left": "Concertina'",
-      "right": "Etch'",
+      "left": "Glamor'",
+      "right": "Halloween'",
       "floor": 8
     }
   },
@@ -956,12 +956,12 @@
     "pk": 80,
     "fields": {
       "id": 80,
-      "room_name": "Etch'",
-      "description": "Description for the Etch' room ",
+      "room_name": "Halloween'",
+      "description": "Description for the Halloween' room ",
       "up": "",
-      "down": "Topnotch'",
-      "left": "Candela'",
-      "right": "Novice'",
+      "down": "Gaffe'",
+      "left": "Clara'",
+      "right": "Rock'",
       "floor": 8
     }
   },
@@ -970,11 +970,11 @@
     "pk": 81,
     "fields": {
       "id": 81,
-      "room_name": "Novice'",
-      "description": "Description for the Novice' room ",
+      "room_name": "Rock'",
+      "description": "Description for the Rock' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Etch'",
+      "left": "Halloween'",
       "right": "",
       "floor": 8
     }
@@ -984,12 +984,12 @@
     "pk": 82,
     "fields": {
       "id": 82,
-      "room_name": "Phraseology'",
-      "description": "Description for the Phraseology' room ",
+      "room_name": "Berg'",
+      "description": "Description for the Berg' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Potatoes'",
+      "right": "Rill'",
       "floor": 8
     }
   },
@@ -998,9 +998,9 @@
     "pk": 83,
     "fields": {
       "id": 83,
-      "room_name": "Topnotch'",
-      "description": "Description for the Topnotch' room ",
-      "up": "Etch'",
+      "room_name": "Gaffe'",
+      "description": "Description for the Gaffe' room ",
+      "up": "Halloween'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -1012,11 +1012,11 @@
     "pk": 84,
     "fields": {
       "id": 84,
-      "room_name": "Scientific'",
-      "description": "Description for the Scientific' room ",
+      "room_name": "Pigment'",
+      "description": "Description for the Pigment' room ",
       "up": "",
-      "down": "Candela'",
-      "left": "Devolve'",
+      "down": "Clara'",
+      "left": "Cachalot'",
       "right": "",
       "floor": 8
     }
@@ -1026,12 +1026,12 @@
     "pk": 85,
     "fields": {
       "id": 85,
-      "room_name": "Devolve'",
-      "description": "Description for the Devolve' room ",
-      "up": "Potatoes'",
-      "down": "Concertina'",
+      "room_name": "Cachalot'",
+      "description": "Description for the Cachalot' room ",
+      "up": "Rill'",
+      "down": "Glamor'",
       "left": "",
-      "right": "Scientific'",
+      "right": "Pigment'",
       "floor": 8
     }
   },
@@ -1040,11 +1040,11 @@
     "pk": 86,
     "fields": {
       "id": 86,
-      "room_name": "Potatoes'",
-      "description": "Description for the Potatoes' room ",
-      "up": "Weight'",
-      "down": "Devolve'",
-      "left": "Phraseology'",
+      "room_name": "Rill'",
+      "description": "Description for the Rill' room ",
+      "up": "Schmitt'",
+      "down": "Cachalot'",
+      "left": "Berg'",
       "right": "",
       "floor": 8
     }
@@ -1054,10 +1054,10 @@
     "pk": 87,
     "fields": {
       "id": 87,
-      "room_name": "Weight'",
-      "description": "Description for the Weight' room ",
+      "room_name": "Schmitt'",
+      "description": "Description for the Schmitt' room ",
       "up": "",
-      "down": "Potatoes'",
+      "down": "Rill'",
       "left": "",
       "right": "",
       "floor": 8
@@ -1070,10 +1070,10 @@
       "id": 88,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 8
     }
   },
@@ -1082,12 +1082,12 @@
     "pk": 89,
     "fields": {
       "id": 89,
-      "room_name": "Leitmotiv'",
-      "description": "Description for the Leitmotiv' room ",
-      "up": "Lana'",
+      "room_name": "Ruffian'",
+      "description": "Description for the Ruffian' room ",
+      "up": "Manure'",
       "down": "",
       "left": "",
-      "right": "Theoretic'",
+      "right": "Scourge'",
       "floor": 9
     }
   },
@@ -1096,12 +1096,12 @@
     "pk": 90,
     "fields": {
       "id": 90,
-      "room_name": "Theoretic'",
-      "description": "Description for the Theoretic' room ",
-      "up": "Foment'",
+      "room_name": "Scourge'",
+      "description": "Description for the Scourge' room ",
+      "up": "Debility'",
       "down": "",
-      "left": "Leitmotiv'",
-      "right": "Iodide'",
+      "left": "Ruffian'",
+      "right": "Imprimatur'",
       "floor": 9
     }
   },
@@ -1110,12 +1110,12 @@
     "pk": 91,
     "fields": {
       "id": 91,
-      "room_name": "Iodide'",
-      "description": "Description for the Iodide' room ",
+      "room_name": "Imprimatur'",
+      "description": "Description for the Imprimatur' room ",
       "up": "",
-      "down": "Salesmen'",
-      "left": "Theoretic'",
-      "right": "Annie'",
+      "down": "Thankful'",
+      "left": "Scourge'",
+      "right": "Pizarro'",
       "floor": 9
     }
   },
@@ -1124,11 +1124,11 @@
     "pk": 92,
     "fields": {
       "id": 92,
-      "room_name": "Annie'",
-      "description": "Description for the Annie' room ",
+      "room_name": "Pizarro'",
+      "description": "Description for the Pizarro' room ",
       "up": "",
       "down": "Staircase",
-      "left": "Iodide'",
+      "left": "Imprimatur'",
       "right": "",
       "floor": 9
     }
@@ -1138,12 +1138,12 @@
     "pk": 93,
     "fields": {
       "id": 93,
-      "room_name": "B\"mightn't\"",
-      "description": "Description for the B\"mightn't\" room ",
+      "room_name": "Extend'",
+      "description": "Description for the Extend' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Billionth'",
+      "right": "Oberlin'",
       "floor": 9
     }
   },
@@ -1152,9 +1152,9 @@
     "pk": 94,
     "fields": {
       "id": 94,
-      "room_name": "Salesmen'",
-      "description": "Description for the Salesmen' room ",
-      "up": "Iodide'",
+      "room_name": "Thankful'",
+      "description": "Description for the Thankful' room ",
+      "up": "Imprimatur'",
       "down": "",
       "left": "",
       "right": "Staircase",
@@ -1166,11 +1166,11 @@
     "pk": 95,
     "fields": {
       "id": 95,
-      "room_name": "Foment'",
-      "description": "Description for the Foment' room ",
+      "room_name": "Debility'",
+      "description": "Description for the Debility' room ",
       "up": "",
-      "down": "Theoretic'",
-      "left": "Lana'",
+      "down": "Scourge'",
+      "left": "Manure'",
       "right": "",
       "floor": 9
     }
@@ -1180,12 +1180,12 @@
     "pk": 96,
     "fields": {
       "id": 96,
-      "room_name": "Lana'",
-      "description": "Description for the Lana' room ",
-      "up": "Billionth'",
-      "down": "Leitmotiv'",
+      "room_name": "Manure'",
+      "description": "Description for the Manure' room ",
+      "up": "Oberlin'",
+      "down": "Ruffian'",
       "left": "",
-      "right": "Foment'",
+      "right": "Debility'",
       "floor": 9
     }
   },
@@ -1194,11 +1194,11 @@
     "pk": 97,
     "fields": {
       "id": 97,
-      "room_name": "Billionth'",
-      "description": "Description for the Billionth' room ",
-      "up": "Jacky'",
-      "down": "Lana'",
-      "left": "B\"mightn't\"",
+      "room_name": "Oberlin'",
+      "description": "Description for the Oberlin' room ",
+      "up": "Militarist'",
+      "down": "Manure'",
+      "left": "Extend'",
       "right": "",
       "floor": 9
     }
@@ -1208,10 +1208,10 @@
     "pk": 98,
     "fields": {
       "id": 98,
-      "room_name": "Jacky'",
-      "description": "Description for the Jacky' room ",
+      "room_name": "Militarist'",
+      "description": "Description for the Militarist' room ",
       "up": "",
-      "down": "Billionth'",
+      "down": "Oberlin'",
       "left": "",
       "right": "",
       "floor": 9
@@ -1224,10 +1224,10 @@
       "id": 99,
       "room_name": "Staircase",
       "description": "Movin' On Up!!!",
-      "up": "Unital'",
+      "up": "Jazz'",
       "down": "",
-      "left": "Spire'",
-      "right": "Comptroller'",
+      "left": "Chinese'",
+      "right": "Jutland'",
       "floor": 9
     }
   },
@@ -1236,12 +1236,12 @@
     "pk": 100,
     "fields": {
       "id": 100,
-      "room_name": "Gastronomic'",
-      "description": "Description for the Gastronomic' room ",
-      "up": "Worthington'",
+      "room_name": "Destroy'",
+      "description": "Description for the Destroy' room ",
+      "up": "Caliph'",
       "down": "",
       "left": "",
-      "right": "Skulk'",
+      "right": "Nudge'",
       "floor": 10
     }
   },
@@ -1250,12 +1250,12 @@
     "pk": 101,
     "fields": {
       "id": 101,
-      "room_name": "Skulk'",
-      "description": "Description for the Skulk' room ",
-      "up": "Bootlegging'",
+      "room_name": "Nudge'",
+      "description": "Description for the Nudge' room ",
+      "up": "Vegetable'",
       "down": "",
-      "left": "Gastronomic'",
-      "right": "Incombustible'",
+      "left": "Destroy'",
+      "right": "Flyway'",
       "floor": 10
     }
   },
@@ -1264,12 +1264,12 @@
     "pk": 102,
     "fields": {
       "id": 102,
-      "room_name": "Incombustible'",
-      "description": "Description for the Incombustible' room ",
+      "room_name": "Flyway'",
+      "description": "Description for the Flyway' room ",
       "up": "",
-      "down": "Deplete'",
-      "left": "Skulk'",
-      "right": "Balk'",
+      "down": "Hearst'",
+      "left": "Nudge'",
+      "right": "Hydroxy'",
       "floor": 10
     }
   },
@@ -1278,11 +1278,11 @@
     "pk": 103,
     "fields": {
       "id": 103,
-      "room_name": "Balk'",
-      "description": "Description for the Balk' room ",
+      "room_name": "Hydroxy'",
+      "description": "Description for the Hydroxy' room ",
       "up": "",
       "down": "Treasure",
-      "left": "Incombustible'",
+      "left": "Flyway'",
       "right": "",
       "floor": 10
     }
@@ -1292,12 +1292,12 @@
     "pk": 104,
     "fields": {
       "id": 104,
-      "room_name": "Frosty'",
-      "description": "Description for the Frosty' room ",
+      "room_name": "Pugh'",
+      "description": "Description for the Pugh' room ",
       "up": "",
       "down": "",
       "left": "",
-      "right": "Hebraic'",
+      "right": "Afrikaans'",
       "floor": 10
     }
   },
@@ -1306,9 +1306,9 @@
     "pk": 105,
     "fields": {
       "id": 105,
-      "room_name": "Deplete'",
-      "description": "Description for the Deplete' room ",
-      "up": "Incombustible'",
+      "room_name": "Hearst'",
+      "description": "Description for the Hearst' room ",
+      "up": "Flyway'",
       "down": "",
       "left": "",
       "right": "Treasure",
@@ -1320,11 +1320,11 @@
     "pk": 106,
     "fields": {
       "id": 106,
-      "room_name": "Bootlegging'",
-      "description": "Description for the Bootlegging' room ",
+      "room_name": "Vegetable'",
+      "description": "Description for the Vegetable' room ",
       "up": "",
-      "down": "Skulk'",
-      "left": "Worthington'",
+      "down": "Nudge'",
+      "left": "Caliph'",
       "right": "",
       "floor": 10
     }
@@ -1334,12 +1334,12 @@
     "pk": 107,
     "fields": {
       "id": 107,
-      "room_name": "Worthington'",
-      "description": "Description for the Worthington' room ",
-      "up": "Hebraic'",
-      "down": "Gastronomic'",
+      "room_name": "Caliph'",
+      "description": "Description for the Caliph' room ",
+      "up": "Afrikaans'",
+      "down": "Destroy'",
       "left": "",
-      "right": "Bootlegging'",
+      "right": "Vegetable'",
       "floor": 10
     }
   },
@@ -1348,11 +1348,11 @@
     "pk": 108,
     "fields": {
       "id": 108,
-      "room_name": "Hebraic'",
-      "description": "Description for the Hebraic' room ",
-      "up": "Everett'",
-      "down": "Worthington'",
-      "left": "Frosty'",
+      "room_name": "Afrikaans'",
+      "description": "Description for the Afrikaans' room ",
+      "up": "Rutledge'",
+      "down": "Caliph'",
+      "left": "Pugh'",
       "right": "",
       "floor": 10
     }
@@ -1362,10 +1362,10 @@
     "pk": 109,
     "fields": {
       "id": 109,
-      "room_name": "Everett'",
-      "description": "Description for the Everett' room ",
+      "room_name": "Rutledge'",
+      "description": "Description for the Rutledge' room ",
       "up": "",
-      "down": "Hebraic'",
+      "down": "Afrikaans'",
       "left": "",
       "right": "",
       "floor": 10
@@ -1378,9 +1378,9 @@
       "id": 110,
       "room_name": "Treasure",
       "description": "Made it to the top! Remember though, Money isn't everything",
-      "up": "Balk'",
+      "up": "Hydroxy'",
       "down": "",
-      "left": "Deplete'",
+      "left": "Hearst'",
       "right": "",
       "floor": 10
     }

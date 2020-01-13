@@ -65,18 +65,19 @@
       .row {
         display: flex;
       }
-      form.actions-form {
+      /* form.actions-form {
         border : 10px solid black;
         margin : 10px;
-      }
+      } */
     
       #attacks {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
       }
 
       #attack {
-        background-color: red;
+        background-color:red;
         color: white;
         margin: 5px;
         flex-basis: content;
@@ -191,6 +192,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items:center;
+        overflow-y: scroll;
       }
 
       .action {
@@ -247,15 +249,19 @@
         width: 34vw;
       }
 
-      .actions-form {
+      .actions-wrapper {
         /* padding: 5vw; */
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content : center;
         align-items : center;
+        border : 10px solid black;
+        margin: 10px 0 0 0;
       }
+
       .room {
+        position: relative;
         border: 5px double black;
         color : white;
       }
@@ -320,6 +326,16 @@
         color: black;
       }
 
+      .treasure {
+        /* border: none; */
+        background-color: goldenrod;
+        color: white;
+        background-image: url('http://www.strangehistory.net/blog/wp-content/uploads/2016/09/treasure-chest-1024x995.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+
       .room p {
         font-size: 24px;
         margin: 5px;
@@ -327,6 +343,9 @@
 
       .material-icons {
         color: black;
+        /* position: absolute; */
+        bottom: 5px;
+        left: 5px;
       }
 
       .stat {
@@ -341,8 +360,9 @@
         color: blue;
       }
 
+
       .player {
-        color : black;
+        position: absolute;
       }
 
       /* section.map-wrapper#map {
