@@ -129,6 +129,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: flex-start;
         background-color:black;
         color: white; 
         height: 20vw;
@@ -138,8 +139,14 @@
         /* font-weight:bolder; */
       }
 
-      #info-panel p {
+      /* .info-panel pre {
+        align-self: flex-start;
+      } */
+
+      pre p {
         flex-basis: auto;
+        white-space: normal;
+        word-break: normal;
       }
 
       #map-stats {
@@ -166,21 +173,17 @@
       }
 
       #inventory {
-        /* text-align: end; */
-        /* grid-area: 2 / 4 / 4 / 6; */
+
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
         color: black;
         background-color: white;
         padding: 5px;
         border : 5px double black;
         margin : 5px 5px 0 0;
-        /* background-color: white; */
         border-radius: 10px;
-        /* background-image: url('https://www.peakeventservices.com/sites/default/files/styles/max_2600x2600/public/linen_bengaline_darkbrown_swatch.jpg?itok=yIsIBtSe');
-        background-repeat: no-repeat;
-        background-size: cover; */
+        overflow: scroll;
+       
       }
 
       #item-buttons {
