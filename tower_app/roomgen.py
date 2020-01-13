@@ -101,14 +101,21 @@ def roomgen(names,descriptions):
                 room['fields']['left'] = names[4]
             if i == 9:
                 room['fields']['down'] = names[8]
-            # if i == 10:
-                # room["fields"]['up'] = names[3]
-                # room['fields']['left'] = names[5]
-                # room['fields']['right'] = names[11]
+            if i == 10:
+                room["fields"]['up'] = names[3]
+                room['fields']['left'] = names[5]
             rooms.append(room)
             pk = pk + 1
         if floor == 10:
-            rooms.append(treasure())
+            treasure_room = treasure()
+            treasure_room['fields']['up'] = names[3]
+            treasure_room['fields']['left'] = names[5]
+            rooms.append(treasure_room)
+            # 
+            floor10 = [room for room in rooms if room['fields']['floor'] == 10 and (room['fields']['down'] == 'Staircase' or room['fields']['right'] == 'Staircase')]
+            room3,room5 = floor10
+            room3["fields"]['down'] = "Treasure"
+            room5['fields']['right'] = "Treasure"
         else:
             rooms.append(stairs(pk,floor))
             pk = pk + 1

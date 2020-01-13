@@ -114,6 +114,14 @@ class Player(models.Model):
         return message
 
     def move(self, way=""):
+        if self.room.floor == 10 and self.room.down == 'Treasure':
+            treasure = Room.objects.get(room_name='Treasure')
+            print('Treasure Room', treasure)
+            print('floor 10 rooms', Room.objects.filter(floor=10))
+            self.room = treasure
+            self.hp = self.hp + 30
+            self.save()
+            message = f"{self.name} made it to {self.room} Room.  Congratulations. You have climbed the PyTower!!!"
         
         if self.room.left == 'Staircase' and way=="left" or self.room.right == 'Staircase' and way =="right" or self.room.up == 'Staircase' and way=="up" or self.room.down == 'Staircase' and way=="down":
             stair = Room.objects.get(room_name='Staircase', floor=self.room.floor)
