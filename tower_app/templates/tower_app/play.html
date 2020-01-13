@@ -111,7 +111,7 @@
   </section>
 
   <section class="right-content">
-    <div class="player-info">
+    <div class="info-panel">
       <!-- <p>Name: {{player.name}}</p>
       <p>HP: {{player.hp}}  Strength: {{player.strength}}</p> -->
 
@@ -136,21 +136,24 @@
 
         <div id="attacks">
           {% for enemy in enemies%}
-          <input type="submit" value="attack {{enemy.enemy_name}}" id="attack" name="btn" class="action"
+          <input type="submit" value="attack {{enemy.enemy_name}}" id="{{enemy.id}}" name="btn" class="action attack"
           />
           {% endfor %}
         </div>
-
+        <div id="item-buttons">
           {% for item in items%}
-          <input type="submit" value="take {{ item.item_name }}" id="{{item.id}}" name="btn" class="action"/>
+          <input type="submit" value="take {{ item.item_name }}" id="item-{{item.id}}" name="btn" class="action take"/>
           {% endfor %}
+
           {% for item in inventory %}
-          <input type="submit" value="drop {{ item.item_name }}" id="{{ item.id }}" name="btn" class="action" />
+          <input type="submit" value="drop {{ item.item_name }}" id="item-{{ item.id }}" name="btn" class="action drop" />
           {% endfor %}
         
           {% if player.room.id in stairids %}
           <input type="submit" value ="stair" name="btn" class="action">
           {% endif %}
+        </div>
+         
         
         <p>{{ form.errors.as_text }}</p>
       </form>
