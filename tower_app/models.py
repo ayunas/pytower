@@ -105,12 +105,12 @@ class Player(models.Model):
         for enemy in room_enemies:
             strike = random.randint(0,1)
             if strike:
-                if message is None:
-                    message=f"\n{enemy.enemy_name} is attacking you!"
+                if not message:
+                    message = f"\n{enemy.enemy_name} is attacking you! "
                 else:
-                    message=message + f"\n{enemy.enemy_name} is attacking you!"
+                    message= message + f"\n{enemy.enemy_name} is attacking you! "
                 attack_message = enemy.enemy_strikes_player(self)
-                message=message + attack_message
+                message = message + attack_message
         return message
 
     def move(self, way=""):
@@ -120,7 +120,7 @@ class Player(models.Model):
             self.room = Room.objects.get(id=stair.id + 1)
             self.hp = self.hp + 10*self.room.floor
             self.save()
-            message=f'Congratulations, {self.name} has moved to floor {self.room.floor}. {self.name} HP increased to {self.hp}.  Now in {self.room.room_name} Room.'
+            message=f"{self.name} moved to floor {self.room.floor}.  \nHP increased to: {self.hp}"
             # room_enemies = Enemy.objects.filter(roomID=self.room.id)
             # for enemy in room_enemies:
             #     strike = random.randint(0,1)
@@ -133,7 +133,7 @@ class Player(models.Model):
 
         if way == 'up':
             if not self.room.up:
-                return 'you cannot go that way. no rooms there...'
+                return "no rooms that way..."
             else:
                 self.room = Room.objects.get(room_name=self.room.up)
                 self.save()
@@ -152,7 +152,7 @@ class Player(models.Model):
 
         elif way == 'down':
             if not self.room.down:
-                return 'you cannot go that way. no rooms there...'
+                return "no rooms that way..."
             else:
                 # if self.room.down == 'Staircase':
                 #     self.room = Room.objects.get(id = 11)
@@ -175,7 +175,7 @@ class Player(models.Model):
 
         elif way == 'left':
             if not self.room.left:
-                return 'you cannot go that way. no rooms there...'
+                return "no rooms that way..."
             else:
                 self.room = Room.objects.get(room_name=self.room.left)
                 self.save()
@@ -193,7 +193,7 @@ class Player(models.Model):
 
         elif way == 'right':
             if not self.room.right:
-                return 'you cannot go that way. no rooms there...'
+                return "no rooms that way..."
             else:
                 self.room = Room.objects.get(room_name=self.room.right)
                 self.save()
@@ -208,7 +208,7 @@ class Player(models.Model):
                 message = self.enemy_attack()
                 return message
         else:
-            return 'you have entered an invalid direction'
+            return 'invalid direction'
 
     def __str__(self):
         # if not self.room:
@@ -242,7 +242,7 @@ class Enemy(models.Model):
         return self.enemy_name
 
     def enemy_strikes_player(self, player):
-        
+        print('ENEMY STRIKES PLAYER')
         player_room = player.room.id
         print(f'{player.name} HP: {player.hp}, {self.enemy_name} strength: {self.strength}')
         player.hp = player.hp - self.strength
@@ -250,9 +250,9 @@ class Enemy(models.Model):
         if player.hp <= 0:
             player.initialize()
             player.save()
-            return f'{player.name}, Oh no! You have been slayed. Please try again from the beginning.'
-        print(f'{player.name}, You have been hit and now your HP is {player.hp}')
-        return f'{player.name}, You have been hit and now your HP is {player.hp}'
+            return f"You've been slayed. Start over..."
+        # print(f"You've been' hit! \nreduced HP: {player.hp}")
+        return f"You're hit'\nLost: {self.strength} HP"
 
     def player_strikes_enemy(self, player):
         print("PLAYER STRIKING ENEMY")

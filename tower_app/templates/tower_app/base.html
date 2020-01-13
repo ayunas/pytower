@@ -2,39 +2,65 @@
 <html lang="en">
   <head>
     <title>PyTower</title>
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
     <style type="text/css">
-      .body {
+
+      html {
+        padding: 0;
+        height: 100%;
+        overflow: hidden;
         box-sizing: border-box;
-        background-color: black;
-        font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
+        font-size : 62.5%
       }
+      /* body {
+        margin-left: -20px;
+      } */
+
+      h2 {
+        text-align: center;
+        margin: 0;
+      }
+
       #content-wrapper {
         margin: 40px;
       }
-      p {
-        font-family: fantasy;
-        font-size: 3vh;
+      p,h2 {
+        font-family: 'Cute Font';
+        font-size: 2.5rem;
+        margin: 0;
       }
-      .wrapper {
+      /* .wrapper {
         height: 50vh;
         font-family: 'Copperplate,Copperplate Gothic Light,fantasy'; 
-      }
+      } */
       #map {
+        display: grid; 
         width:75%; 
         max-width:910px; 
-        height:90vh;
+        height:85vh;
+        margin: 0 10px 10px -30px;
         /* max-height:700px;  */
-        background-color: rgba(245, 245, 245, 0.836);
+        background-color: whitesmoke;
+        background-image: url('https://previews.123rf.com/images/pzuh/pzuh1712/pzuh171200008/91083760-forest-parallax-image-scrolling-for-video-game-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
         border: 5px double black;
-        display: grid; 
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px; 
-        padding:2vw"
+      }
+
+      #floorname {
+        font-size: 50px;
+        padding: 0;
+        margin: 0;
+        margin-left: 5px;
+        margin-top: -10px;
+        position: relative;
       }
       .movement-wrapper {
-        width: 15vw;
+        width: 100%;
       }
       .row {
         display: flex;
@@ -51,39 +77,45 @@
 
       #attack {
         background-color: red;
-        margin: 5px;
-      }
-      
-    .action {
-        /* height: 5vw; */
-        /* border-radius: 20%; */
         color: white;
-        background-color: blue;
+        margin: 5px;
         flex-basis: content;
         padding: 10px;
         border-radius: 10px;
       }
+      
+    /* .action {
+        /* height: 5vw; */
+        /* border-radius: 20%; */
+        
+      /* } */ */
 
-      div.lr {
+      /* div.lr {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
         align-self: stretch;
-      }
-
-      #left,#right {
-        flex-basis: 40%;
-      }
-
-      .left .right {
-        width: 100px;
-      }
-
-      /* .move {
-          background-color: blue;
+        border: 1px solid green;
       } */
-      /* .left {
-        margin-right: 5vw;
-      } */
+
+      .lr {
+        border: 10px solid green;
+      }
+
+      #left,#right,#up,#down{
+        /* flex-basis: 100px; */
+        width: 7rem;
+        height: 3rem;
+        color: white;
+        background-color: blue;
+        padding: 5px;
+        border-radius: 10px;
+        padding-bottom: 20px !important;
+        margin: 1px;
+      }
+
       .movement-wrapper {
         display: flex;
         flex-direction: column;
@@ -91,25 +123,127 @@
         justify-content: center;
         align-items: center;
       }
-      /* .vertical {
-        margin-left: 5vw;
-      } */
-      .player-info {
-        background-color:lightgrey;
-        height: 25vw;
-        padding:1vw;
+
+      .info-panel {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        background-color:black;
+        color: white; 
+        height: 20vw;
+        width : 35vw;
+        padding: .5rem 1rem .5rem 1rem;
+        font-size: 1vw;
         /* font-weight:bolder; */
       }
+
+      #info-panel p {
+        flex-basis: auto;
+      }
+
+      #map-stats {
+        /* text-align: end; */
+        grid-column: 4 / 7;
+        grid-row: 1 / 4;
+        /* border : 5px double black; */
+        margin : 5px 5px 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        /* background-color: white; */
+        /* border-radius: 10px; */
+      }
+
+      #player-stats {
+        text-align: end;
+        /* grid-area: 1 / 5 / 2 / 6; */
+        border : 5px double black;
+        margin : 5px 5px 0 0;
+        background-color: white;
+        border-radius: 10px;
+        align-self: flex-end;
+      }
+
+      #inventory {
+        /* text-align: end; */
+        /* grid-area: 2 / 4 / 4 / 6; */
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: center; */
+        color: black;
+        background-color: white;
+        padding: 5px;
+        border : 5px double black;
+        margin : 5px 5px 0 0;
+        /* background-color: white; */
+        border-radius: 10px;
+        /* background-image: url('https://www.peakeventservices.com/sites/default/files/styles/max_2600x2600/public/linen_bengaline_darkbrown_swatch.jpg?itok=yIsIBtSe');
+        background-repeat: no-repeat;
+        background-size: cover; */
+      }
+
+      #item-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items:center;
+      }
+
+      .action {
+        color: white;
+        background-color: black;
+        padding: 2px 7px 2px 7px;
+        border-radius: 10px;
+        margin: 3px;
+        font-size: larger;
+      }
+
+      .drop {
+        background-color: white;
+        color: black;
+      }
+
+      .take {
+        background-color: black;
+        color: white;
+      }
+
+      .attack {
+        background-color: orangered;
+      }
+
+      #inventory-item {
+        margin-left: 10px;
+      }
+
+      #inventory h2 {
+        font-size: 3rem;
+        margin-top: -10px;
+      }
+
+      #player-stats p {
+        font-size: 24px;
+        margin: 0 5px 0 0;
+        border: 3px;
+        border-bottom: black;
+      }
+
+      #hp {
+        color : red;
+      }
+
+      #strength {
+        color: blue;
+      }
+
       .wrapper {
         display: flex;
       }
       .right-content {
         width: 34vw;
       }
-      /* .actions-wrapper {
-        display: flex;
-        justify-content: center;
-      } */
+
       .actions-form {
         /* padding: 5vw; */
         display: flex;
@@ -120,23 +254,24 @@
       }
       .room {
         border: 5px double black;
-        background-color: rgb(243, 164, 164);
+        color : white;
       }
 
       .one {
-        background-color: aqua;
+        background-color: gold;
+        grid-area: 1 / 2 / 2 / 3;
       }
 
       .two {
-        background-color : yellow;
+        background-color : rgb(121, 92, 92);
       }
 
       .three {
-        background-color : violet;
+        background-color : rgb(64, 64, 228);
       }
 
       .four {
-        background-color : blue;
+        background-color : grey;
       }
 
       .five {
@@ -148,52 +283,81 @@
       }
 
       .seven {
-        background-color : grey;
+        background-color : indigo;
       }
 
       .eight {
-        background-color : skyblue;
+        background-color :red;
       }
 
       .nine {
-        background-color : rgb(112, 23, 163);
+        background-color : orange;
       }
 
       .ten {
-        background-color: rgb(243, 59, 59);
+        background-color: fuchsia;
       }
 
       .outside {
-        border: none;
-        background-color: white;
+        color : black;
+        background-color: whitesmoke;
+        background-image: url('https://www.netclipart.com/pp/m/38-383467_email-clipart-white-object-open-door-clipart.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
       }
 
       .stair {
         border: none;
-        background-color: white;
+        background-color: whitesmoke;
+        background-image: url('http://clipart-library.com/data_images/144180.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right bottom;
+        color: black;
+      }
+
+      .room p {
+        font-size: 24px;
+        margin: 5px;
       }
 
       .material-icons {
         color: black;
       }
-      section.map-wrapper#map {
-        
+
+      .stat {
+        display: flex;
+        justify-content: flex-end;
       }
+      .heart {
+        color: red;
+      }
+
+      .strength {
+        color: blue;
+      }
+
+      .player {
+        color : black;
+      }
+
+      /* section.map-wrapper#map {
+        
+      } */
       
       </style>
 
 {% load sass_tags %}
 <link href="{% sass_src 'amir.scss' %}" re="stylesheet" type="text/css" />
 
-<link
-rel="stylesheet"
-href="https://fonts.googleapis.com/icon?family=Material+Icons"
-/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
 
   </head>
   <body>
     <div name="content" id="content-wrapper">
+      <h2>PyTower</h2>
       {% block content%} {% endblock %}
     </div>
  
