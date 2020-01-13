@@ -37,11 +37,12 @@ def get_context(player_id, message=None):
     player=Player.objects.get(id=player_id)
     player.name = player.name.capitalize()
     inventory=player.inventory()
-    for item in inventory:
-        print(item.item_name)
+    floor_items = Item.objects.filter(roomID__gte=1,roomID__lte=12)
+    room_items = Item.objects.filter(roomID = player.room.id)
+
     if len(inventory) == 0:
         inventory=None
-    room_items = player.room.items()
+   
     if len(room_items) == 0:
         room_items = None
     enemies = Enemy.objects.filter(roomID=player.room.id)
@@ -56,7 +57,7 @@ def get_context(player_id, message=None):
 def play(request, id):
     player_id=id
     context=get_context(player_id)
-    #print("Context", context["player"].room.room_name)
+    print("Context", context['items'])
     print("REFRESH")
     if request.method =="POST":
         #print("method is post")
