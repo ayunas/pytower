@@ -65,18 +65,19 @@
       .row {
         display: flex;
       }
-      form.actions-form {
+      /* form.actions-form {
         border : 10px solid black;
         margin : 10px;
-      }
+      } */
     
       #attacks {
         display: flex;
         justify-content: flex-start;
+        flex-wrap: wrap;
       }
 
       #attack {
-        background-color: red;
+        background-color:red;
         color: white;
         margin: 5px;
         flex-basis: content;
@@ -129,6 +130,7 @@
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: flex-start;
+        align-items: flex-start;
         background-color:black;
         color: white; 
         height: 20vw;
@@ -138,8 +140,14 @@
         /* font-weight:bolder; */
       }
 
-      #info-panel p {
+      /* .info-panel pre {
+        align-self: flex-start;
+      } */
+
+      pre p {
         flex-basis: auto;
+        white-space: normal;
+        word-break: normal;
       }
 
       #map-stats {
@@ -166,21 +174,17 @@
       }
 
       #inventory {
-        /* text-align: end; */
-        /* grid-area: 2 / 4 / 4 / 6; */
+
         display: flex;
         flex-wrap: wrap;
-        /* justify-content: center; */
         color: black;
         background-color: white;
         padding: 5px;
         border : 5px double black;
         margin : 5px 5px 0 0;
-        /* background-color: white; */
         border-radius: 10px;
-        /* background-image: url('https://www.peakeventservices.com/sites/default/files/styles/max_2600x2600/public/linen_bengaline_darkbrown_swatch.jpg?itok=yIsIBtSe');
-        background-repeat: no-repeat;
-        background-size: cover; */
+        overflow: scroll;
+       
       }
 
       #item-buttons {
@@ -188,6 +192,7 @@
         flex-wrap: wrap;
         justify-content: center;
         align-items:center;
+        overflow-y: scroll;
       }
 
       .action {
@@ -244,15 +249,19 @@
         width: 34vw;
       }
 
-      .actions-form {
+      .actions-wrapper {
         /* padding: 5vw; */
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content : center;
         align-items : center;
+        border : 10px solid black;
+        margin: 10px 0 0 0;
       }
+
       .room {
+        position: relative;
         border: 5px double black;
         color : white;
       }
@@ -317,6 +326,16 @@
         color: black;
       }
 
+      .treasure {
+        /* border: none; */
+        background-color: goldenrod;
+        color: white;
+        background-image: url('http://www.strangehistory.net/blog/wp-content/uploads/2016/09/treasure-chest-1024x995.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+
       .room p {
         font-size: 24px;
         margin: 5px;
@@ -324,6 +343,9 @@
 
       .material-icons {
         color: black;
+        /* position: absolute; */
+        bottom: 5px;
+        left: 5px;
       }
 
       .stat {
@@ -338,8 +360,9 @@
         color: blue;
       }
 
+
       .player {
-        color : black;
+        position: absolute;
       }
 
       /* section.map-wrapper#map {
